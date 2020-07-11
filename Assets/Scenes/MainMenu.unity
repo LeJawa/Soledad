@@ -482,6 +482,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4561454886918931046, guid: 58a2e2dc6605025458f82737f10f8e7f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561454886918931046, guid: 58a2e2dc6605025458f82737f10f8e7f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.99607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561454886918931046, guid: 58a2e2dc6605025458f82737f10f8e7f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.88235295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58a2e2dc6605025458f82737f10f8e7f, type: 3}
 --- !u!1 &2120452667

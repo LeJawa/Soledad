@@ -24,6 +24,29 @@ public class GameEvents : MonoBehaviour {
     #endregion
 
 
+    #region onTutorial1
+    public event Action onTutorial1;
+    public void TriggerTutorial1() {
+        onTutorial1?.Invoke();
+    }
+    #endregion
+
+
+    #region onTutorialEnd
+    public event Action onTutorialEnd;
+    public void TriggerTutorialEnd() {
+        onTutorialEnd?.Invoke();
+    }
+    #endregion
+
+    #region onNameTokenFound
+    public event Action onNameTokenFound;
+    public void TriggerNameTokenFound() {
+        onNameTokenFound?.Invoke();
+    }
+    #endregion
+
+
     private void Awake() {
         if ( current != null ) {
             Destroy(gameObject);

@@ -29,8 +29,10 @@ public class CenterPerson : MonoBehaviour {
         relationships = new List<RelationshipObject>();
 
         GameEvents.current.onMouseClicked += HandleMouseClicked;
+        GameEvents.current.onTutorial1 += ShowRelationships;
+        GameEvents.current.onNameTokenFound += ResetCenterPersonToSoledad;
 
-        UpdateEverything();
+        SetCenterSprite();
     }
 
     void UpdateEverything() {
@@ -124,9 +126,12 @@ public class CenterPerson : MonoBehaviour {
     void HandleMouseClicked() {
         if ( isHighlighted ) {
             GameEvents.current.TriggerCenterPersonClicked(person.Name);
-            SetCenterPerson(GameController.current.Soledad);
         }
 
+    }
+
+    void ResetCenterPersonToSoledad() {
+        SetCenterPerson(GameController.current.Soledad);
     }
 
 }

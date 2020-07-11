@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tokens
+    uniqueID: 391885853
+    locked: 0
   - name: Cursor
     uniqueID: 2709322079
     locked: 0
