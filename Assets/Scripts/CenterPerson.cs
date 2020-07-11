@@ -9,20 +9,51 @@ public class CenterPerson : MonoBehaviour {
     GameObject prefabRelationship;
 
     Person person;
+    Sprite personSprite;
 
     List<RelationshipObject> relationships;
 
+    Vector3 highlightScale = new Vector3(1.1f, 1.1f, 1);
+    bool isHighlighted = false;
 
-    public string Name { get => person.Name; }
+
+    public PersonName Name { get => person.Name; }
 
     private void Start() {
         person = Soledad.current.Abuela;
 
         relationships = new List<RelationshipObject>();
 
+        UpdateEverything();
+    }
+
+    void UpdateEverything() {
+
+        SetCenterSprite();
+
+        relationships.Clear();
+        foreach ( GameObject gameObject in GameObject.FindGameObjectsWithTag("Relationship") ) {
+            Destroy(gameObject);
+        }
 
         ShowRelationships();
     }
+
+    void SetCenterSprite() {
+        personSprite = SpriteManager.current.GetSpriteFromPerson(person.Name);
+        GetComponent<SpriteRenderer>().sprite = personSprite;
+    }
+
+    public void SetCenterPerson(Person person) {
+        if ( person == this.person ) {
+            return;
+        }
+
+        this.person = person;
+        UpdateEverything();
+
+    }
+
 
     void ShowRelationships() {
         foreach ( Relationship relationship in person.Relationships ) {
@@ -31,9 +62,7 @@ public class CenterPerson : MonoBehaviour {
             }
         }
 
-
-
-
+        SetRelationshipObjectsPosition();
     }
 
     private void CreateRelationshipObject(Relationship relationship, Person person) {
@@ -45,8 +74,26 @@ public class CenterPerson : MonoBehaviour {
     }
 
 
-    void SetRelationshipObjectPosition(RelationshipObject relationshipObject) {
-        relationshipObject.transform.position = new Vector3(2, 2, 0);
+    void SetRelationshipObjectsPosition() {
+        int N = relationships.Count;
+        int NumberOfRelationshipsPerCircle = 9;
+        int numberOfCircles = N / NumberOfRelationshipsPerCircle + 1;
+
+        for ( int j = 0; j < numberOfCircles; j++ ) {
+            int relationshipsInThisCircle = NumberOfRelationshipsPerCircle;
+            if ( N < (j+1) * NumberOfRelationshipsPerCircle ) {
+                relationshipsInThisCircle = N % NumberOfRelationshipsPerCircle;
+            }
+
+            float angleBetweenRelationships = 2 * Mathf.PI / relationshipsInThisCircle;
+
+            for ( int i = j*NumberOfRelationshipsPerCircle; i < j * NumberOfRelationshipsPerCircle + relationshipsInThisCircle; i++ ) {
+                float angle = Mathf.PI / 2 + angleBetweenRelationships * i;
+                relationships[i].transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * (2.5f + 1.5f*j);
+            }
+        }
+
+
     }
 
     void SetRelationshipObjectSprite(RelationshipObject relationshipObject) {
@@ -54,7 +101,18 @@ public class CenterPerson : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        print(person.Name);
+        if ( collision.CompareTag("Cursor") ) {
+            print(person.Name);
+
+            transform.localScale = highlightScale;
+            isHighlighted = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision) {
+        if ( collision.CompareTag("Cursor") ) {
+            transform.localScale = Vector3.one;
+            isHighlighted = false;
+        }
     }
 
 }

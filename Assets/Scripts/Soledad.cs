@@ -8,6 +8,9 @@ public class Soledad : MonoBehaviour {
 
     Person soledad;
 
+    [SerializeField]
+    public CenterPerson centerPerson;
+
     public Person Abuela { get => soledad; }
 
     private void Awake() {
@@ -29,142 +32,161 @@ public class Soledad : MonoBehaviour {
     }
 
     private void InitializePersons() {
-        soledad = new Person("Soledad", Sex.Female);
+        soledad = new Person(PersonName.soledad, Sex.Female);
 
-        Person mother = AddAnonymousRelationship(Relationship.Mother, Sex.Female);
-        Person father = AddAnonymousRelationship(Relationship.Father, Sex.Male);
-        mother.AddRelationship(Relationship.Husband, father);
+        Person maria = new Person(PersonName.maria, Sex.Female); 
+        soledad.AddRelationship(Relationship.Mother, maria);
+        Person francisco = new Person(PersonName.francisco, Sex.Male);
+        soledad.AddRelationship(Relationship.Father, francisco);
+        maria.AddRelationship(Relationship.Husband, francisco);
 
-        Person sister = AddAnonymousRelationship(Relationship.Sister, Sex.Female);
-        sister.AddRelationship(Relationship.Mother, mother);
-        sister.AddRelationship(Relationship.Father, father);
+        Person pilar = new Person(PersonName.pilar, Sex.Female);
+        soledad.AddRelationship(Relationship.Sister, pilar);
+        pilar.AddRelationship(Relationship.Mother, maria);
+        pilar.AddRelationship(Relationship.Father, francisco);
 
-        Person husband = AddAnonymousRelationship(Relationship.Husband, Sex.Male);
-        husband.AddRelationship(Relationship.SisterInLaw, sister);
-        husband.AddRelationship(Relationship.MotherInLaw, mother);
-        husband.AddRelationship(Relationship.FatherInLaw, father);
+        Person luisAbuelo = new Person(PersonName.luis, Sex.Male);
+        soledad.AddRelationship(Relationship.Husband, luisAbuelo);
+        luisAbuelo.AddRelationship(Relationship.SisterInLaw, pilar);
+        luisAbuelo.AddRelationship(Relationship.MotherInLaw, maria);
+        luisAbuelo.AddRelationship(Relationship.FatherInLaw, francisco);
 
-        Person son1 = AddAnonymousRelationship(Relationship.Son, Sex.Male);
-        son1.AddRelationship(Relationship.Father, husband);
-        son1.AddRelationship(Relationship.Grandmother, mother);
-        son1.AddRelationship(Relationship.Grandfather, father);
-        son1.AddRelationship(Relationship.Aunt, sister);
-        Person son2 = AddAnonymousRelationship(Relationship.Son, Sex.Male);
-        son2.AddRelationship(Relationship.Father, husband);
-        son2.AddRelationship(Relationship.Grandmother, mother);
-        son2.AddRelationship(Relationship.Grandfather, father);
-        son2.AddRelationship(Relationship.Aunt, sister);
-        son2.AddRelationship(Relationship.Brother, son1);
-        Person son3 = AddAnonymousRelationship(Relationship.Son, Sex.Male);
-        son3.AddRelationship(Relationship.Father, husband);
-        son3.AddRelationship(Relationship.Grandmother, mother);
-        son3.AddRelationship(Relationship.Grandfather, father);
-        son3.AddRelationship(Relationship.Aunt, sister);
-        son3.AddRelationship(Relationship.Brother, son1);
-        son3.AddRelationship(Relationship.Brother, son2);
+        Person luisfrancisco = new Person(PersonName.luisfrancisco, Sex.Male);
+        soledad.AddRelationship(Relationship.Son, luisfrancisco);
+        luisfrancisco.AddRelationship(Relationship.Father, luisAbuelo);
+        luisfrancisco.AddRelationship(Relationship.Grandmother, maria);
+        luisfrancisco.AddRelationship(Relationship.Grandfather, francisco);
+        luisfrancisco.AddRelationship(Relationship.Aunt, pilar);
+        Person jorge = new Person(PersonName.jorge, Sex.Male);
+        soledad.AddRelationship(Relationship.Son, jorge);
+        jorge.AddRelationship(Relationship.Father, luisAbuelo);
+        jorge.AddRelationship(Relationship.Grandmother, maria);
+        jorge.AddRelationship(Relationship.Grandfather, francisco);
+        jorge.AddRelationship(Relationship.Aunt, pilar);
+        jorge.AddRelationship(Relationship.Brother, luisfrancisco);
+        Person javier = new Person(PersonName.javier, Sex.Male);
+        soledad.AddRelationship(Relationship.Son, javier);
+        javier.AddRelationship(Relationship.Father, luisAbuelo);
+        javier.AddRelationship(Relationship.Grandmother, maria);
+        javier.AddRelationship(Relationship.Grandfather, francisco);
+        javier.AddRelationship(Relationship.Aunt, pilar);
+        javier.AddRelationship(Relationship.Brother, luisfrancisco);
+        javier.AddRelationship(Relationship.Brother, jorge);
 
 
-        Person daughterIL1 = AddAnonymousRelationship(Relationship.DaughterInLaw, Sex.Female);
-        daughterIL1.AddRelationship(Relationship.Husband, son1);
-        daughterIL1.AddRelationship(Relationship.BrotherInLaw, son2);
-        daughterIL1.AddRelationship(Relationship.BrotherInLaw, son3);
-        daughterIL1.AddRelationship(Relationship.FatherInLaw, husband);
-        Person daughterIL2 = AddAnonymousRelationship(Relationship.DaughterInLaw, Sex.Female);
-        daughterIL2.AddRelationship(Relationship.Husband, son2);
-        daughterIL2.AddRelationship(Relationship.BrotherInLaw, son1);
-        daughterIL2.AddRelationship(Relationship.BrotherInLaw, son3);
-        daughterIL2.AddRelationship(Relationship.FatherInLaw, husband);
-        Person daughterIL3 = AddAnonymousRelationship(Relationship.DaughterInLaw, Sex.Female);
-        daughterIL3.AddRelationship(Relationship.Husband, son3);
-        daughterIL3.AddRelationship(Relationship.BrotherInLaw, son2);
-        daughterIL3.AddRelationship(Relationship.BrotherInLaw, son1);
-        daughterIL3.AddRelationship(Relationship.FatherInLaw, husband);
+        Person socorro = new Person(PersonName.socorro, Sex.Female);
+        soledad.AddRelationship(Relationship.DaughterInLaw, socorro);
+        socorro.AddRelationship(Relationship.Husband, luisfrancisco);
+        socorro.AddRelationship(Relationship.BrotherInLaw, jorge);
+        socorro.AddRelationship(Relationship.BrotherInLaw, javier);
+        socorro.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
+        Person concha = new Person(PersonName.concha, Sex.Female);
+        soledad.AddRelationship(Relationship.DaughterInLaw, concha);
+        concha.AddRelationship(Relationship.Husband, jorge);
+        concha.AddRelationship(Relationship.BrotherInLaw, luisfrancisco);
+        concha.AddRelationship(Relationship.BrotherInLaw, javier);
+        concha.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
+        Person margarita = new Person(PersonName.margarita, Sex.Female);
+        soledad.AddRelationship(Relationship.DaughterInLaw, margarita);
+        margarita.AddRelationship(Relationship.Husband, javier);
+        margarita.AddRelationship(Relationship.BrotherInLaw, jorge);
+        margarita.AddRelationship(Relationship.BrotherInLaw, luisfrancisco);
+        margarita.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
 
-        Person grandchild11 = AddAnonymousRelationship(Relationship.Grandchild, Sex.Female);
-        grandchild11.AddRelationship(Relationship.Father, son1);
-        grandchild11.AddRelationship(Relationship.Mother, daughterIL1);
-        grandchild11.AddRelationship(Relationship.Uncle, son2);
-        grandchild11.AddRelationship(Relationship.Aunt, daughterIL2);
-        grandchild11.AddRelationship(Relationship.Uncle, son3);
-        grandchild11.AddRelationship(Relationship.Aunt, daughterIL3);
-        grandchild11.AddRelationship(Relationship.Grandfather, husband);
-        Person grandchild12 = AddAnonymousRelationship(Relationship.Grandchild, Sex.Male);
-        grandchild12.AddRelationship(Relationship.Father, son1);
-        grandchild12.AddRelationship(Relationship.Mother, daughterIL1);
-        grandchild12.AddRelationship(Relationship.Uncle, son2);
-        grandchild12.AddRelationship(Relationship.Aunt, daughterIL2);
-        grandchild12.AddRelationship(Relationship.Uncle, son3);
-        grandchild12.AddRelationship(Relationship.Aunt, daughterIL3);
-        grandchild12.AddRelationship(Relationship.Grandfather, husband);
-        grandchild12.AddRelationship(Relationship.Sister, grandchild11);
-        Person grandchild21 = AddAnonymousRelationship(Relationship.Grandchild, Sex.Male);
-        grandchild21.AddRelationship(Relationship.Father, son2);
-        grandchild21.AddRelationship(Relationship.Mother, daughterIL2);
-        grandchild21.AddRelationship(Relationship.Uncle, son1);
-        grandchild21.AddRelationship(Relationship.Aunt, daughterIL1);
-        grandchild21.AddRelationship(Relationship.Uncle, son3);
-        grandchild21.AddRelationship(Relationship.Aunt, daughterIL3);
-        grandchild21.AddRelationship(Relationship.Grandfather, husband);
-        grandchild21.AddRelationship(Relationship.Cousin, grandchild11);
-        grandchild21.AddRelationship(Relationship.Cousin, grandchild12);
-        Person grandchild22 = AddAnonymousRelationship(Relationship.Grandchild, Sex.Male);
-        grandchild22.AddRelationship(Relationship.Father, son2);
-        grandchild22.AddRelationship(Relationship.Mother, daughterIL2);
-        grandchild22.AddRelationship(Relationship.Uncle, son1);
-        grandchild22.AddRelationship(Relationship.Aunt, daughterIL1);
-        grandchild22.AddRelationship(Relationship.Uncle, son3);
-        grandchild22.AddRelationship(Relationship.Aunt, daughterIL3);
-        grandchild22.AddRelationship(Relationship.Grandfather, husband);
-        grandchild22.AddRelationship(Relationship.Cousin, grandchild11);
-        grandchild22.AddRelationship(Relationship.Cousin, grandchild12);
-        grandchild22.AddRelationship(Relationship.Brother, grandchild21);
-        Person grandchild23 = AddAnonymousRelationship(Relationship.Grandchild, Sex.Female);
-        grandchild23.AddRelationship(Relationship.Father, son2);
-        grandchild23.AddRelationship(Relationship.Mother, daughterIL2);
-        grandchild23.AddRelationship(Relationship.Uncle, son1);
-        grandchild23.AddRelationship(Relationship.Aunt, daughterIL1);
-        grandchild23.AddRelationship(Relationship.Uncle, son3);
-        grandchild23.AddRelationship(Relationship.Aunt, daughterIL3);
-        grandchild23.AddRelationship(Relationship.Grandfather, husband);
-        grandchild23.AddRelationship(Relationship.Cousin, grandchild11);
-        grandchild23.AddRelationship(Relationship.Cousin, grandchild12);
-        grandchild23.AddRelationship(Relationship.Brother, grandchild21);
-        grandchild23.AddRelationship(Relationship.Brother, grandchild22);
-        Person grandchild31 = AddAnonymousRelationship(Relationship.Grandchild, Sex.Male);
-        grandchild31.AddRelationship(Relationship.Father, son3);
-        grandchild31.AddRelationship(Relationship.Mother, daughterIL3);
-        grandchild31.AddRelationship(Relationship.Uncle, son1);
-        grandchild31.AddRelationship(Relationship.Aunt, daughterIL1);
-        grandchild31.AddRelationship(Relationship.Uncle, son2);
-        grandchild31.AddRelationship(Relationship.Aunt, daughterIL2);
-        grandchild31.AddRelationship(Relationship.Grandfather, husband);
-        grandchild31.AddRelationship(Relationship.Cousin, grandchild11);
-        grandchild31.AddRelationship(Relationship.Cousin, grandchild12);
-        grandchild31.AddRelationship(Relationship.Cousin, grandchild21);
-        grandchild31.AddRelationship(Relationship.Cousin, grandchild22);
-        grandchild31.AddRelationship(Relationship.Cousin, grandchild23);
-        Person grandchild32 = AddAnonymousRelationship(Relationship.Grandchild, Sex.Male);
-        grandchild32.AddRelationship(Relationship.Father, son3);
-        grandchild32.AddRelationship(Relationship.Mother, daughterIL3);
-        grandchild32.AddRelationship(Relationship.Uncle, son1);
-        grandchild32.AddRelationship(Relationship.Aunt, daughterIL1);
-        grandchild32.AddRelationship(Relationship.Uncle, son2);
-        grandchild32.AddRelationship(Relationship.Aunt, daughterIL2);
-        grandchild32.AddRelationship(Relationship.Grandfather, husband);
-        grandchild32.AddRelationship(Relationship.Cousin, grandchild11);
-        grandchild32.AddRelationship(Relationship.Cousin, grandchild12);
-        grandchild32.AddRelationship(Relationship.Cousin, grandchild21);
-        grandchild32.AddRelationship(Relationship.Cousin, grandchild22);
-        grandchild32.AddRelationship(Relationship.Cousin, grandchild23);
-        grandchild32.AddRelationship(Relationship.Brother, grandchild31);
+        Person almudena = new Person(PersonName.almudena, Sex.Female);
+        soledad.AddRelationship(Relationship.Grandchild, almudena);
+        almudena.AddRelationship(Relationship.Father, luisfrancisco);
+        almudena.AddRelationship(Relationship.Mother, socorro);
+        almudena.AddRelationship(Relationship.Uncle, jorge);
+        almudena.AddRelationship(Relationship.Aunt, concha);
+        almudena.AddRelationship(Relationship.Uncle, javier);
+        almudena.AddRelationship(Relationship.Aunt, margarita);
+        almudena.AddRelationship(Relationship.Grandfather, luisAbuelo);
+        Person javi = new Person(PersonName.javi, Sex.Male);
+        soledad.AddRelationship(Relationship.Grandchild, javi);
+        javi.AddRelationship(Relationship.Father, luisfrancisco);
+        javi.AddRelationship(Relationship.Mother, socorro);
+        javi.AddRelationship(Relationship.Uncle, jorge);
+        javi.AddRelationship(Relationship.Aunt, concha);
+        javi.AddRelationship(Relationship.Uncle, javier);
+        javi.AddRelationship(Relationship.Aunt, margarita);
+        javi.AddRelationship(Relationship.Grandfather, luisAbuelo);
+        javi.AddRelationship(Relationship.Sister, almudena);
+        Person david = new Person(PersonName.david, Sex.Male);
+        soledad.AddRelationship(Relationship.Grandchild, david);
+        david.AddRelationship(Relationship.Father, jorge);
+        david.AddRelationship(Relationship.Mother, concha);
+        david.AddRelationship(Relationship.Uncle, luisfrancisco);
+        david.AddRelationship(Relationship.Aunt, socorro);
+        david.AddRelationship(Relationship.Uncle, javier);
+        david.AddRelationship(Relationship.Aunt, margarita);
+        david.AddRelationship(Relationship.Grandfather, luisAbuelo);
+        david.AddRelationship(Relationship.Cousin, almudena);
+        david.AddRelationship(Relationship.Cousin, javi);
+        Person jaime = new Person(PersonName.jaime, Sex.Male);
+        soledad.AddRelationship(Relationship.Grandchild, jaime);
+        jaime.AddRelationship(Relationship.Father, jorge);
+        jaime.AddRelationship(Relationship.Mother, concha);
+        jaime.AddRelationship(Relationship.Uncle, luisfrancisco);
+        jaime.AddRelationship(Relationship.Aunt, socorro);
+        jaime.AddRelationship(Relationship.Uncle, javier);
+        jaime.AddRelationship(Relationship.Aunt, margarita);
+        jaime.AddRelationship(Relationship.Grandfather, luisAbuelo);
+        jaime.AddRelationship(Relationship.Cousin, almudena);
+        jaime.AddRelationship(Relationship.Cousin, javi);
+        jaime.AddRelationship(Relationship.Brother, david);
+        Person ana= new Person(PersonName.ana, Sex.Female);
+        soledad.AddRelationship(Relationship.Grandchild, ana);
+        ana.AddRelationship(Relationship.Father, jorge);
+        ana.AddRelationship(Relationship.Mother, concha);
+        ana.AddRelationship(Relationship.Uncle, luisfrancisco);
+        ana.AddRelationship(Relationship.Aunt, socorro);
+        ana.AddRelationship(Relationship.Uncle, javier);
+        ana.AddRelationship(Relationship.Aunt, margarita);
+        ana.AddRelationship(Relationship.Grandfather, luisAbuelo);
+        ana.AddRelationship(Relationship.Cousin, almudena);
+        ana.AddRelationship(Relationship.Cousin, javi);
+        ana.AddRelationship(Relationship.Brother, david);
+        ana.AddRelationship(Relationship.Brother, jaime);
+        Person luisNieto = new Person(PersonName.luis, Sex.Male);
+        soledad.AddRelationship(Relationship.Grandchild, luisNieto);
+        luisNieto.AddRelationship(Relationship.Father, javier);
+        luisNieto.AddRelationship(Relationship.Mother, margarita);
+        luisNieto.AddRelationship(Relationship.Uncle, luisfrancisco);
+        luisNieto.AddRelationship(Relationship.Aunt, socorro);
+        luisNieto.AddRelationship(Relationship.Uncle, jorge);
+        luisNieto.AddRelationship(Relationship.Aunt, concha);
+        luisNieto.AddRelationship(Relationship.Grandfather, luisAbuelo);
+        luisNieto.AddRelationship(Relationship.Cousin, almudena);
+        luisNieto.AddRelationship(Relationship.Cousin, javi);
+        luisNieto.AddRelationship(Relationship.Cousin, david);
+        luisNieto.AddRelationship(Relationship.Cousin, jaime);
+        luisNieto.AddRelationship(Relationship.Cousin, ana);
+        Person alberto = new Person(PersonName.alberto, Sex.Male);
+        soledad.AddRelationship(Relationship.Grandchild, alberto);
+        alberto.AddRelationship(Relationship.Father, javier);
+        alberto.AddRelationship(Relationship.Mother, margarita);
+        alberto.AddRelationship(Relationship.Uncle, luisfrancisco);
+        alberto.AddRelationship(Relationship.Aunt, socorro);
+        alberto.AddRelationship(Relationship.Uncle, jorge);
+        alberto.AddRelationship(Relationship.Aunt, concha);
+        alberto.AddRelationship(Relationship.Grandfather, luisAbuelo);
+        alberto.AddRelationship(Relationship.Cousin, almudena);
+        alberto.AddRelationship(Relationship.Cousin, javi);
+        alberto.AddRelationship(Relationship.Cousin, david);
+        alberto.AddRelationship(Relationship.Cousin, jaime);
+        alberto.AddRelationship(Relationship.Cousin, ana);
+        alberto.AddRelationship(Relationship.Brother, luisNieto);
     }
 
-    Person AddAnonymousRelationship(Relationship relationship, Sex sex) {
-        Person newPerson = new Person(sex);
-        soledad.AddRelationship(relationship, newPerson);
-        return newPerson;
+    
+
+    private void Update() {
+
+        if ( Input.GetMouseButtonDown(0) ) {
+            GameEvents.current.TriggerMouseClicked();
+        }
+
     }
-
-
 
 }

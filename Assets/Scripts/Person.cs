@@ -12,27 +12,18 @@ public enum Sex {
 
 public class Person {
 
-    static int id = 0;
-
-    string name;
+    PersonName name;
     Sex sex;
 
 
     Dictionary<Relationship, List<Person>> dictionaryOfRelationships;
 
     public Dictionary<Relationship, List<Person>>.KeyCollection Relationships { get => dictionaryOfRelationships.Keys; }
-    public string Name { get => name; }
+    public PersonName Name { get => name; }
     public Sex Sex { get => sex; }
 
-    public Person(Sex sex) {
-        name = "id" + id;
-        id++;
-        this.sex = sex;
 
-        dictionaryOfRelationships = new Dictionary<Relationship, List<Person>>();
-    }
-
-    public Person(string name, Sex sex) {
+    public Person(PersonName name, Sex sex) {
         this.name = name;
         this.sex = sex;
 
@@ -73,7 +64,7 @@ public class Person {
     }
 
     public override string ToString() {
-        return name;
+        return name.ToString();
     }
 
 

@@ -7,8 +7,8 @@ public class SpriteManager : MonoBehaviour {
 
     public static SpriteManager current;
 
-    [SerializeField]
     SpriteAtlas relationshipSprites;
+    SpriteAtlas personSprites;
 
     private void Awake() {
 
@@ -25,12 +25,9 @@ public class SpriteManager : MonoBehaviour {
     void Start() {
 
         relationshipSprites = (SpriteAtlas) Resources.Load("Relationships");
+        personSprites = (SpriteAtlas) Resources.Load("Persons");
     }
 
-    // Update is called once per frame
-    void Update() {
-
-    }
 
     public Sprite GetSpriteFromRelationship(Relationship relationship) {
         string relationshipString;
@@ -113,5 +110,71 @@ public class SpriteManager : MonoBehaviour {
         }
         return relationshipSprites.GetSprite(relationshipString);
     }
+
+    public Sprite GetSpriteFromPerson(PersonName person) {
+        string personString;
+        switch ( person ) {
+            case PersonName.soledad:
+                personString = "soledad";
+                break;
+            case PersonName.javier:
+                personString = "javier";
+                break;
+            case PersonName.jorge:
+                personString = "jorge";
+                break;
+            case PersonName.luisfrancisco:
+                personString = "luisfrancisco";
+                break;
+            case PersonName.socorro:
+                personString = "socorro";
+                break;
+            case PersonName.margarita:
+                personString = "margarita";
+                break;
+            case PersonName.concha:
+                personString = "concha";
+                break;
+            case PersonName.almudena:
+                personString = "almudena";
+                break;
+            case PersonName.javi:
+                personString = "javi";
+                break;
+            case PersonName.david:
+                personString = "david";
+                break;
+            case PersonName.jaime:
+                personString = "jaime";
+                break;
+            case PersonName.ana:
+                personString = "ana";
+                break;
+            case PersonName.carlos:
+                personString = "carlos";
+                break;
+            case PersonName.alberto:
+                personString = "alberto";
+                break;
+            case PersonName.luis:
+                personString = "luis";
+                break;
+            case PersonName.francisco:
+                personString = "francisco";
+                break;
+            case PersonName.pilar:
+                personString = "pilar";
+                break;
+            case PersonName.maria:
+                personString = "maria";
+                break;
+            default:
+                personString = "";
+                break;
+        }
+        return personSprites.GetSprite(personString);
+    }
+    
+
 
 }

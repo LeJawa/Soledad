@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Persons
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+    totalSpriteSurfaceArea: 589824
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 4464801562234768900, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 8386513804703199615, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 2392380890927047134, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -1681963287209402487, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 6655015069928151642, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -5002343191757026407, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -7811547252778386343, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 6561166048716094780, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 4431888971456123001, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 4322779006258089581, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 7509106657099884469, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 7277885507467173308, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -2308534922537917679, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 1724734946594901226, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -5525954360396450897, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 3863668215156047769, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -1544234526235410256, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 6651274491117759369, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 3151160066122310486, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -7726289830314682251, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -4508615179429641715, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -3912498747124366175, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 3499734926984405456, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -516666541630234181, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -2060131739815400545, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 144494663824721170, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 4406095387906127276, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -7388621475202762202, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -3537111890340417712, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -2979422620246979989, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -5496367215037967954, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -2664253569044257319, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 8963737302870824329, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -3812102224346897094, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: 2010410865543553252, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  - {fileID: -913758379357129194, guid: f2f94597cf5628a42a960948ec6592c7, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Persons_20
+  - Persons_21
+  - Persons_22
+  - Persons_23
+  - Persons_33
+  - Persons_24
+  - Persons_32
+  - Persons_25
+  - Persons_31
+  - Persons_26
+  - Persons_30
+  - Persons_27
+  - Persons_28
+  - Persons_29
+  - Persons_35
+  - Persons_34
+  - david
+  - javier
+  - margarita
+  - francisco
+  - maria
+  - concha
+  - luis
+  - pilar
+  - javi
+  - alberto
+  - ana
+  - Persons_19
+  - Persons_18
+  - soledad
+  - socorro
+  - jorge
+  - carlos
+  - luisfrancisco
+  - almudena
+  - jaime
+  m_Tag: Persons
+  m_IsVariant: 0

@@ -10,11 +10,13 @@ public class RelationshipObject : MonoBehaviour {
     public Relationship Relationship { get => relationship; }
     public Person Person { get => person; }
 
+    Vector3 highlightScale = new Vector3(1.1f, 1.1f, 1);
+    bool isHighlighted = false;
 
 
     // Start is called before the first frame update
     void Start() {
-
+        GameEvents.current.onMouseClicked += HandleMouseClicked;
     }
 
     public void SetPersonAndRelationship(Person person, Relationship relationship) {
@@ -31,7 +33,25 @@ public class RelationshipObject : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        print(person.Name);
+        if ( collision.CompareTag("Cursor") ) {
+
+            transform.localScale = highlightScale;
+            isHighlighted = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision) {
+        if ( collision.CompareTag("Cursor") ) {
+            transform.localScale = Vector3.one;
+            isHighlighted = false;
+        }
+    }
+
+    void HandleMouseClicked() {
+        if ( isHighlighted ) {
+            print(person.Name);
+            Soledad.current.centerPerson.SetCenterPerson(person);
+        }
+
     }
 
 }
