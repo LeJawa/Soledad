@@ -3,25 +3,62 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+
+public enum Sex {
+    Male,
+    Female
+}
+
+
 public class Person {
 
+    static int id = 0;
+
     string name;
+    Sex sex;
 
-    Dictionary<Relationship, Person> dictionaryOfRelationships;
 
-    public Dictionary<Relationship, Person>.KeyCollection Relationships { get => dictionaryOfRelationships.Keys; }
+    Dictionary<Relationship, List<Person>> dictionaryOfRelationships;
 
-    public Person(string name) {
+    public Dictionary<Relationship, List<Person>>.KeyCollection Relationships { get => dictionaryOfRelationships.Keys; }
+    public string Name { get => name; }
+    public Sex Sex { get => sex; }
+
+    public Person(Sex sex) {
+        name = "id" + id;
+        id++;
+        this.sex = sex;
+
+        dictionaryOfRelationships = new Dictionary<Relationship, List<Person>>();
+    }
+
+    public Person(string name, Sex sex) {
         this.name = name;
+        this.sex = sex;
 
-        dictionaryOfRelationships = new Dictionary<Relationship, Person>();
+        dictionaryOfRelationships = new Dictionary<Relationship, List<Person>>();
     }
 
     public void AddRelationship(Relationship relationship, Person person) {
-        dictionaryOfRelationships.Add(relationship, person);
+        if ( !dictionaryOfRelationships.ContainsKey(relationship) ) {
+            dictionaryOfRelationships.Add(relationship, new List<Person>());
+        }
+
+        dictionaryOfRelationships[relationship].Add(person);
+
+        AddReciprocateRelationship(relationship, person);
     }
 
-    public Person GetPersonFromRelationship(Relationship relationship) {
+    public void AddReciprocateRelationship(Relationship relationship, Person person) {
+        Relationship reciprocate = RelationshipExtensions.Reciprocate(relationship, this);
+        if ( !person.dictionaryOfRelationships.ContainsKey(reciprocate) ) {
+            person.dictionaryOfRelationships.Add(reciprocate, new List<Person>());
+        }
+
+        person.dictionaryOfRelationships[reciprocate].Add(this);
+    }
+
+    public List<Person> GetPersonsFromRelationship(Relationship relationship) {
 
         if ( Relationships.Contains(relationship) ) {
             return dictionaryOfRelationships[relationship];
