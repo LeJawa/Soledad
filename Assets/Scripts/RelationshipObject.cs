@@ -16,6 +16,9 @@ public class RelationshipObject : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+
+        GetComponent<SpriteRenderer>().color = SpriteManager.current.GetSpriteColorFromPersonName(person.Name);
+
         GameEvents.current.onMouseClicked += HandleMouseClicked;
     }
 

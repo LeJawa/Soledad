@@ -18,6 +18,7 @@ public class CursorScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        Cursor.visible = false;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = -Camera.main.transform.position.z;
 

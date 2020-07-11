@@ -35,6 +35,10 @@ public class Person {
             dictionaryOfRelationships.Add(relationship, new List<Person>());
         }
 
+        if ( dictionaryOfRelationships[relationship].Contains(person) ) {
+            return;
+        }
+
         dictionaryOfRelationships[relationship].Add(person);
 
         AddReciprocateRelationship(relationship, person);

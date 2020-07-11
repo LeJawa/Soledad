@@ -22,7 +22,7 @@ public class Soledad : MonoBehaviour {
             current = this;
             DontDestroyOnLoad(gameObject);
         }
-
+        
 
         InitializePersons();
     }
@@ -102,7 +102,7 @@ public class Soledad : MonoBehaviour {
         almudena.AddRelationship(Relationship.Uncle, javier);
         almudena.AddRelationship(Relationship.Aunt, margarita);
         almudena.AddRelationship(Relationship.Grandfather, luisAbuelo);
-        Person javi = new Person(PersonName.javi, Sex.Male);
+        Person javi = new Person(PersonName.javier, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild, javi);
         javi.AddRelationship(Relationship.Father, luisfrancisco);
         javi.AddRelationship(Relationship.Mother, socorro);
@@ -185,6 +185,7 @@ public class Soledad : MonoBehaviour {
 
         if ( Input.GetMouseButtonDown(0) ) {
             GameEvents.current.TriggerMouseClicked();
+
         }
 
     }

@@ -10,6 +10,7 @@ public class CenterPerson : MonoBehaviour {
 
     Person person;
     Sprite personSprite;
+    SpriteRenderer spriteRenderer;
 
     List<RelationshipObject> relationships;
 
@@ -21,6 +22,7 @@ public class CenterPerson : MonoBehaviour {
 
     private void Start() {
         person = Soledad.current.Abuela;
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         relationships = new List<RelationshipObject>();
 
@@ -40,8 +42,8 @@ public class CenterPerson : MonoBehaviour {
     }
 
     void SetCenterSprite() {
-        personSprite = SpriteManager.current.GetSpriteFromPerson(person.Name);
-        GetComponent<SpriteRenderer>().sprite = personSprite;
+        spriteRenderer.sprite = SpriteManager.current.GetSpriteFromPerson(person.Name);
+        spriteRenderer.color = SpriteManager.current.GetSpriteColorFromPersonName(person.Name);
     }
 
     public void SetCenterPerson(Person person) {

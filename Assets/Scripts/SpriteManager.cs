@@ -175,6 +175,37 @@ public class SpriteManager : MonoBehaviour {
         return personSprites.GetSprite(personString);
     }
     
+    public Color GetSpriteColorFromPersonName(PersonName name) {
 
+        float r = 0;
+        float g = 0;
+        float b = 0;
+        float total = 0;
+
+        string str = name.ToString();
+        for ( int i = 0; i < str.Length; i++ ) {
+            int c = (int) str[i] - (int) 'a';
+
+            switch ( i%3 ) {
+                case 0:
+                    r += c;
+                    break;
+                case 1:
+                    g += c;
+                    break;
+                default:
+                    b += c;
+                    break;
+            }
+            total += c;
+        }
+
+        r /= total;
+        g /= total;
+        b /= total;
+
+        return new Color(r, g, b);
+
+    }
 
 }
