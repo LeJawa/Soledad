@@ -46,6 +46,15 @@ public class GameEvents : MonoBehaviour {
     }
     #endregion
 
+    #region onResetEverything
+    public event Action onResetEverything;
+    public void TriggerResetEverything() {
+        onResetEverything?.Invoke();
+    }
+    #endregion
+
+
+
 
     private void Awake() {
         if ( current != null ) {

@@ -37,10 +37,6 @@ public class GameController : MonoBehaviour {
     private void Start() {
 
         DontDestroyOnLoad(Instantiate(prefabCursor));
-
-
-
-        InitializePersons();
     }
 
     private void InitializePersons() {
@@ -192,10 +188,8 @@ public class GameController : MonoBehaviour {
     }
 
     public void StartNewGame() {
+        InitializePersons();
         SceneManager.LoadScene("GamePlay");
-
-        //Destroy(GameObject.FindGameObjectWithTag("MainMenu"));
-        //centerPerson = Instantiate(prefabCenterPerson).GetComponent<CenterPerson>();
     }
 
     private void Update() {

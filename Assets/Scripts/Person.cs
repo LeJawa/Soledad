@@ -61,9 +61,9 @@ public class Person {
         return null;
     }
 
-    public void RemoveRelationship(Relationship relationship) {
+    public void RemoveRelationship(Relationship relationship, Person person) {
         if ( Relationships.Contains(relationship) ) {
-            dictionaryOfRelationships.Remove(relationship);
+            dictionaryOfRelationships[relationship].Remove(person);
         }
     }
 
