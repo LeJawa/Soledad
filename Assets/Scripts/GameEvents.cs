@@ -16,6 +16,14 @@ public class GameEvents : MonoBehaviour {
     #endregion
 
 
+    #region onCenterPersonClicked
+    public event Action<PersonName> onCenterPersonClicked;
+    public void TriggerCenterPersonClicked(PersonName name) {
+        onCenterPersonClicked?.Invoke(name);
+    }
+    #endregion
+
+
     private void Awake() {
         if ( current != null ) {
             Destroy(gameObject);

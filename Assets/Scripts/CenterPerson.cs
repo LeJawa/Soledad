@@ -21,10 +21,14 @@ public class CenterPerson : MonoBehaviour {
     public PersonName Name { get => person.Name; }
 
     private void Start() {
-        person = Soledad.current.Abuela;
+        GameController.current.centerPerson = this;
+
+        person = GameController.current.Soledad;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         relationships = new List<RelationshipObject>();
+
+        GameEvents.current.onMouseClicked += HandleMouseClicked;
 
         UpdateEverything();
     }
@@ -91,7 +95,7 @@ public class CenterPerson : MonoBehaviour {
 
             for ( int i = j*NumberOfRelationshipsPerCircle; i < j * NumberOfRelationshipsPerCircle + relationshipsInThisCircle; i++ ) {
                 float angle = Mathf.PI / 2 + angleBetweenRelationships * i;
-                relationships[i].transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * (2.5f + 1.5f*j);
+                relationships[i].transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)) * (2.5f + 1.5f*j) + transform.position;
             }
         }
 
@@ -115,6 +119,14 @@ public class CenterPerson : MonoBehaviour {
             transform.localScale = Vector3.one;
             isHighlighted = false;
         }
+    }
+
+    void HandleMouseClicked() {
+        if ( isHighlighted ) {
+            GameEvents.current.TriggerCenterPersonClicked(person.Name);
+            SetCenterPerson(GameController.current.Soledad);
+        }
+
     }
 
 }

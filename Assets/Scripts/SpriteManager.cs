@@ -30,6 +30,11 @@ public class SpriteManager : MonoBehaviour {
 
 
     public Sprite GetSpriteFromRelationship(Relationship relationship) {
+        string relationshipString = GetStringOfRelationship(relationship);
+        return relationshipSprites.GetSprite(relationshipString);
+    }
+
+    private static string GetStringOfRelationship(Relationship relationship) {
         string relationshipString;
         switch ( relationship ) {
             case Relationship.Unknown:
@@ -108,10 +113,16 @@ public class SpriteManager : MonoBehaviour {
                 relationshipString = "";
                 break;
         }
-        return relationshipSprites.GetSprite(relationshipString);
+
+        return relationshipString;
     }
 
     public Sprite GetSpriteFromPerson(PersonName person) {
+        string personString = GetStringOfPersonName(person);
+        return personSprites.GetSprite(personString);
+    }
+
+    private static string GetStringOfPersonName(PersonName person) {
         string personString;
         switch ( person ) {
             case PersonName.soledad:
@@ -172,9 +183,10 @@ public class SpriteManager : MonoBehaviour {
                 personString = "";
                 break;
         }
-        return personSprites.GetSprite(personString);
+
+        return personString;
     }
-    
+
     public Color GetSpriteColorFromPersonName(PersonName name) {
 
         float r = 0;

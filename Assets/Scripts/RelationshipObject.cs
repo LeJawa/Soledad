@@ -52,7 +52,7 @@ public class RelationshipObject : MonoBehaviour {
     void HandleMouseClicked() {
         if ( isHighlighted ) {
             print(person.Name);
-            Soledad.current.centerPerson.SetCenterPerson(person);
+            GameController.current.centerPerson.SetCenterPerson(person);
         }
 
     }

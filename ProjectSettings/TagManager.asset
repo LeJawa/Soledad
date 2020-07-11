@@ -7,6 +7,7 @@ TagManager:
   - CenterPerson
   - Cursor
   - Relationship
+  - MainMenu
   layers:
   - Default
   - TransparentFX
