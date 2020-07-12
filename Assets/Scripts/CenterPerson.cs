@@ -59,6 +59,7 @@ public class CenterPerson : MonoBehaviour {
 
     public void SetPerson(Person person) {
         if ( person == this.person ) {
+            UpdateEverything();
             return;
         }
 

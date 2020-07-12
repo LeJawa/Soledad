@@ -260,6 +260,8 @@ MonoBehaviour:
     type: 3}
   prefabFinishScreen: {fileID: 4564221064048789969, guid: fe5dcf2ac962e3646a42a139cdec70b9,
     type: 3}
+  prefabEndScreen: {fileID: 3823119875067201608, guid: 01c46d5cd2d1cd9488067d5446ad5d25,
+    type: 3}
 --- !u!4 &136070091
 Transform:
   m_ObjectHideFlags: 0
@@ -407,8 +409,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The objective is to help Soledad remember all the members of her family
-    within the time limit.
+  m_Text: The objective is to remember all the members of your family within the
+    time limit.
 --- !u!222 &458382957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -872,7 +874,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'She has three sons, Luis-Francisco, Jorge and Javier.
+  m_Text: 'You have three sons, Luis-Francisco, Jorge and Javier.
 
 '
 --- !u!1 &868438118
@@ -1544,7 +1546,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is Soledad
+  m_Text: You are Soledad
 --- !u!222 &1536603319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1670,7 +1672,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'She also has seven grand-children:'
+  m_Text: 'You also have seven grand-children:'
 --- !u!1 &1637997702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,7 +1724,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: She had a sister, Pilar, who never married.
+  m_Text: You had a sister, Pilar, who never married.
 --- !u!222 &1637997704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2191,7 +2193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: And these are her memories of her family
+  m_Text: And you have Alzheimer disease.
 --- !u!222 &1882246764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2289,7 +2291,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Right now she remembers her mother Mar\xEDa and her father Francisco."
+  m_Text: "Right now you remember your mother Mar\xEDa and your father Francisco."
 --- !u!222 &1891906892
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -9,4 +9,11 @@ public class BackToMenuButton : MonoBehaviour {
         GameEvents.current.TriggerResetEverything();
         SceneManager.LoadScene("MainMenu");
     }
+
+
+    public void HandleBackToMenuButtonFromEnd() {
+        GameEvents.current.TriggerResetEverything();
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Dedicatoria");
+    }
 }

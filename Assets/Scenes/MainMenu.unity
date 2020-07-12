@@ -264,8 +264,7 @@ MonoBehaviour:
   prefabCursor: {fileID: 5658312617370953817, guid: 2b77b4ba8485d0649a475c0b7dd392a0,
     type: 3}
   prefabMainMenu: {fileID: 0}
-  centerPerson: {fileID: 7167814755011300952, guid: de9d2adb3484be341b4b42294ade4791,
-    type: 3}
+  centerPersonObject: {fileID: 0}
 --- !u!4 &1329290310
 Transform:
   m_ObjectHideFlags: 0

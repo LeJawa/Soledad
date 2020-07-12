@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Dedicatoria.unity
+    guid: 50ac834c0d25c514fb0f3689e33cd53a
   m_configObjects: {}

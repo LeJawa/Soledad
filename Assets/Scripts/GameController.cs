@@ -31,15 +31,13 @@ public class GameController : MonoBehaviour {
     Person alberto;
 
     [SerializeField]
-    GameObject prefabCenterPerson;
-
-    [SerializeField]
     GameObject prefabCursor;
 
-    [SerializeField]
-    GameObject prefabMainMenu;
-
     public CenterPerson centerPersonObject;
+
+    [SerializeField]
+    AudioSource musicSource;
+
 
     public Person Soledad { get => soledad; }
 
@@ -209,6 +207,7 @@ public class GameController : MonoBehaviour {
     }
 
     public void StartNewGame() {
+        SetMusicVolume(0.240f);
         InitializePersons();
         SceneManager.LoadScene("GamePlay");
     }
@@ -277,6 +276,10 @@ public class GameController : MonoBehaviour {
         }
 
 
+    }
+
+    public void SetMusicVolume(float volume) {
+        musicSource.volume = volume;
     }
 
 }

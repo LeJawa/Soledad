@@ -43,16 +43,16 @@ public class StartScreen : MonoBehaviour {
     float timeTutorial10 = 27f;
     bool tutorial10Triggered = false;
 
-    float timeTutorial11 = 29f;
+    float timeTutorial11 = 30f;
     bool tutorial11Triggered = false;
 
-    float timeTutorial12 = 31f;
+    float timeTutorial12 = 33f;
     bool tutorial12Triggered = false;
 
-    float timeTutorial13 = 33f;
+    float timeTutorial13 = 36f;
     bool tutorial13Triggered = false;
 
-    float timeTutorial14 = 35f;
+    float timeTutorial14 = 39f;
     bool tutorial14Triggered = false;
 
     float timeTutorialEnd = 45f;
@@ -94,7 +94,7 @@ public class StartScreen : MonoBehaviour {
     [SerializeField]
     TutorialSpawner tutorialSpawner;
 
-    bool skipTutorial = true;
+    bool skipTutorial = false;
 
 
     // Start is called before the first frame update
