@@ -58,7 +58,7 @@ public class CenterPerson : MonoBehaviour {
         spriteRenderer.color = SpriteManager.current.GetSpriteColorFromPersonName(person.Name);
     }
 
-    public void SetCenterPerson(Person person) {
+    public void SetPerson(Person person) {
         if ( person == this.person ) {
             return;
         }
@@ -137,7 +137,15 @@ public class CenterPerson : MonoBehaviour {
     }
 
     void ResetCenterPersonToSoledad() {
-        SetCenterPerson(GameController.current.Soledad);
+        SetPerson(GameController.current.Soledad);
+    }
+
+    private void OnDestroy() {
+        GameEvents.current.onMouseClicked -= HandleMouseClicked;
+        GameEvents.current.onTutorial1 -= ShowRelationships;
+        GameEvents.current.onNameTokenFound -= ResetCenterPersonToSoledad;
+        GameEvents.current.onTutorialEnd -= ResetCenterPersonToSoledad;
+        GameEvents.current.onResetEverything -= Clear;
     }
 
 }

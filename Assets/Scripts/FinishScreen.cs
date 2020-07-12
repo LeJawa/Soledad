@@ -16,7 +16,7 @@ public class FinishScreen : MonoBehaviour {
 
     void GenerateEndText() {
         string s = "";
-        if ( RoundController.current.PersonsLeftToFind == 0 ) {
+        if ( RoundController.Instance.PersonsLeftToFind == 0 ) {
             s = "Congratulations!\nYou have remembered everyone.";
         }
         else {

@@ -5,6 +5,6 @@ using UnityEngine;
 public class TryAgainButton : MonoBehaviour {
 
     public void HandleTryAgainButtonClicked() {
-        RoundController.current.HandleTryAgain();
+        RoundController.Instance.HandleTryAgain();
     }
 }

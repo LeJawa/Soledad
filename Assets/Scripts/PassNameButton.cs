@@ -6,6 +6,6 @@ public class PassNameButton : MonoBehaviour {
 
 
     public void HandlePassNameButtonClicked() {
-        RoundController.current.HandlePassTokenName();
+        RoundController.Instance.HandlePassTokenName();
     }
 }

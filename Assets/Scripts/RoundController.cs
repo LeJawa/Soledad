@@ -7,7 +7,24 @@ using UnityEngine.UI;
 
 public class RoundController : MonoBehaviour {
 
-    public static RoundController current;
+
+    #region SINGLETON PATTERN
+    static RoundController current;
+    public static RoundController Instance {
+        get {
+            if ( current == null ) {
+                current = GameObject.FindObjectOfType<RoundController>();
+
+                if ( current == null ) {
+                    GameObject container = new GameObject("RoundController");
+                    current = container.AddComponent<RoundController>();
+                }
+            }
+
+            return current;
+        }
+    }
+    #endregion
 
     float roundDurationTimeInSeconds = 5;
     float secondsToRemoveAfterPerfectRound = 10f;
@@ -20,6 +37,9 @@ public class RoundController : MonoBehaviour {
 
     [SerializeField]
     Text gameTimerText;
+
+    [SerializeField]
+    GameObject prefabCenterPerson;
 
     bool playing = true;
 
@@ -40,16 +60,6 @@ public class RoundController : MonoBehaviour {
 
     public int PersonsLeftToFind { get => arrayOfNameTokens.Length - currentNameTokenIndex; }
 
-    private void Awake() {
-
-        if ( current != null ) {
-            Destroy(gameObject);
-        }
-        else {
-            current = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
 
     // Start is called before the first frame update
     void Start() {
@@ -69,9 +79,16 @@ public class RoundController : MonoBehaviour {
     }
 
     void RestartRound() {
-        Time.timeScale = 1;
+
+        if ( GameObject.FindGameObjectsWithTag("CenterPerson").Length == 0 ) {
+            Instantiate(prefabCenterPerson);
+        }
+
         ClearTokens();
         StartStartTimer();
+
+
+        Time.timeScale = 1;
     }
 
     private static void ClearTokens() {
