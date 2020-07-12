@@ -26,8 +26,9 @@ public class RoundController : MonoBehaviour {
     }
     #endregion
 
-    float roundDurationTimeInSeconds = 30;
-    float secondsToRemoveAfterPerfectRound = 10f;
+    float InitialRoundDurationInSeconds = 30;
+    float roundDurationTimeInSeconds;
+    float secondsToRemoveAfterPerfectRound = 5f;
     float secondsBeforeStartOfGame = 1f;
 
     float chanceToLoseOneRelationship = 0.5f;
@@ -40,6 +41,9 @@ public class RoundController : MonoBehaviour {
 
     [SerializeField]
     GameObject prefabCenterPerson;
+
+    [SerializeField]
+    GameObject PassNameButton;
 
     bool playing = true;
 
@@ -61,7 +65,7 @@ public class RoundController : MonoBehaviour {
     GameObject prefabFinishScreen;
 
     public int PersonsLeftToFind { get => arrayOfNameTokens.Length - currentNameTokenIndex + numberOfNamesPassed; }
-
+    public bool Playing { get => playing; }
 
     // Start is called before the first frame update
     void Start() {
@@ -69,6 +73,7 @@ public class RoundController : MonoBehaviour {
         startTimer.Duration = secondsBeforeStartOfGame;
         startTimer.onTimerFinished += StartRound;
 
+        roundDurationTimeInSeconds = InitialRoundDurationInSeconds;
         roundTimer = gameObject.AddComponent<Timer>();
         roundTimer.Duration = roundDurationTimeInSeconds;
         roundTimer.onTimerFinished += EndRound;
@@ -91,7 +96,6 @@ public class RoundController : MonoBehaviour {
         StartStartTimer();
 
         GameController.current.SetSoledadAsCenterPerson();
-
 
         Time.timeScale = 1;
     }
@@ -134,20 +138,25 @@ public class RoundController : MonoBehaviour {
         playing = true;
         roundTimer.Run();
         SpawnNewName();
+
+        PassNameButton.SetActive(true);
     }
 
     void EndRound() {
         playing = false;
         Time.timeScale = 0;
 
-        Instantiate(prefabFinishScreen);
+        PassNameButton.SetActive(false);
 
         if ( PersonsLeftToFind == 0 ) {
             HandlePerfectRound();
         }
         else {
             HandleRoundWithPersonsLeft();
+            roundDurationTimeInSeconds = InitialRoundDurationInSeconds;
         }
+
+        Instantiate(prefabFinishScreen);
     }
 
     void HandlePerfectRound() {
@@ -250,7 +259,6 @@ public class RoundController : MonoBehaviour {
 
     public void HandlePassTokenName() {
         numberOfNamesPassed++;
-        currentNameTokenIndex++;
         SpawnNewName();
     }
 

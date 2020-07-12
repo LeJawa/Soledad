@@ -153,6 +153,7 @@ MonoBehaviour:
   gameTimerText: {fileID: 1769899546}
   prefabCenterPerson: {fileID: 7167814755011300956, guid: de9d2adb3484be341b4b42294ade4791,
     type: 3}
+  PassNameButton: {fileID: 1743538179}
   prefabNameToken: {fileID: 1570652947011272747, guid: 16dc84442d3c97d45ae44a4c4e919227,
     type: 3}
   prefabFinishScreen: {fileID: 4564221064048789969, guid: fe5dcf2ac962e3646a42a139cdec70b9,
@@ -861,7 +862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1743538180
 RectTransform:
   m_ObjectHideFlags: 0

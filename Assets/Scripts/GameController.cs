@@ -41,7 +41,6 @@ public class GameController : MonoBehaviour {
 
     public CenterPerson centerPersonObject;
 
-
     public Person Soledad { get => soledad; }
 
     private void Awake() {
@@ -58,6 +57,7 @@ public class GameController : MonoBehaviour {
     private void Start() {
 
         DontDestroyOnLoad(Instantiate(prefabCursor));
+
     }
 
     private void InitializePersons() {
