@@ -219,7 +219,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Jorge, Javier and Pilar, from Francisco and Mar\xEDa\n"
+  m_Text: 'David, Jaime y Ana, de Jorge y Concha
+
+'
 --- !u!1 &136070089
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,12 +345,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You can try now to navigate through the family relationships.
-
-    When
-    you are ready to remember,
-
-    press Start.'
+  m_Text: "Puedes probar a moverte a trav\xE9s del \xE1rbol familiar.\nCuando est\xE9s
+    lista para recordar,\ndale a Empezar."
 --- !u!222 &155055291
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -407,8 +405,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The objective is to remember all the members of your family within the
-    time limit.
+  m_Text: El objetivo es recordar a todos los miembros de la familia, en el tiempo
+    asignado.
 --- !u!222 &458382957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -534,7 +532,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "And the respective three daughters-in-law: Almudena, Mar\xEDa and Ana."
+  m_Text: 'Tienes las respectivas tres nueras: Socorro, Concha and Margarita.'
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +685,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The names to remember will appear at the bottom left of the screen.
+  m_Text: "El siguiente nombre que recordar aparecer\xE1 en la esquina de abajo a
+    la izquierda."
 --- !u!222 &526647708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -754,7 +753,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 76b01c5577d0a0e42809c258e1512f2d, type: 3}
-    m_FontSize: 22
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -765,7 +764,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pass Name
+  m_Text: Pasar Nombre
 --- !u!222 &591394299
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -872,9 +871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You have three sons, Alberto, Francisco and David.
-
-'
+  m_Text: "Con qui\xE9n tuviste tres hijos, Luis-Francisco, Jorge and Javier.\n"
 --- !u!1 &868438118
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: And, Luis and Javi from David and Ana.
+  m_Text: y Luis y Alberto, de Javier y Margarita.
 --- !u!114 &1043486367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,7 +1326,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: and you remember them by clicking on their name.
+  m_Text: ... y recordarlos al seleccionar su nombre.
 --- !u!222 &1451699262
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1544,7 +1541,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You are Soledad
+  m_Text: Eres Soledad
 --- !u!222 &1536603319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1670,7 +1667,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You also have seven grand-children:'
+  m_Text: "Tambi\xE9n tienes siete nietos:"
 --- !u!1 &1637997702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,7 +1719,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You had a sister, Concha, and a husband, Carlos.
+  m_Text: Estuviste casada con Luis.
 --- !u!222 &1637997704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2012,7 +2009,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Socorro and Luis-Francisco, from Alberto and Almudena
+  m_Text: Almudena y Javi, de Luis-Francisco y Socorro
 --- !u!1 &1769899544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,7 +2188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: And you have Alzheimer disease.
+  m_Text: Y tienes Alzheimer.
 --- !u!222 &1882246764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2289,7 +2286,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Right now you remember your mother Margarita and your father Jaime.
+  m_Text: "Ahora mismo, te acuerdas de tu madre, Mar\xEDa, y de tu padre, Francisco."
 --- !u!222 &1891906892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2520,7 +2517,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 76b01c5577d0a0e42809c258e1512f2d, type: 3}
-    m_FontSize: 22
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2531,7 +2528,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Empezar
 --- !u!222 &2068863383
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2590,7 +2587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You access each name by clicking on their family relationship...
+  m_Text: "Puedes acceder a cada nombre seleccion\xE1ndo su parentesco..."
 --- !u!222 &2091099199
 CanvasRenderer:
   m_ObjectHideFlags: 0

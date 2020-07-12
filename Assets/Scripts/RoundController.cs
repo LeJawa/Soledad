@@ -26,7 +26,7 @@ public class RoundController : MonoBehaviour {
     }
     #endregion
 
-    float InitialRoundDurationInSeconds = 90;
+    float InitialRoundDurationInSeconds = 50;
     float MinRoundDurationInSeconds = 20;
     float MaxRoundDurationInSeconds = 90;
     float roundDurationTimeInSeconds;
@@ -36,7 +36,7 @@ public class RoundController : MonoBehaviour {
     float chanceThatSoledadForgetsDirectRelationship = 0.2f;
     float RelationshipsLostToPersonsLeftFactor = 2;
     float RelationshipsLostToRelationshipsLeftFactor = 50f;
-    float RelationshipsLostToSecondsLostFactor = 3f;
+    float RelationshipsLostToSecondsLostFactor = 5f;
 
     bool forgetReciprocalRelationships = false;
 
@@ -205,7 +205,12 @@ public class RoundController : MonoBehaviour {
 
     void HandlePerfectRound() {
         if ( roundDurationTimeInSeconds > MinRoundDurationInSeconds ) {
-            roundDurationTimeInSeconds -= roundTimer.SecondsLeft;
+            if ( roundTimer.SecondsLeft < secondsToRemoveAfterPerfectRound ) {
+                roundDurationTimeInSeconds -= secondsToRemoveAfterPerfectRound;
+            }
+            else {
+                roundDurationTimeInSeconds -= roundTimer.SecondsLeft;
+            }
             roundTimer.Stop();
             roundTimer.Duration = roundDurationTimeInSeconds;
         }

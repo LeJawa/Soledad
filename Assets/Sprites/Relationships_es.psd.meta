@@ -1,115 +1,115 @@
 fileFormatVersion: 2
-guid: f2f94597cf5628a42a960948ec6592c7
+guid: 505c069fb8430b940b934f8eb10bb8ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2979422620246979989
-    second: soledad
+      213: -2240753378501762885
+    second: husband
   - first:
-      213: 6651274491117759369
-    second: javier
+      213: 6502650176569398639
+    second: wife
   - first:
-      213: -2664253569044257319
-    second: jorge
+      213: 1645775774237017836
+    second: mother
   - first:
-      213: -3812102224346897094
-    second: luisfrancisco
+      213: 7882249541294487817
+    second: father
   - first:
-      213: -5496367215037967954
-    second: socorro
+      213: 9047420748348682908
+    second: son
   - first:
-      213: 3151160066122310486
-    second: margarita
+      213: -7933905904133372799
+    second: daughter
   - first:
-      213: -3912498747124366175
-    second: concha
+      213: -7008369870783628580
+    second: brother
   - first:
-      213: 2010410865543553252
-    second: almudena
+      213: -652810886642560130
+    second: sister
   - first:
-      213: -2060131739815400545
-    second: javi
+      213: 1061255780940200286
+    second: grandmother
   - first:
-      213: -1544234526235410256
-    second: david
+      213: 3747921422869831398
+    second: grandfather
   - first:
-      213: -913758379357129194
-    second: jaime
+      213: 659562665986140031
+    second: grandchild_m
   - first:
-      213: 4406095387906127276
-    second: ana
+      213: -4223750044445689000
+    second: uncle
   - first:
-      213: 8963737302870824329
-    second: carlos
+      213: -8572670363956929689
+    second: aunt
   - first:
-      213: 144494663824721170
-    second: alberto
+      213: 2672363764463131882
+    second: cousin_m
   - first:
-      213: 3499734926984405456
-    second: luis
+      213: 73009507024671440
+    second: niece
   - first:
-      213: -7726289830314682251
-    second: francisco
+      213: -7370709069703481042
+    second: nephew
   - first:
-      213: -516666541630234181
-    second: pilar
+      213: -3165885447688151162
+    second: friend
   - first:
-      213: -4508615179429641715
-    second: maria
+      213: -8730136642078062515
+    second: motheril
   - first:
-      213: -3537111890340417712
+      213: -129593383507102699
+    second: fatheril
+  - first:
+      213: 3380102316271101984
+    second: sonil
+  - first:
+      213: 499305084238615419
+    second: daughteril
+  - first:
+      213: 3451189061022933972
+    second: brotheril
+  - first:
+      213: -5081350935672783476
+    second: sisteril
+  - first:
+      213: -2405010453915025109
     second: empty
   - first:
-      213: -7388621475202762202
-    second: luisnieto
+      213: -8545762280715727040
+    second: grandchild_f
   - first:
-      213: 4464801562234768900
-    second: Persons_20
+      213: -8094111064995455324
+    second: Relationships_es_25
   - first:
-      213: 8386513804703199615
-    second: Persons_21
+      213: -1137823470649759742
+    second: Relationships_es_26
   - first:
-      213: 2392380890927047134
-    second: Persons_22
+      213: 5348903832863848558
+    second: Relationships_es_27
   - first:
-      213: -1681963287209402487
-    second: Persons_23
+      213: 2007613779115804118
+    second: Relationships_es_28
   - first:
-      213: -5002343191757026407
-    second: Persons_24
+      213: -4226627945069437706
+    second: Relationships_es_29
   - first:
-      213: 6561166048716094780
-    second: Persons_25
+      213: -4752685271594973647
+    second: cousin_f
   - first:
-      213: 4322779006258089581
-    second: Persons_26
+      213: -2108009564979207095
+    second: Relationships_es_31
   - first:
-      213: 7277885507467173308
-    second: Persons_27
+      213: 2979857227074227063
+    second: Relationships_es_32
   - first:
-      213: -2308534922537917679
-    second: Persons_28
+      213: 1118955243622160743
+    second: Relationships_es_33
   - first:
-      213: 1724734946594901226
-    second: Persons_29
+      213: -7675662058573285028
+    second: Relationships_es_34
   - first:
-      213: 7509106657099884469
-    second: Persons_30
-  - first:
-      213: 4431888971456123001
-    second: Persons_31
-  - first:
-      213: -7811547252778386343
-    second: Persons_32
-  - first:
-      213: 6655015069928151642
-    second: Persons_33
-  - first:
-      213: 3863668215156047769
-    second: Persons_34
-  - first:
-      213: -5525954360396450897
-    second: Persons_35
+      213: 1889475527218414645
+    second: Relationships_es_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -231,7 +231,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soledad
+      name: husband
       rect:
         serializedVersion: 2
         x: 0
@@ -239,20 +239,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6a4a6c99e6f6a6d0800000000000000
-      internalID: -2979422620246979989
+      spriteID: bb0652d9cae37e0e0800000000000000
+      internalID: -2240753378501762885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: javier
+      name: wife
       rect:
         serializedVersion: 2
         x: 128
@@ -260,20 +260,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98be0b2e8e21e4c50800000000000000
-      internalID: 6651274491117759369
+      spriteID: f65dc0112ed0e3a50800000000000000
+      internalID: 6502650176569398639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jorge
+      name: mother
       rect:
         serializedVersion: 2
         x: 256
@@ -281,20 +281,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d5ec89ae7ba60bd0800000000000000
-      internalID: -2664253569044257319
+      spriteID: ce64753d858f6d610800000000000000
+      internalID: 1645775774237017836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: luisfrancisco
+      name: father
       rect:
         serializedVersion: 2
         x: 384
@@ -302,20 +302,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a35a35e6931b81bc0800000000000000
-      internalID: -3812102224346897094
+      spriteID: 909f7d32230636d60800000000000000
+      internalID: 7882249541294487817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: socorro
+      name: son
       rect:
         serializedVersion: 2
         x: 512
@@ -323,20 +323,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea11f80932bf8b3b0800000000000000
-      internalID: -5496367215037967954
+      spriteID: c9272de3c35ee8d70800000000000000
+      internalID: 9047420748348682908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: margarita
+      name: daughter
       rect:
         serializedVersion: 2
         x: 640
@@ -344,20 +344,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 653ed93726b2bbb20800000000000000
-      internalID: 3151160066122310486
+      spriteID: 18481c6ad9a15e190800000000000000
+      internalID: -7933905904133372799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: concha
+      name: brother
       rect:
         serializedVersion: 2
         x: 0
@@ -365,20 +365,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a4cd796e1304b9c0800000000000000
-      internalID: -3912498747124366175
+      spriteID: cda34650cb44dbe90800000000000000
+      internalID: -7008369870783628580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: almudena
+      name: sister
       rect:
         serializedVersion: 2
         x: 128
@@ -386,20 +386,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e02f45d70a66eb10800000000000000
-      internalID: 2010410865543553252
+      spriteID: e73992415ffb0f6f0800000000000000
+      internalID: -652810886642560130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: javi
+      name: grandmother
       rect:
         serializedVersion: 2
         x: 256
@@ -407,20 +407,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9babc10911f863e0800000000000000
-      internalID: -2060131739815400545
+      spriteID: e5935ce82865abe00800000000000000
+      internalID: 1061255780940200286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: david
+      name: grandfather
       rect:
         serializedVersion: 2
         x: 384
@@ -428,20 +428,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b048dd41e6c19ae0800000000000000
-      internalID: -1544234526235410256
+      spriteID: 6ee9b304daa430430800000000000000
+      internalID: 3747921422869831398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jaime
+      name: grandchild_m
       rect:
         serializedVersion: 2
         x: 512
@@ -449,20 +449,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 616b1e3689da153f0800000000000000
-      internalID: -913758379357129194
+      spriteID: f77a63d00cc372900800000000000000
+      internalID: 659562665986140031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ana
+      name: uncle
       rect:
         serializedVersion: 2
         x: 640
@@ -470,20 +470,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca5b1aa2968952d30800000000000000
-      internalID: 4406095387906127276
+      spriteID: 85b36c486b93265c0800000000000000
+      internalID: -4223750044445689000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: carlos
+      name: aunt
       rect:
         serializedVersion: 2
         x: 0
@@ -491,20 +491,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9859885c597956c70800000000000000
-      internalID: 8963737302870824329
+      spriteID: 76b14d359b1c70980800000000000000
+      internalID: -8572670363956929689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: alberto
+      name: cousin_m
       rect:
         serializedVersion: 2
         x: 128
@@ -512,20 +512,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21546359129510200800000000000000
-      internalID: 144494663824721170
+      spriteID: aec537b5fa4261520800000000000000
+      internalID: 2672363764463131882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: luis
+      name: niece
       rect:
         serializedVersion: 2
         x: 256
@@ -533,20 +533,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d1eeeaaf5e819030800000000000000
-      internalID: 3499734926984405456
+      spriteID: 0d29e6382c1630100800000000000000
+      internalID: 73009507024671440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: francisco
+      name: nephew
       rect:
         serializedVersion: 2
         x: 384
@@ -554,20 +554,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5785160c554b6c490800000000000000
-      internalID: -7726289830314682251
+      spriteID: e29f29d172bf5b990800000000000000
+      internalID: -7370709069703481042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pilar
+      name: friend
       rect:
         serializedVersion: 2
         x: 512
@@ -575,20 +575,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb1ecce848e64d8f0800000000000000
-      internalID: -516666541630234181
+      spriteID: 68f18fa75f38014d0800000000000000
+      internalID: -3165885447688151162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: maria
+      name: motheril
       rect:
         serializedVersion: 2
         x: 640
@@ -596,14 +596,119 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d028929c16e2e61c0800000000000000
-      internalID: -4508615179429641715
+      spriteID: d48c0507af258d680800000000000000
+      internalID: -8730136642078062515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fatheril
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51471da1187933ef0800000000000000
+      internalID: -129593383507102699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sonil
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02860d9e52988ee20800000000000000
+      internalID: 3380102316271101984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: daughteril
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73d6942453ede600800000000000000
+      internalID: 499305084238615419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brotheril
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d36cf27a2615ef20800000000000000
+      internalID: 3451189061022933972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisteril
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 257
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8dff140f3a6b79b0800000000000000
+      internalID: -5081350935672783476
       vertices: []
       indices: 
       edges: []
@@ -612,130 +717,25 @@ TextureImporter:
       name: empty
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05fe275e977a9eec0800000000000000
-      internalID: -3537111890340417712
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: luisnieto
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62a77b63ae7567990800000000000000
-      internalID: -7388621475202762202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Persons_20
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40ecc958d5926fd30800000000000000
-      internalID: 4464801562234768900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Persons_21
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f717e392fd1e26470800000000000000
-      internalID: 8386513804703199615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Persons_22
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed1a323beb1733120800000000000000
-      internalID: 2392380890927047134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Persons_23
-      rect:
-        serializedVersion: 2
         x: 640
         y: 256
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98f92ac3d4778a8e0800000000000000
-      internalID: -1681963287209402487
+      spriteID: b214b450cbfaf9ed0800000000000000
+      internalID: -2405010453915025109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_24
+      name: grandchild_f
       rect:
         serializedVersion: 2
         x: 0
@@ -743,20 +743,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99b8ab2ee5b149ab0800000000000000
-      internalID: -5002343191757026407
+      spriteID: 04fc10bab7a576980800000000000000
+      internalID: -8545762280715727040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_25
+      name: Relationships_es_25
       rect:
         serializedVersion: 2
         x: 128
@@ -764,20 +764,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3d731e32c1fd0b50800000000000000
-      internalID: 6561166048716094780
+      spriteID: 4ae136eeed0fbaf80800000000000000
+      internalID: -8094111064995455324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_26
+      name: Relationships_es_26
       rect:
         serializedVersion: 2
         x: 256
@@ -785,20 +785,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6e87866a989dfb30800000000000000
-      internalID: 4322779006258089581
+      spriteID: 208a1d6f493a530f0800000000000000
+      internalID: -1137823470649759742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_27
+      name: Relationships_es_27
       rect:
         serializedVersion: 2
         x: 384
@@ -806,20 +806,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbd5b842f4e300560800000000000000
-      internalID: 7277885507467173308
+      spriteID: e68339f32bf1b3a40800000000000000
+      internalID: 5348903832863848558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_28
+      name: Relationships_es_28
       rect:
         serializedVersion: 2
         x: 512
@@ -827,20 +827,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1132b8618bf66ffd0800000000000000
-      internalID: -2308534922537917679
+      spriteID: 6d58066681a7cdb10800000000000000
+      internalID: 2007613779115804118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_29
+      name: Relationships_es_29
       rect:
         serializedVersion: 2
         x: 640
@@ -848,20 +848,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeccd7fbb4d7fe710800000000000000
-      internalID: 1724734946594901226
+      spriteID: 6fc956017400855c0800000000000000
+      internalID: -4226627945069437706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_30
+      name: cousin_f
       rect:
         serializedVersion: 2
         x: 0
@@ -869,20 +869,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b7a5fc38b4b53860800000000000000
-      internalID: 7509106657099884469
+      spriteID: 136c9512de11b0eb0800000000000000
+      internalID: -4752685271594973647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_31
+      name: Relationships_es_31
       rect:
         serializedVersion: 2
         x: 128
@@ -890,20 +890,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9701d93d98b318d30800000000000000
-      internalID: 4431888971456123001
+      spriteID: 944e9482878deb2e0800000000000000
+      internalID: -2108009564979207095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_32
+      name: Relationships_es_32
       rect:
         serializedVersion: 2
         x: 256
@@ -911,20 +911,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95c37f3392fc79390800000000000000
-      internalID: -7811547252778386343
+      spriteID: 77bc32d2c549a5920800000000000000
+      internalID: 2979857227074227063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_33
+      name: Relationships_es_33
       rect:
         serializedVersion: 2
         x: 384
@@ -932,20 +932,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5a50f142fc5b5c50800000000000000
-      internalID: 6655015069928151642
+      spriteID: 769d8a79dd3578f00800000000000000
+      internalID: 1118955243622160743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_34
+      name: Relationships_es_34
       rect:
         serializedVersion: 2
         x: 512
@@ -953,20 +953,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99ff75665c18e9530800000000000000
-      internalID: 3863668215156047769
+      spriteID: c59bbce66029a7590800000000000000
+      internalID: -7675662058573285028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Persons_35
+      name: Relationships_es_35
       rect:
         serializedVersion: 2
         x: 640
@@ -974,14 +974,14 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa37c8779cddf43b0800000000000000
-      internalID: -5525954360396450897
+      spriteID: 534c5ab2bf3c83a10800000000000000
+      internalID: 1889475527218414645
       vertices: []
       indices: 
       edges: []

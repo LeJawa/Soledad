@@ -11,11 +11,10 @@
     david,
     jaime,
     ana,
-    carlos,
+    luisNieto,
     alberto,
     luis,
     francisco,
-    pilar,
     maria
 
 

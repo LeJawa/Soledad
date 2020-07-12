@@ -561,6 +561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 5063113451281884467, guid: 58a2e2dc6605025458f82737f10f8e7f,
+        type: 3}
+      propertyPath: m_Text
+      value: Nuevo Juego
+      objectReference: {fileID: 0}
     - target: {fileID: 8925183891963345284, guid: 58a2e2dc6605025458f82737f10f8e7f,
         type: 3}
       propertyPath: m_AnchorMin.y

@@ -70,8 +70,11 @@ public class SpriteManager : MonoBehaviour {
             case Relationship.Grandfather:
                 relationshipString = "grandfather";
                 break;
-            case Relationship.Grandchild:
-                relationshipString = "grandchild";
+            case Relationship.Grandchild_m:
+                relationshipString = "grandchild_m";
+                break;
+            case Relationship.Grandchild_f:
+                relationshipString = "grandchild_f";
                 break;
             case Relationship.Uncle:
                 relationshipString = "uncle";
@@ -79,8 +82,11 @@ public class SpriteManager : MonoBehaviour {
             case Relationship.Aunt:
                 relationshipString = "aunt";
                 break;
-            case Relationship.Cousin:
-                relationshipString = "cousin";
+            case Relationship.Cousin_m:
+                relationshipString = "cousin_m";
+                break;
+            case Relationship.Cousin_f:
+                relationshipString = "cousin_f";
                 break;
             case Relationship.Niece:
                 relationshipString = "niece";
@@ -161,8 +167,8 @@ public class SpriteManager : MonoBehaviour {
             case PersonName.ana:
                 personString = "ana";
                 break;
-            case PersonName.carlos:
-                personString = "carlos";
+            case PersonName.luisNieto:
+                personString = "luisnieto";
                 break;
             case PersonName.alberto:
                 personString = "alberto";
@@ -172,9 +178,6 @@ public class SpriteManager : MonoBehaviour {
                 break;
             case PersonName.francisco:
                 personString = "francisco";
-                break;
-            case PersonName.pilar:
-                personString = "pilar";
                 break;
             case PersonName.maria:
                 personString = "maria";

@@ -14,10 +14,12 @@ public enum Relationship {
     Sister,
     Grandmother,
     Grandfather,
-    Grandchild,
+    Grandchild_m,
+    Grandchild_f,
     Uncle,
     Aunt,
-    Cousin,
+    Cousin_m,
+    Cousin_f,
     Niece,
     Nephew,
     FatherInLaw,
@@ -106,10 +108,33 @@ public static class RelationshipExtensions {
                         return Relationship.Unknown;
                 }
             case Relationship.Grandmother:
-                return Relationship.Grandchild;
+                switch ( me.Sex ) {
+                    case Sex.Female:
+                        return Relationship.Grandchild_f;
+                    case Sex.Male:
+                        return Relationship.Grandchild_m;
+                    default:
+                        return Relationship.Unknown;
+                }
             case Relationship.Grandfather:
-                return Relationship.Grandchild;
-            case Relationship.Grandchild:
+                switch ( me.Sex ) {
+                    case Sex.Female:
+                        return Relationship.Grandchild_f;
+                    case Sex.Male:
+                        return Relationship.Grandchild_m;
+                    default:
+                        return Relationship.Unknown;
+                }
+            case Relationship.Grandchild_m:
+                switch ( me.Sex ) {
+                    case Sex.Female:
+                        return Relationship.Grandmother;
+                    case Sex.Male:
+                        return Relationship.Grandfather;
+                    default:
+                        return Relationship.Unknown;
+                }
+            case Relationship.Grandchild_f:
                 switch ( me.Sex ) {
                     case Sex.Female:
                         return Relationship.Grandmother;
@@ -136,8 +161,24 @@ public static class RelationshipExtensions {
                     default:
                         return Relationship.Unknown;
                 }
-            case Relationship.Cousin:
-                return Relationship.Cousin;
+            case Relationship.Cousin_m:
+                switch ( me.Sex ) {
+                    case Sex.Female:
+                        return Relationship.Cousin_f;
+                    case Sex.Male:
+                        return Relationship.Cousin_m;
+                    default:
+                        return Relationship.Unknown;
+                }
+            case Relationship.Cousin_f:
+                switch ( me.Sex ) {
+                    case Sex.Female:
+                        return Relationship.Cousin_f;
+                    case Sex.Male:
+                        return Relationship.Cousin_m;
+                    default:
+                        return Relationship.Unknown;
+                }
             case Relationship.Niece:
                 switch ( me.Sex ) {
                     case Sex.Female:
