@@ -26,7 +26,7 @@ public class RoundController : MonoBehaviour {
     }
     #endregion
 
-    float InitialRoundDurationInSeconds = 30;
+    float InitialRoundDurationInSeconds = 90;
     float MinRoundDurationInSeconds = 20;
     float MaxRoundDurationInSeconds = 90;
     float roundDurationTimeInSeconds;

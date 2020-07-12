@@ -1724,7 +1724,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You had a sister, Pilar, who never married.
+  m_Text: You had a sister, Pilar, and a husband, Luis.
 --- !u!222 &1637997704
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -23,11 +23,12 @@ public class TutorialSpawner : MonoBehaviour {
     public void SpawnNextBatchOfNames() {
         switch ( spawnTurn ) {
             case 0:
-                InstantiateNameTokenAtPosition(PersonName.maria, new Vector3(5, 5, 0));
-                InstantiateNameTokenAtPosition(PersonName.francisco, new Vector3(3, 5, 0));
+                InstantiateNameTokenAtPosition(PersonName.francisco, new Vector3(1, 5, 0));
+                InstantiateNameTokenAtPosition(PersonName.maria, new Vector3(3, 5, 0));
                 break;
             case 1:
-                InstantiateNameTokenAtPosition(PersonName.pilar, new Vector3(7, 5, 0));
+                InstantiateNameTokenAtPosition(PersonName.pilar, new Vector3(5, 5, 0));
+                InstantiateNameTokenAtPosition(PersonName.luis, new Vector3(7, 5, 0));
                 break;
             case 2:
                 InstantiateNameTokenAtPosition(PersonName.luisfrancisco, new Vector3(3, 2.5f, 0));
