@@ -94,9 +94,15 @@ public class StartScreen : MonoBehaviour {
     [SerializeField]
     TutorialSpawner tutorialSpawner;
 
+    bool skipTutorial = true;
+
 
     // Start is called before the first frame update
     void Start() {
+
+        if ( skipTutorial ) {
+            timeTutorialEnd = 1;
+        }
 
         GameEvents.current.onStartButtonClicked += FinishTutorial;
 
@@ -196,6 +202,15 @@ public class StartScreen : MonoBehaviour {
             RoundController.Instance.ActivateStartButton();
         }
         else if (!tutorialEndTriggered && timePassed > timeTutorialEnd) {
+
+            // TO REMOVE!!!
+            // Trigger show relationships
+            if ( skipTutorial ) {
+                Time.timeScale = 1;
+                GameEvents.current.TriggerTutorial1();
+                RoundController.Instance.ActivateStartButton();
+            }
+
 
             FinishTutorial();
 

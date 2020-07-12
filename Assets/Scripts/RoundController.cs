@@ -32,8 +32,9 @@ public class RoundController : MonoBehaviour {
     float secondsToRemoveAfterPerfectRound = 5f;
     float secondsBeforeStartOfGame = 1f;
 
-    float chanceToLoseOneRelationship = 0.5f;
     float chanceThatSoledadForgetsDirectRelationship = 0.2f;
+    float RelationshipsLostToPersonsLeftFactor = 2;
+
     bool forgetReciprocalRelationships = false;
 
     Timer startTimer;
@@ -69,7 +70,7 @@ public class RoundController : MonoBehaviour {
     [SerializeField]
     GameObject prefabFinishScreen;
 
-    public int PersonsLeftToFind { get => arrayOfNameTokens.Length - currentNameTokenIndex + numberOfNamesPassed; }
+    public int PersonsLeftToFind { get => arrayOfNameTokens.Length - currentNameTokenIndex + 1 + numberOfNamesPassed; }
     public bool Playing { get => playing; }
 
     // Start is called before the first frame update
@@ -189,41 +190,33 @@ public class RoundController : MonoBehaviour {
     void HandleRoundWithPersonsLeft() {
         System.Random rng = new System.Random();
         int index;
-        for ( int i = 0; i < PersonsLeftToFind; i++ ) {
-            bool relationshipLost = false;
-            Person currentPerson = GameController.current.Soledad;
-            while ( !relationshipLost ) {
-                if ( currentPerson.Relationships.Count == 0 ) {
-                    if ( currentPerson == GameController.current.Soledad ) {
-                        EndGame();
-                        return;
-                    }
-                    else {
-                        index = rng.Next(arrayOfNameTokens.Length);
-                        currentPerson = GameController.current.GetPersonFromName(arrayOfNameTokens[index]);
-                        continue;
-                    }
-                }
+        Person currentPerson;
+        for ( int i = 0; i < PersonsLeftToFind * RelationshipsLostToPersonsLeftFactor; i++ ) {
 
-                index = rng.Next(currentPerson.Relationships.Count);
-                Relationship currentRelationship = Enumerable.ToList(currentPerson.Relationships)[index];
+            currentPerson = GameController.current.Soledad;
 
-                if ( rng.NextDouble() < chanceToLoseOneRelationship ) {
-                    List<Person> personList = currentPerson.GetPersonsFromRelationship(currentRelationship);
-                    index = rng.Next(personList.Count);
-                    currentPerson.RemoveRelationship(currentRelationship, personList[index]);
-                    relationshipLost = true;
-
-                    if ( currentPerson.Relationships.Count == 0 && currentPerson == GameController.current.Soledad ) {
-                        EndGame();
-                        return;
-                    }
-                }
-                else {
+            if ( rng.NextDouble() > chanceThatSoledadForgetsDirectRelationship ) {
+                int tries = 0;
+                do {
                     index = rng.Next(arrayOfNameTokens.Length);
                     currentPerson = GameController.current.GetPersonFromName(arrayOfNameTokens[index]);
+                    tries++;
                 }
+                while ( currentPerson.Relationships.Count == 0 && tries < 20 );
             }
+            if ( currentPerson.Relationships.Count == 0 ) {
+                continue;
+            }
+
+            index = rng.Next(currentPerson.Relationships.Count);
+            Relationship currentRelationship = Enumerable.ToList(currentPerson.Relationships)[index];
+            List<Person> personList = currentPerson.GetPersonsFromRelationship(currentRelationship);
+            index = rng.Next(personList.Count);
+            currentPerson.RemoveRelationship(currentRelationship, personList[index]);
+        }
+
+        if ( GameController.current.Soledad.Relationships.Count == 0 ) {
+            EndGame();
         }
 
 
