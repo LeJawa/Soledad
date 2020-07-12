@@ -21,7 +21,7 @@ public class FinishScreen : MonoBehaviour {
         }
         else {
             s = "Uh oh!\nYour memory is not as fast as it once was, this will probably leave some lasting effects...";
-            s += "\nYou have forgotten " + RoundController.Instance.LastRoundRelationshipsLost + " relationships between your family members.";
+            s += "\n\nYou have forgotten " + RoundController.Instance.LastRoundRelationshipsLost + " relationships between your family members.";
         }
         s += "\n\nYou still remember " + RoundController.Instance.CurrentNumberOfRelationships + " relationships.";
 

@@ -219,9 +219,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'David, Jaime and Ana, from Jorge and Concha
-
-'
+  m_Text: "Jorge, Javier and Pilar, from Francisco and Mar\xEDa\n"
 --- !u!1 &136070089
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'And the respective three daughters-in-law: Socorro, Concha and Margarita.'
+  m_Text: "And the respective three daughters-in-law: Almudena, Mar\xEDa and Ana."
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +872,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You have three sons, Luis-Francisco, Jorge and Javier.
+  m_Text: 'You have three sons, Alberto, Francisco and David.
 
 '
 --- !u!1 &868438118
@@ -997,7 +995,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: And, Carlos and Alberto from Javier and Margarita.
+  m_Text: And, Luis and Javi from David and Ana.
 --- !u!114 &1043486367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,7 +1722,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You had a sister, Pilar, and a husband, Luis.
+  m_Text: You had a sister, Concha, and a husband, Carlos.
 --- !u!222 &1637997704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2014,7 +2012,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Almudena and Javi, from Luis-Francisco and Socorro
+  m_Text: Socorro and Luis-Francisco, from Alberto and Almudena
 --- !u!1 &1769899544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,7 +2289,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Right now you remember your mother Mar\xEDa and your father Francisco."
+  m_Text: Right now you remember your mother Margarita and your father Jaime.
 --- !u!222 &1891906892
 CanvasRenderer:
   m_ObjectHideFlags: 0

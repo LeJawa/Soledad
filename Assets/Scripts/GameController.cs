@@ -61,37 +61,37 @@ public class GameController : MonoBehaviour {
     private void InitializePersons() {
         soledad = new Person(PersonName.soledad, Sex.Female);
 
-        maria = new Person(PersonName.maria, Sex.Female);
+        maria = new Person(PersonName.margarita , Sex.Female);
         soledad.AddRelationship(Relationship.Mother, maria);
-        francisco = new Person(PersonName.francisco, Sex.Male);
+        francisco = new Person(PersonName.jaime, Sex.Male);
         soledad.AddRelationship(Relationship.Father, francisco);
         maria.AddRelationship(Relationship.Husband, francisco);
 
-        pilar = new Person(PersonName.pilar, Sex.Female);
+        pilar = new Person(PersonName.concha, Sex.Female);
         soledad.AddRelationship(Relationship.Sister, pilar);
         pilar.AddRelationship(Relationship.Mother, maria);
         pilar.AddRelationship(Relationship.Father, francisco);
 
-        luisAbuelo = new Person(PersonName.luis, Sex.Male);
+        luisAbuelo = new Person(PersonName.carlos, Sex.Male);
         soledad.AddRelationship(Relationship.Husband, luisAbuelo);
         luisAbuelo.AddRelationship(Relationship.SisterInLaw, pilar);
         luisAbuelo.AddRelationship(Relationship.MotherInLaw, maria);
         luisAbuelo.AddRelationship(Relationship.FatherInLaw, francisco);
 
-        luisfrancisco = new Person(PersonName.luisfrancisco, Sex.Male);
+        luisfrancisco = new Person(PersonName.alberto, Sex.Male);
         soledad.AddRelationship(Relationship.Son, luisfrancisco);
         luisfrancisco.AddRelationship(Relationship.Father, luisAbuelo);
         luisfrancisco.AddRelationship(Relationship.Grandmother, maria);
         luisfrancisco.AddRelationship(Relationship.Grandfather, francisco);
         luisfrancisco.AddRelationship(Relationship.Aunt, pilar);
-        jorge = new Person(PersonName.jorge, Sex.Male);
+        jorge = new Person(PersonName.francisco, Sex.Male);
         soledad.AddRelationship(Relationship.Son, jorge);
         jorge.AddRelationship(Relationship.Father, luisAbuelo);
         jorge.AddRelationship(Relationship.Grandmother, maria);
         jorge.AddRelationship(Relationship.Grandfather, francisco);
         jorge.AddRelationship(Relationship.Aunt, pilar);
         jorge.AddRelationship(Relationship.Brother, luisfrancisco);
-        javier = new Person(PersonName.javier, Sex.Male);
+        javier = new Person(PersonName.david, Sex.Male);
         soledad.AddRelationship(Relationship.Son, javier);
         javier.AddRelationship(Relationship.Father, luisAbuelo);
         javier.AddRelationship(Relationship.Grandmother, maria);
@@ -101,26 +101,26 @@ public class GameController : MonoBehaviour {
         javier.AddRelationship(Relationship.Brother, jorge);
 
 
-        socorro = new Person(PersonName.socorro, Sex.Female);
+        socorro = new Person(PersonName.almudena, Sex.Female);
         soledad.AddRelationship(Relationship.DaughterInLaw, socorro);
         socorro.AddRelationship(Relationship.Husband, luisfrancisco);
         socorro.AddRelationship(Relationship.BrotherInLaw, jorge);
         socorro.AddRelationship(Relationship.BrotherInLaw, javier);
         socorro.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
-        concha = new Person(PersonName.concha, Sex.Female);
+        concha = new Person(PersonName.maria, Sex.Female);
         soledad.AddRelationship(Relationship.DaughterInLaw, concha);
         concha.AddRelationship(Relationship.Husband, jorge);
         concha.AddRelationship(Relationship.BrotherInLaw, luisfrancisco);
         concha.AddRelationship(Relationship.BrotherInLaw, javier);
         concha.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
-        margarita = new Person(PersonName.margarita, Sex.Female);
+        margarita = new Person(PersonName.ana, Sex.Female);
         soledad.AddRelationship(Relationship.DaughterInLaw, margarita);
         margarita.AddRelationship(Relationship.Husband, javier);
         margarita.AddRelationship(Relationship.BrotherInLaw, jorge);
         margarita.AddRelationship(Relationship.BrotherInLaw, luisfrancisco);
         margarita.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
 
-        almudena = new Person(PersonName.almudena, Sex.Female);
+        almudena = new Person(PersonName.socorro, Sex.Female);
         soledad.AddRelationship(Relationship.Grandchild, almudena);
         almudena.AddRelationship(Relationship.Father, luisfrancisco);
         almudena.AddRelationship(Relationship.Mother, socorro);
@@ -129,7 +129,7 @@ public class GameController : MonoBehaviour {
         almudena.AddRelationship(Relationship.Uncle, javier);
         almudena.AddRelationship(Relationship.Aunt, margarita);
         almudena.AddRelationship(Relationship.Grandfather, luisAbuelo);
-        javi = new Person(PersonName.javi, Sex.Male);
+        javi = new Person(PersonName.luisfrancisco, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild, javi);
         javi.AddRelationship(Relationship.Father, luisfrancisco);
         javi.AddRelationship(Relationship.Mother, socorro);
@@ -139,7 +139,7 @@ public class GameController : MonoBehaviour {
         javi.AddRelationship(Relationship.Aunt, margarita);
         javi.AddRelationship(Relationship.Grandfather, luisAbuelo);
         javi.AddRelationship(Relationship.Sister, almudena);
-        david = new Person(PersonName.david, Sex.Male);
+        david = new Person(PersonName.jorge, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild, david);
         david.AddRelationship(Relationship.Father, jorge);
         david.AddRelationship(Relationship.Mother, concha);
@@ -150,7 +150,7 @@ public class GameController : MonoBehaviour {
         david.AddRelationship(Relationship.Grandfather, luisAbuelo);
         david.AddRelationship(Relationship.Cousin, almudena);
         david.AddRelationship(Relationship.Cousin, javi);
-        jaime = new Person(PersonName.jaime, Sex.Male);
+        jaime = new Person(PersonName.javier, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild, jaime);
         jaime.AddRelationship(Relationship.Father, jorge);
         jaime.AddRelationship(Relationship.Mother, concha);
@@ -162,7 +162,7 @@ public class GameController : MonoBehaviour {
         jaime.AddRelationship(Relationship.Cousin, almudena);
         jaime.AddRelationship(Relationship.Cousin, javi);
         jaime.AddRelationship(Relationship.Brother, david);
-        ana = new Person(PersonName.ana, Sex.Female);
+        ana = new Person(PersonName.pilar, Sex.Female);
         soledad.AddRelationship(Relationship.Grandchild, ana);
         ana.AddRelationship(Relationship.Father, jorge);
         ana.AddRelationship(Relationship.Mother, concha);
@@ -175,7 +175,7 @@ public class GameController : MonoBehaviour {
         ana.AddRelationship(Relationship.Cousin, javi);
         ana.AddRelationship(Relationship.Brother, david);
         ana.AddRelationship(Relationship.Brother, jaime);
-        luisNieto = new Person(PersonName.carlos, Sex.Male);
+        luisNieto = new Person(PersonName.luis, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild, luisNieto);
         luisNieto.AddRelationship(Relationship.Father, javier);
         luisNieto.AddRelationship(Relationship.Mother, margarita);
@@ -189,7 +189,7 @@ public class GameController : MonoBehaviour {
         luisNieto.AddRelationship(Relationship.Cousin, david);
         luisNieto.AddRelationship(Relationship.Cousin, jaime);
         luisNieto.AddRelationship(Relationship.Cousin, ana);
-        alberto = new Person(PersonName.alberto, Sex.Male);
+        alberto = new Person(PersonName.javi, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild, alberto);
         alberto.AddRelationship(Relationship.Father, javier);
         alberto.AddRelationship(Relationship.Mother, margarita);
