@@ -31,7 +31,6 @@ public class CenterPerson : MonoBehaviour {
         GameEvents.current.onMouseClicked += HandleMouseClicked;
         GameEvents.current.onTutorial1 += ShowRelationships;
         GameEvents.current.onNameTokenFound += ResetCenterPersonToSoledad;
-        GameEvents.current.onTutorialEnd += ResetCenterPersonToSoledad;
         GameEvents.current.onResetEverything += Clear;
 
         SetCenterSprite();
@@ -144,7 +143,6 @@ public class CenterPerson : MonoBehaviour {
         GameEvents.current.onMouseClicked -= HandleMouseClicked;
         GameEvents.current.onTutorial1 -= ShowRelationships;
         GameEvents.current.onNameTokenFound -= ResetCenterPersonToSoledad;
-        GameEvents.current.onTutorialEnd -= ResetCenterPersonToSoledad;
         GameEvents.current.onResetEverything -= Clear;
     }
 

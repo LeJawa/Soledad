@@ -27,11 +27,14 @@ public class RoundController : MonoBehaviour {
     #endregion
 
     float InitialRoundDurationInSeconds = 30;
+    float MinRoundDurationInSeconds = 20;
     float roundDurationTimeInSeconds;
     float secondsToRemoveAfterPerfectRound = 5f;
     float secondsBeforeStartOfGame = 1f;
 
     float chanceToLoseOneRelationship = 0.5f;
+    float chanceThatSoledadForgetsDirectRelationship = 0.2f;
+    bool forgetReciprocalRelationships = false;
 
     Timer startTimer;
     Timer roundTimer;
@@ -43,7 +46,9 @@ public class RoundController : MonoBehaviour {
     GameObject prefabCenterPerson;
 
     [SerializeField]
-    GameObject PassNameButton;
+    GameObject passNameButton;
+    [SerializeField]
+    GameObject startButton;
 
     bool playing = true;
 
@@ -79,10 +84,16 @@ public class RoundController : MonoBehaviour {
         roundTimer.onTimerFinished += EndRound;
 
         GameEvents.current.onCenterPersonClicked += HandleCenterPersonClicked;
-        GameEvents.current.onTutorialEnd += StartStartTimer;
+        GameEvents.current.onStartButtonClicked += HandleStartButtonClicked;
 
         InitializeArrayOfNameTokens();
         lastTokenPosition = InitialTokenPosition;
+
+        passNameButton.SetActive(false);
+        startButton.SetActive(false);
+
+
+        UpdateGameTimerText();
     }
 
     void RestartRound() {
@@ -98,6 +109,7 @@ public class RoundController : MonoBehaviour {
         GameController.current.SetSoledadAsCenterPerson();
 
         Time.timeScale = 1;
+
     }
 
     private void ClearTokens() {
@@ -135,34 +147,43 @@ public class RoundController : MonoBehaviour {
     }
 
     void StartRound() {
+        GameController.current.SetSoledadAsCenterPerson();
+
         playing = true;
         roundTimer.Run();
         SpawnNewName();
 
-        PassNameButton.SetActive(true);
+        passNameButton.SetActive(true);
+        startButton.SetActive(false);
     }
 
     void EndRound() {
         playing = false;
         Time.timeScale = 0;
 
-        PassNameButton.SetActive(false);
+        passNameButton.SetActive(false);
 
         if ( PersonsLeftToFind == 0 ) {
             HandlePerfectRound();
         }
         else {
             HandleRoundWithPersonsLeft();
-            roundDurationTimeInSeconds = InitialRoundDurationInSeconds;
+            if ( roundDurationTimeInSeconds < InitialRoundDurationInSeconds ) {
+                roundDurationTimeInSeconds += secondsToRemoveAfterPerfectRound;
+                roundTimer.Stop();
+                roundTimer.Duration = roundDurationTimeInSeconds;
+            }
         }
 
         Instantiate(prefabFinishScreen);
     }
 
     void HandlePerfectRound() {
-        roundDurationTimeInSeconds -= secondsToRemoveAfterPerfectRound;
-        roundTimer.Stop();
-        roundTimer.Duration = roundDurationTimeInSeconds;
+        if ( roundDurationTimeInSeconds > MinRoundDurationInSeconds ) {
+            roundDurationTimeInSeconds -= secondsToRemoveAfterPerfectRound;
+            roundTimer.Stop();
+            roundTimer.Duration = roundDurationTimeInSeconds;
+        }
     }
 
     void HandleRoundWithPersonsLeft() {
@@ -254,6 +275,9 @@ public class RoundController : MonoBehaviour {
         else if ( startTimer.Running ) {
             gameTimerText.text = startTimer.SecondsLeft.ToString("0.0") + " ";
         }
+        else {
+            gameTimerText.text = roundDurationTimeInSeconds.ToString("0.0") + " ";
+        }
         
     }
 
@@ -266,11 +290,23 @@ public class RoundController : MonoBehaviour {
         RestartRound();
     }
 
+    public void HandleStartButtonClicked() {
+        StartRound();
+    }
+
+    public void ActivateStartButton() {
+        startButton.SetActive(true);
+    }
+
 
     private void OnDestroy() {
 
         startTimer.onTimerFinished -= StartRound;
         roundTimer.onTimerFinished -= EndRound;
+
+
+        GameEvents.current.onCenterPersonClicked -= HandleCenterPersonClicked;
+        GameEvents.current.onStartButtonClicked -= HandleStartButtonClicked;
     }
 
     
