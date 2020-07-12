@@ -26,14 +26,14 @@ public class RoundController : MonoBehaviour {
     }
     #endregion
 
-    float roundDurationTimeInSeconds = 5;
+    float roundDurationTimeInSeconds = 30;
     float secondsToRemoveAfterPerfectRound = 10f;
-    float secondsBeforeStartOfGame = 5f;
+    float secondsBeforeStartOfGame = 1f;
 
     float chanceToLoseOneRelationship = 0.5f;
 
     Timer startTimer;
-    Timer gameTimer;
+    Timer roundTimer;
 
     [SerializeField]
     Text gameTimerText;
@@ -47,8 +47,10 @@ public class RoundController : MonoBehaviour {
 
     int currentNameTokenIndex = 0;
     PersonName[] arrayOfNameTokens;
+    int numberOfNamesPassed = 0;
 
-    Vector3 lastTokenPosition = new Vector3(-6.5f, -5, 0);
+    Vector3 InitialTokenPosition = new Vector3(-6.5f, -5, 0);
+    Vector3 lastTokenPosition;
     Vector3 tokenOffset = new Vector3(0.5f, 0, 0);
     int sortingOrderOfTokens = 0;
 
@@ -58,24 +60,24 @@ public class RoundController : MonoBehaviour {
     [SerializeField]
     GameObject prefabFinishScreen;
 
-    public int PersonsLeftToFind { get => arrayOfNameTokens.Length - currentNameTokenIndex; }
+    public int PersonsLeftToFind { get => arrayOfNameTokens.Length - currentNameTokenIndex + numberOfNamesPassed; }
 
 
     // Start is called before the first frame update
     void Start() {
         startTimer = gameObject.AddComponent<Timer>();
         startTimer.Duration = secondsBeforeStartOfGame;
-        startTimer.onTimerFinished += StartGame;
+        startTimer.onTimerFinished += StartRound;
 
-        gameTimer = gameObject.AddComponent<Timer>();
-        gameTimer.Duration = roundDurationTimeInSeconds;
-        gameTimer.onTimerFinished += EndGame;
+        roundTimer = gameObject.AddComponent<Timer>();
+        roundTimer.Duration = roundDurationTimeInSeconds;
+        roundTimer.onTimerFinished += EndRound;
 
         GameEvents.current.onCenterPersonClicked += HandleCenterPersonClicked;
         GameEvents.current.onTutorialEnd += StartStartTimer;
 
         InitializeArrayOfNameTokens();
-
+        lastTokenPosition = InitialTokenPosition;
     }
 
     void RestartRound() {
@@ -85,16 +87,22 @@ public class RoundController : MonoBehaviour {
         }
 
         ClearTokens();
+        ShuffleArrayOfNameTokens();
         StartStartTimer();
+
+        GameController.current.SetSoledadAsCenterPerson();
 
 
         Time.timeScale = 1;
     }
 
-    private static void ClearTokens() {
+    private void ClearTokens() {
         foreach ( GameObject gameObject in GameObject.FindGameObjectsWithTag("Token") ) {
             Destroy(gameObject);
         }
+        lastTokenPosition = InitialTokenPosition;
+        currentNameTokenIndex = 0;
+        numberOfNamesPassed = 0;
     }
 
     private void InitializeArrayOfNameTokens() {
@@ -109,6 +117,7 @@ public class RoundController : MonoBehaviour {
             arrayOfNameTokens[i] = listOfPersonTokens[i];
         }
         ShuffleArrayOfNameTokens();
+
     }
 
     private void ShuffleArrayOfNameTokens() {
@@ -121,13 +130,13 @@ public class RoundController : MonoBehaviour {
 
     }
 
-    void StartGame() {
+    void StartRound() {
         playing = true;
-        gameTimer.Run();
+        roundTimer.Run();
         SpawnNewName();
     }
 
-    void EndGame() {
+    void EndRound() {
         playing = false;
         Time.timeScale = 0;
 
@@ -143,26 +152,46 @@ public class RoundController : MonoBehaviour {
 
     void HandlePerfectRound() {
         roundDurationTimeInSeconds -= secondsToRemoveAfterPerfectRound;
-        gameTimer.Stop();
-        gameTimer.Duration = roundDurationTimeInSeconds;
+        roundTimer.Stop();
+        roundTimer.Duration = roundDurationTimeInSeconds;
     }
 
     void HandleRoundWithPersonsLeft() {
+        System.Random rng = new System.Random();
+        int index;
         for ( int i = 0; i < PersonsLeftToFind; i++ ) {
             bool relationshipLost = false;
             Person currentPerson = GameController.current.Soledad;
-            System.Random rng = new System.Random();
             while ( !relationshipLost ) {
-                Relationship currentRelationship = Enumerable.ToList(currentPerson.Relationships)[rng.Next(currentPerson.Relationships.Count)];
+                if ( currentPerson.Relationships.Count == 0 ) {
+                    if ( currentPerson == GameController.current.Soledad ) {
+                        EndGame();
+                        return;
+                    }
+                    else {
+                        index = rng.Next(arrayOfNameTokens.Length);
+                        currentPerson = GameController.current.GetPersonFromName(arrayOfNameTokens[index]);
+                        continue;
+                    }
+                }
+
+                index = rng.Next(currentPerson.Relationships.Count);
+                Relationship currentRelationship = Enumerable.ToList(currentPerson.Relationships)[index];
 
                 if ( rng.NextDouble() < chanceToLoseOneRelationship ) {
                     List<Person> personList = currentPerson.GetPersonsFromRelationship(currentRelationship);
-                    currentPerson.RemoveRelationship(currentRelationship, personList[rng.Next(personList.Count)]);
+                    index = rng.Next(personList.Count);
+                    currentPerson.RemoveRelationship(currentRelationship, personList[index]);
                     relationshipLost = true;
+
+                    if ( currentPerson.Relationships.Count == 0 && currentPerson == GameController.current.Soledad ) {
+                        EndGame();
+                        return;
+                    }
                 }
                 else {
-                    List<Person> personList = currentPerson.GetPersonsFromRelationship(currentRelationship);
-                    currentPerson = personList[rng.Next(personList.Count)];
+                    index = rng.Next(arrayOfNameTokens.Length);
+                    currentPerson = GameController.current.GetPersonFromName(arrayOfNameTokens[index]);
                 }
             }
         }
@@ -178,9 +207,13 @@ public class RoundController : MonoBehaviour {
 
     }
 
+    void EndGame() {
+        Debug.Log("End game");
+    }
+
     void SpawnNewName() {
-        if ( currentNameTokenIndex == arrayOfNameTokens.Length ) {
-            EndGame();
+        if ( currentNameTokenIndex >= arrayOfNameTokens.Length ) {
+            EndRound();
             return;
         }
 
@@ -206,8 +239,8 @@ public class RoundController : MonoBehaviour {
     }
 
     void UpdateGameTimerText() {
-        if ( gameTimer.Running ) {
-            gameTimerText.text = gameTimer.SecondsLeft.ToString("0.0") + " ";
+        if ( roundTimer.Running ) {
+            gameTimerText.text = roundTimer.SecondsLeft.ToString("0.0") + " ";
         }
         else if ( startTimer.Running ) {
             gameTimerText.text = startTimer.SecondsLeft.ToString("0.0") + " ";
@@ -216,18 +249,20 @@ public class RoundController : MonoBehaviour {
     }
 
     public void HandlePassTokenName() {
-        print("Pass name");
+        numberOfNamesPassed++;
+        currentNameTokenIndex++;
+        SpawnNewName();
     }
 
     public void HandleTryAgain() {
-        print("try again");
+        RestartRound();
     }
 
 
     private void OnDestroy() {
 
-        startTimer.onTimerFinished -= StartGame;
-        gameTimer.onTimerFinished -= EndGame;
+        startTimer.onTimerFinished -= StartRound;
+        roundTimer.onTimerFinished -= EndRound;
     }
 
     

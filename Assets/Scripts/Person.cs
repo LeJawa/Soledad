@@ -64,6 +64,10 @@ public class Person {
     public void RemoveRelationship(Relationship relationship, Person person) {
         if ( Relationships.Contains(relationship) ) {
             dictionaryOfRelationships[relationship].Remove(person);
+
+            if ( dictionaryOfRelationships[relationship].Count == 0 ) {
+                dictionaryOfRelationships.Remove(relationship);
+            }
         }
     }
 

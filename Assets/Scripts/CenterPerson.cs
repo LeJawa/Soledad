@@ -21,7 +21,7 @@ public class CenterPerson : MonoBehaviour {
     public PersonName Name { get => person.Name; }
 
     private void Start() {
-        GameController.current.centerPerson = this;
+        GameController.current.SetCenterPersonObject(this);
 
         person = GameController.current.Soledad;
         spriteRenderer = GetComponent<SpriteRenderer>();
