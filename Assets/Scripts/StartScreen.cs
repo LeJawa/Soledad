@@ -7,55 +7,55 @@ public class StartScreen : MonoBehaviour {
 
     float timePassed = 0;
 
-    float timeTutorial0 = 0.5f;
+    float timeTutorial0 = 2f;
     bool tutorial0Triggered = false;
 
-    float timeTutorial1 = 3f;
+    float timeTutorial1 = 4.5f;
     bool tutorial1Triggered = false;
 
-    float timeTutorial2 = 6f;
+    float timeTutorial2 = 7.5f;
     bool tutorial2Triggered = false;
 
-    float timeTutorial3 = 8f;
+    float timeTutorial3 = 9.5f;
     bool tutorial3Triggered = false;
 
-    float timeTutorial4 = 10f;
+    float timeTutorial4 = 11.5f;
     bool tutorial4Triggered = false;
 
-    float timeTutorial5 = 12f;
+    float timeTutorial5 = 13.5f;
     bool tutorial5Triggered = false;
 
-    float timeTutorial6 = 14f;
+    float timeTutorial6 = 15.5f;
     bool tutorial6Triggered = false;
 
-    float timeTutorial7 = 16f;
+    float timeTutorial7 = 17.56f;
     bool tutorial7Triggered = false;
 
-    float timeTutorial8 = 18f;
+    float timeTutorial8 = 19.5f;
     bool tutorial8Triggered = false;
 
-    float timeTutorial9 = 20f;
+    float timeTutorial9 = 21.5f;
     bool tutorial9Triggered = false;
 
-    float pauseAfterTutorial9 = 26f;
+    float pauseAfterTutorial9 = 27.5f;
     bool pauseAfterTutorial9Triggered = false;
 
-    float timeTutorial10 = 27f;
+    float timeTutorial10 = 28.5f;
     bool tutorial10Triggered = false;
 
-    float timeTutorial11 = 30f;
+    float timeTutorial11 = 31.5f;
     bool tutorial11Triggered = false;
 
-    float timeTutorial12 = 33f;
+    float timeTutorial12 = 34.5f;
     bool tutorial12Triggered = false;
 
-    float timeTutorial13 = 36f;
+    float timeTutorial13 = 37.5f;
     bool tutorial13Triggered = false;
 
-    float timeTutorial14 = 39f;
+    float timeTutorial14 = 40.5f;
     bool tutorial14Triggered = false;
 
-    float timeTutorialEnd = 45f;
+    float timeTutorialEnd = 47f;
     bool tutorialEndTriggered = false;
 
     [SerializeField]
@@ -94,7 +94,7 @@ public class StartScreen : MonoBehaviour {
     [SerializeField]
     TutorialSpawner tutorialSpawner;
 
-    bool skipTutorial = false;
+    bool skipTutorial = true;
 
 
     // Start is called before the first frame update
@@ -106,13 +106,13 @@ public class StartScreen : MonoBehaviour {
 
         GameEvents.current.onStartButtonClicked += FinishTutorial;
 
-        Time.timeScale = 0;
     }
 
     // Update is called once per frame
     void Update() {
         timePassed += Time.unscaledDeltaTime;
         if ( !tutorial0Triggered && timePassed > timeTutorial0 ) {
+            Time.timeScale = 0;
             tutorial0.gameObject.SetActive(true);
             tutorial0Triggered = true;
         }

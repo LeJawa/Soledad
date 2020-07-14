@@ -26,19 +26,21 @@ public class RoundController : MonoBehaviour {
     }
     #endregion
 
-    float InitialRoundDurationInSeconds = 50;
+    const float InitialRoundDurationInSeconds = 50;
     float MinRoundDurationInSeconds = 20;
     float MaxRoundDurationInSeconds = 90;
-    float roundDurationTimeInSeconds;
+    float roundDurationTimeInSeconds = InitialRoundDurationInSeconds;
     float secondsToRemoveAfterPerfectRound = 5f;
     float secondsBeforeStartOfGame = 1f;
 
+    // Set but not really used
+    float bestPerfectRoundTime = InitialRoundDurationInSeconds;
+
     float chanceThatSoledadForgetsDirectRelationship = 0.2f;
-    float RelationshipsLostToPersonsLeftFactor = 2;
+    float RelationshipsLostToPersonsLeftFactor = 3f;
+    float AddingRelationshipsLostToPersonsLeftFactorPerRoundPlayed = 0.1f;
     float RelationshipsLostToRelationshipsLeftFactor = 50f;
     float RelationshipsLostToSecondsLostFactor = 5f;
-
-    bool forgetReciprocalRelationships = false;
 
     int totalNumberOfRounds = 0;
 
@@ -92,13 +94,16 @@ public class RoundController : MonoBehaviour {
     public int LastRoundRelationshipsLost { get => lastRoundRelationshipsLost; }
     public int CurrentNumberOfRelationships { get => currentNumberOfRelationships; }
 
+    private void Awake() {
+        GameController.current.InitializeSceneAnimator();
+    }
+
     // Start is called before the first frame update
     void Start() {
         startTimer = gameObject.AddComponent<Timer>();
         startTimer.Duration = secondsBeforeStartOfGame;
         startTimer.onTimerFinished += StartRound;
 
-        roundDurationTimeInSeconds = InitialRoundDurationInSeconds;
         roundTimer = gameObject.AddComponent<Timer>();
         roundTimer.Duration = roundDurationTimeInSeconds;
         roundTimer.onTimerFinished += EndRound;
@@ -204,6 +209,11 @@ public class RoundController : MonoBehaviour {
     }
 
     void HandlePerfectRound() {
+        float roundTime = roundDurationTimeInSeconds - roundTimer.SecondsLeft;
+        if ( roundTime < bestPerfectRoundTime ) {
+            bestPerfectRoundTime = roundTime;
+        }
+
         if ( roundDurationTimeInSeconds > MinRoundDurationInSeconds ) {
             if ( roundTimer.SecondsLeft < secondsToRemoveAfterPerfectRound ) {
                 roundDurationTimeInSeconds -= secondsToRemoveAfterPerfectRound;
@@ -213,6 +223,7 @@ public class RoundController : MonoBehaviour {
             }
             roundTimer.Stop();
             roundTimer.Duration = roundDurationTimeInSeconds;
+
         }
     }
 
@@ -222,8 +233,8 @@ public class RoundController : MonoBehaviour {
         int index;
         Person currentPerson;
 
-        float relationshipsLostThisRound =
-            PersonsLeftToFind * RelationshipsLostToPersonsLeftFactor *
+        float relationshipsLostThisRound = PersonsLeftToFind * 
+            ( RelationshipsLostToPersonsLeftFactor + AddingRelationshipsLostToPersonsLeftFactorPerRoundPlayed * totalNumberOfRounds) *
             currentNumberOfRelationships / RelationshipsLostToRelationshipsLeftFactor;
 
         for ( int i = 0; i < relationshipsLostThisRound; i++ ) {
@@ -271,7 +282,10 @@ public class RoundController : MonoBehaviour {
 
     void EndGame() {
         gameEnded = true;
+        Time.timeScale = 1;
         Instantiate(prefabEndScreen);
+
+        GameController.current.FadeOutMusic();
     }
 
     void SpawnNewName() {

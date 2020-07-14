@@ -16,7 +16,7 @@ public class Dedicatoria : MonoBehaviour {
     }
 
     void HandleTimerEnd() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        GameController.current.LoadMainMenu();
     }
 
     private void OnDestroy() {

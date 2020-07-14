@@ -37,6 +37,11 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     AudioSource musicSource;
 
+    [SerializeField]
+    Animator animationAnim;
+
+    string currentScene = "MainMenu";
+
 
     public Person Soledad { get => soledad; }
 
@@ -199,15 +204,59 @@ public class GameController : MonoBehaviour {
     public void StartNewGame() {
         SetMusicVolume(0.240f);
         InitializePersons();
-        SceneManager.LoadScene("GamePlay");
+        LoadGamePlay();
     }
+
+    void LoadGamePlay() {
+        StartCoroutine(LoadSceneCoroutine("GamePlay"));
+    }
+
+    public void LoadDedicatoria() {
+        StartCoroutine(LoadSceneCoroutine("Dedicatoria"));
+    }
+
+    public void LoadMainMenu() {
+        StartCoroutine(LoadSceneCoroutine("MainMenu"));
+    }
+
+    IEnumerator LoadSceneCoroutine(string scene) {
+        if ( animationAnim == null ) {
+            InitializeSceneAnimator();
+        }
+
+        animationAnim.SetTrigger("end");
+        yield return new WaitForSeconds(1.5f);
+
+        SceneManager.LoadScene(scene);
+        currentScene = scene;
+
+
+        if ( scene == "MainMenu" ) {
+            musicSource.volume = 0.24f;
+            if ( !musicSource.isPlaying ) {
+                musicSource.Play();
+            }
+        }
+    }
+
+    public void InitializeSceneAnimator() {
+        animationAnim = GameObject.FindGameObjectWithTag("IOAnimation").GetComponent<Animator>();
+    }
+
+    public void FadeOutMusic() {
+        StartCoroutine(AudioFadeOut.FadeOut(musicSource, 1.5f));
+    }
+
 
     private void Update() {
 
-        if ( Input.GetMouseButtonDown(0) ) {
-            GameEvents.current.TriggerMouseClicked();
+        if ( (currentScene == "GamePlay" && RoundController.Instance.Playing) || currentScene != "GamePlay" ) {
+            if ( Input.GetMouseButtonDown(0) ) {
+                GameEvents.current.TriggerMouseClicked();
 
+            }
         }
+        
 
     }
 

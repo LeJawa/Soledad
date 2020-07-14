@@ -9,6 +9,7 @@ TagManager:
   - Relationship
   - MainMenu
   - Token
+  - IOAnimation
   layers:
   - Default
   - TransparentFX
