@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour {
     private void InitializePersons() {
         soledad = new Person(PersonName.soledad, Sex.Female);
 
-        maria = new Person(PersonName.maria , Sex.Female);
+        maria = new Person(PersonName.maria, Sex.Female);
         soledad.AddRelationship(Relationship.Mother, maria);
         francisco = new Person(PersonName.francisco, Sex.Male);
         soledad.AddRelationship(Relationship.Father, francisco);
@@ -257,18 +257,15 @@ public class GameController : MonoBehaviour {
     private void Update() {
 
 #if UNITY_EDITOR || UNITY_WEBGL || UNITY_STANDALONE
-        if ( ( currentScene == "GamePlay" && RoundController.Instance.Playing ) || currentScene != "GamePlay" ) {
-            if ( Input.GetMouseButtonDown(0) ) {
-                GameEvents.current.TriggerMouseClicked();
-
-            }
+        if ( Input.GetMouseButtonDown(0) ) {
+            GameEvents.current.TriggerMouseClicked();
         }
 #endif
 
 #if UNITY_ANDROID || UNITY_IOS
         if ( Input.touchCount > 0 ) {
             Touch touch = Input.GetTouch(0);
- 
+
             if ( touch.phase == TouchPhase.Began ) {
                 currentCursor = Instantiate(prefabCursor, Camera.main.ScreenToWorldPoint(touch.position), Quaternion.identity);
             }

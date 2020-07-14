@@ -58,7 +58,7 @@ public class RoundController : MonoBehaviour {
     [SerializeField]
     GameObject startButton;
 
-    bool playing = true;
+    bool playing = false;
 
     bool gameEnded = false;
 
@@ -273,7 +273,7 @@ public class RoundController : MonoBehaviour {
     }
 
     void HandleCenterPersonClicked(PersonName name) {
-        if ( personToFind == name) {
+        if ( playing && personToFind == name) {
             GameEvents.current.TriggerNameTokenFound();
             SpawnNewName();
         }
