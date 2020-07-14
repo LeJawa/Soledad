@@ -347,6 +347,10 @@ public class RoundController : MonoBehaviour {
         startButton.SetActive(true);
     }
 
+    public void ActivateGameTimerText() {
+        gameTimerText.gameObject.SetActive(true);
+    }
+
 
     private void OnDestroy() {
 

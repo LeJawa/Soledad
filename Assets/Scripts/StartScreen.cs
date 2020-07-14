@@ -94,7 +94,7 @@ public class StartScreen : MonoBehaviour {
     [SerializeField]
     TutorialSpawner tutorialSpawner;
 
-    bool skipTutorial = true;
+    bool skipTutorial = false;
 
 
     // Start is called before the first frame update
@@ -176,6 +176,7 @@ public class StartScreen : MonoBehaviour {
         else if ( !tutorial10Triggered && timePassed > timeTutorial10 ) {
             tutorial10.gameObject.SetActive(true);
             tutorial10Triggered = true;
+            RoundController.Instance.ActivateGameTimerText();
         }
         else if ( !tutorial11Triggered && timePassed > timeTutorial11 ) {
             tutorial10.gameObject.SetActive(false);
@@ -209,6 +210,7 @@ public class StartScreen : MonoBehaviour {
                 Time.timeScale = 1;
                 GameEvents.current.TriggerTutorial1();
                 RoundController.Instance.ActivateStartButton();
+                RoundController.Instance.ActivateGameTimerText();
             }
 
 

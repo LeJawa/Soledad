@@ -28,7 +28,7 @@ public enum Relationship {
     DaughterInLaw,
     BrotherInLaw,
     SisterInLaw,
-    Friend
+    Friend,
 }
 
 public static class RelationshipExtensions {

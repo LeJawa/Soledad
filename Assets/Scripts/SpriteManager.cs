@@ -34,6 +34,36 @@ public class SpriteManager : MonoBehaviour {
         return relationshipSprites.GetSprite(relationshipString);
     }
 
+    public Sprite GetSoledadSpriteFromRelationship(Relationship relationship) {
+        string relationshipString;
+
+        switch ( relationship ) {
+            case Relationship.Wife:
+                relationshipString = "wife_s";
+                break;
+            case Relationship.Mother:
+                relationshipString = "mother_s";
+                break;
+            case Relationship.Daughter:
+                relationshipString = "daughter_s";
+                break;
+            case Relationship.Sister:
+                relationshipString = "sister_s";
+                break;
+            case Relationship.Grandmother:
+                relationshipString = "grandmother_s";
+                break;
+            case Relationship.MotherInLaw:
+                relationshipString = "motheril_s";
+                break;
+            default:
+                relationshipString = GetStringOfRelationship(relationship);
+                break;
+        }
+
+        return relationshipSprites.GetSprite(relationshipString);
+    }
+
     private static string GetStringOfRelationship(Relationship relationship) {
         string relationshipString;
         switch ( relationship ) {
@@ -113,7 +143,7 @@ public class SpriteManager : MonoBehaviour {
                 relationshipString = "sisteril";
                 break;
             case Relationship.Friend:
-                relationshipString = "friendil";
+                relationshipString = "friend";
                 break;
             default:
                 relationshipString = "";
