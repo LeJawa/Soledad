@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,6 +31,10 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     GameObject prefabCursor;
 
+#if UNITY_ANDROID || UNITY_IOS
+    GameObject currentCursor;
+    bool touchAlreadyRegistered = false;
+#endif
     public CenterPerson centerPersonObject;
 
     [SerializeField]
@@ -58,7 +61,9 @@ public class GameController : MonoBehaviour {
 
     private void Start() {
 
+#if UNITY_EDITOR || UNITY_WEBGL || UNITY_STANDALONE
         DontDestroyOnLoad(Instantiate(prefabCursor));
+#endif
 
     }
 
@@ -220,6 +225,7 @@ public class GameController : MonoBehaviour {
     }
 
     IEnumerator LoadSceneCoroutine(string scene) {
+        Time.timeScale = 1;
         if ( animationAnim == null ) {
             InitializeSceneAnimator();
         }
@@ -250,13 +256,34 @@ public class GameController : MonoBehaviour {
 
     private void Update() {
 
-        if ( (currentScene == "GamePlay" && RoundController.Instance.Playing) || currentScene != "GamePlay" ) {
+#if UNITY_EDITOR || UNITY_WEBGL || UNITY_STANDALONE
+        if ( ( currentScene == "GamePlay" && RoundController.Instance.Playing ) || currentScene != "GamePlay" ) {
             if ( Input.GetMouseButtonDown(0) ) {
                 GameEvents.current.TriggerMouseClicked();
 
             }
         }
-        
+#endif
+
+#if UNITY_ANDROID || UNITY_IOS
+        if ( Input.touchCount > 0 ) {
+            Touch touch = Input.GetTouch(0);
+ 
+            if ( touch.phase == TouchPhase.Began ) {
+                currentCursor = Instantiate(prefabCursor, Camera.main.ScreenToWorldPoint(touch.position), Quaternion.identity);
+            }
+            if ( !touchAlreadyRegistered && touch.phase == TouchPhase.Stationary ) {
+                GameEvents.current.TriggerMouseClicked();
+                touchAlreadyRegistered = true;
+            }
+            if ( touch.phase == TouchPhase.Ended ) {
+                Destroy(currentCursor);
+                touchAlreadyRegistered = false;
+            }
+        }
+#endif
+
+
 
     }
 
