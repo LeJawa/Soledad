@@ -24,7 +24,7 @@ public class SpriteManager : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
 
-        relationshipSprites = (SpriteAtlas) Resources.Load("Relationships_es");
+        relationshipSprites = (SpriteAtlas) Resources.Load("Relationships");
         personSprites = (SpriteAtlas) Resources.Load("Persons");
     }
 
