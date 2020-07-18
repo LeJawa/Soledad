@@ -14,12 +14,10 @@ public enum Relationship {
     Sister,
     Grandmother,
     Grandfather,
-    Grandchild_m,
-    Grandchild_f,
+    Grandchild,
     Uncle,
     Aunt,
-    Cousin_m,
-    Cousin_f,
+    Cousin,
     Niece,
     Nephew,
     FatherInLaw,
@@ -28,7 +26,7 @@ public enum Relationship {
     DaughterInLaw,
     BrotherInLaw,
     SisterInLaw,
-    Friend,
+    Friend
 }
 
 public static class RelationshipExtensions {
@@ -108,33 +106,10 @@ public static class RelationshipExtensions {
                         return Relationship.Unknown;
                 }
             case Relationship.Grandmother:
-                switch ( me.Sex ) {
-                    case Sex.Female:
-                        return Relationship.Grandchild_f;
-                    case Sex.Male:
-                        return Relationship.Grandchild_m;
-                    default:
-                        return Relationship.Unknown;
-                }
+                return Relationship.Grandchild;
             case Relationship.Grandfather:
-                switch ( me.Sex ) {
-                    case Sex.Female:
-                        return Relationship.Grandchild_f;
-                    case Sex.Male:
-                        return Relationship.Grandchild_m;
-                    default:
-                        return Relationship.Unknown;
-                }
-            case Relationship.Grandchild_m:
-                switch ( me.Sex ) {
-                    case Sex.Female:
-                        return Relationship.Grandmother;
-                    case Sex.Male:
-                        return Relationship.Grandfather;
-                    default:
-                        return Relationship.Unknown;
-                }
-            case Relationship.Grandchild_f:
+                return Relationship.Grandchild;
+            case Relationship.Grandchild:
                 switch ( me.Sex ) {
                     case Sex.Female:
                         return Relationship.Grandmother;
@@ -161,24 +136,8 @@ public static class RelationshipExtensions {
                     default:
                         return Relationship.Unknown;
                 }
-            case Relationship.Cousin_m:
-                switch ( me.Sex ) {
-                    case Sex.Female:
-                        return Relationship.Cousin_f;
-                    case Sex.Male:
-                        return Relationship.Cousin_m;
-                    default:
-                        return Relationship.Unknown;
-                }
-            case Relationship.Cousin_f:
-                switch ( me.Sex ) {
-                    case Sex.Female:
-                        return Relationship.Cousin_f;
-                    case Sex.Male:
-                        return Relationship.Cousin_m;
-                    default:
-                        return Relationship.Unknown;
-                }
+            case Relationship.Cousin:
+                return Relationship.Cousin;
             case Relationship.Niece:
                 switch ( me.Sex ) {
                     case Sex.Female:

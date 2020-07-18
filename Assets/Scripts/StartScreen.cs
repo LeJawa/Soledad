@@ -7,55 +7,55 @@ public class StartScreen : MonoBehaviour {
 
     float timePassed = 0;
 
-    float timeTutorial0 = 2f;
+    float timeTutorial0 = 0.5f;
     bool tutorial0Triggered = false;
 
-    float timeTutorial1 = 4.5f;
+    float timeTutorial1 = 3f;
     bool tutorial1Triggered = false;
 
-    float timeTutorial2 = 7.5f;
+    float timeTutorial2 = 6f;
     bool tutorial2Triggered = false;
 
-    float timeTutorial3 = 9.5f;
+    float timeTutorial3 = 8f;
     bool tutorial3Triggered = false;
 
-    float timeTutorial4 = 11.5f;
+    float timeTutorial4 = 10f;
     bool tutorial4Triggered = false;
 
-    float timeTutorial5 = 13.5f;
+    float timeTutorial5 = 12f;
     bool tutorial5Triggered = false;
 
-    float timeTutorial6 = 15.5f;
+    float timeTutorial6 = 14f;
     bool tutorial6Triggered = false;
 
-    float timeTutorial7 = 17.56f;
+    float timeTutorial7 = 16f;
     bool tutorial7Triggered = false;
 
-    float timeTutorial8 = 19.5f;
+    float timeTutorial8 = 18f;
     bool tutorial8Triggered = false;
 
-    float timeTutorial9 = 21.5f;
+    float timeTutorial9 = 20f;
     bool tutorial9Triggered = false;
 
-    float pauseAfterTutorial9 = 27.5f;
+    float pauseAfterTutorial9 = 26f;
     bool pauseAfterTutorial9Triggered = false;
 
-    float timeTutorial10 = 28.5f;
+    float timeTutorial10 = 27f;
     bool tutorial10Triggered = false;
 
-    float timeTutorial11 = 31.5f;
+    float timeTutorial11 = 30f;
     bool tutorial11Triggered = false;
 
-    float timeTutorial12 = 34.5f;
+    float timeTutorial12 = 33f;
     bool tutorial12Triggered = false;
 
-    float timeTutorial13 = 37.5f;
+    float timeTutorial13 = 36f;
     bool tutorial13Triggered = false;
 
-    float timeTutorial14 = 40.5f;
+    float timeTutorial14 = 39f;
     bool tutorial14Triggered = false;
 
-    float timeTutorialEnd = 47f;
+    float timeTutorialEnd = 45f;
     bool tutorialEndTriggered = false;
 
     [SerializeField]
@@ -106,6 +106,7 @@ public class StartScreen : MonoBehaviour {
 
         GameEvents.current.onStartButtonClicked += FinishTutorial;
 
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -117,11 +118,11 @@ public class StartScreen : MonoBehaviour {
         }
         else if ( !tutorial1Triggered && timePassed > timeTutorial1 ) {
             tutorial1.gameObject.SetActive(true);
-            tutorial0.gameObject.BroadcastMessage("FadeOut");
+            tutorial0.gameObject.SetActive(false);
             tutorial1Triggered = true;
         }
         else if ( !tutorial2Triggered && timePassed > timeTutorial2 ) {
-            tutorial1.gameObject.BroadcastMessage("FadeOut");
+            tutorial1.gameObject.SetActive(false);
             tutorial2.gameObject.SetActive(true);
             tutorial2Triggered = true;
             tutorialSpawner.SpawnNextBatchOfNames();
@@ -167,7 +168,7 @@ public class StartScreen : MonoBehaviour {
 
         }
         else if ( !pauseAfterTutorial9Triggered && timePassed > pauseAfterTutorial9 ) {
-            summary.gameObject.BroadcastMessage("FadeOut");
+            summary.gameObject.SetActive(false);
             pauseAfterTutorial9Triggered = true;
             tutorialSpawner.ClearAllTokens();
 
@@ -175,27 +176,26 @@ public class StartScreen : MonoBehaviour {
         else if ( !tutorial10Triggered && timePassed > timeTutorial10 ) {
             tutorial10.gameObject.SetActive(true);
             tutorial10Triggered = true;
-            RoundController.Instance.ActivateGameTimerText();
         }
         else if ( !tutorial11Triggered && timePassed > timeTutorial11 ) {
-            tutorial10.gameObject.BroadcastMessage("FadeOut");
+            tutorial10.gameObject.SetActive(false);
             tutorial11.gameObject.SetActive(true);
             tutorial11Triggered = true;
         }
         else if ( !tutorial12Triggered && timePassed > timeTutorial12 ) {
             // Trigger show relationships
             GameEvents.current.TriggerTutorial1();
-            tutorial11.gameObject.BroadcastMessage("FadeOut");
+            tutorial11.gameObject.SetActive(false);
             tutorial12.gameObject.SetActive(true);
             tutorial12Triggered = true;
         }
         else if ( !tutorial13Triggered && timePassed > timeTutorial13 ) {
-            tutorial12.gameObject.BroadcastMessage("FadeOut");
+            tutorial12.gameObject.SetActive(false);
             tutorial13.gameObject.SetActive(true);
             tutorial13Triggered = true;
         }
         else if ( !tutorial14Triggered && timePassed > timeTutorial14 ) {
-            tutorial13.gameObject.BroadcastMessage("FadeOut");
+            tutorial13.gameObject.SetActive(false);
             tutorial14.gameObject.SetActive(true);
             tutorial14Triggered = true;
             Time.timeScale = 1;
@@ -209,8 +209,8 @@ public class StartScreen : MonoBehaviour {
                 Time.timeScale = 1;
                 GameEvents.current.TriggerTutorial1();
                 RoundController.Instance.ActivateStartButton();
-                RoundController.Instance.ActivateGameTimerText();
             }
+
 
             FinishTutorial();
 
@@ -221,16 +221,7 @@ public class StartScreen : MonoBehaviour {
     }
 
     void FinishTutorial() {
-        StartCoroutine(FinishTutorialCoroutine());
-    }
-
-    IEnumerator FinishTutorialCoroutine() {
         GameEvents.current.TriggerTutorialEnd();
-
-        tutorial14.gameObject.BroadcastMessage("FadeOut");
-
-        yield return new WaitForSeconds(0.5f);
-
         Destroy(gameObject);
 
     }

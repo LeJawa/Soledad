@@ -7,8 +7,6 @@ public class CursorScript : MonoBehaviour {
     Vector3 mousePosition = new Vector3();
 
     Rigidbody2D rb2d;
-    [SerializeField]
-    RectTransform UIElementTranform;
 
     // Start is called before the first frame update
     void Start() {
@@ -25,7 +23,6 @@ public class CursorScript : MonoBehaviour {
         mousePosition.z = -Camera.main.transform.position.z;
 
         transform.position = mousePosition ;
-        UIElementTranform.anchoredPosition = Input.mousePosition;
 
     }
 

@@ -58,10 +58,10 @@ TextureImporter:
     second: maria
   - first:
       213: -3537111890340417712
-    second: empty
+    second: Persons_18
   - first:
       213: -7388621475202762202
-    second: luisnieto
+    second: Persons_19
   - first:
       213: 4464801562234768900
     second: Persons_20
@@ -609,7 +609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: empty
+      name: Persons_18
       rect:
         serializedVersion: 2
         x: 0
@@ -630,7 +630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: luisnieto
+      name: Persons_19
       rect:
         serializedVersion: 2
         x: 128

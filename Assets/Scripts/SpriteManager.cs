@@ -34,36 +34,6 @@ public class SpriteManager : MonoBehaviour {
         return relationshipSprites.GetSprite(relationshipString);
     }
 
-    public Sprite GetSoledadSpriteFromRelationship(Relationship relationship) {
-        string relationshipString;
-
-        switch ( relationship ) {
-            case Relationship.Wife:
-                relationshipString = "wife_s";
-                break;
-            case Relationship.Mother:
-                relationshipString = "mother_s";
-                break;
-            case Relationship.Daughter:
-                relationshipString = "daughter_s";
-                break;
-            case Relationship.Sister:
-                relationshipString = "sister_s";
-                break;
-            case Relationship.Grandmother:
-                relationshipString = "grandmother_s";
-                break;
-            case Relationship.MotherInLaw:
-                relationshipString = "motheril_s";
-                break;
-            default:
-                relationshipString = GetStringOfRelationship(relationship);
-                break;
-        }
-
-        return relationshipSprites.GetSprite(relationshipString);
-    }
-
     private static string GetStringOfRelationship(Relationship relationship) {
         string relationshipString;
         switch ( relationship ) {
@@ -100,11 +70,8 @@ public class SpriteManager : MonoBehaviour {
             case Relationship.Grandfather:
                 relationshipString = "grandfather";
                 break;
-            case Relationship.Grandchild_m:
-                relationshipString = "grandchild_m";
-                break;
-            case Relationship.Grandchild_f:
-                relationshipString = "grandchild_f";
+            case Relationship.Grandchild:
+                relationshipString = "grandchild";
                 break;
             case Relationship.Uncle:
                 relationshipString = "uncle";
@@ -112,11 +79,8 @@ public class SpriteManager : MonoBehaviour {
             case Relationship.Aunt:
                 relationshipString = "aunt";
                 break;
-            case Relationship.Cousin_m:
-                relationshipString = "cousin_m";
-                break;
-            case Relationship.Cousin_f:
-                relationshipString = "cousin_f";
+            case Relationship.Cousin:
+                relationshipString = "cousin";
                 break;
             case Relationship.Niece:
                 relationshipString = "niece";
@@ -143,7 +107,7 @@ public class SpriteManager : MonoBehaviour {
                 relationshipString = "sisteril";
                 break;
             case Relationship.Friend:
-                relationshipString = "friend";
+                relationshipString = "friendil";
                 break;
             default:
                 relationshipString = "";
@@ -197,8 +161,8 @@ public class SpriteManager : MonoBehaviour {
             case PersonName.ana:
                 personString = "ana";
                 break;
-            case PersonName.luisNieto:
-                personString = "luisnieto";
+            case PersonName.carlos:
+                personString = "carlos";
                 break;
             case PersonName.alberto:
                 personString = "alberto";
@@ -208,6 +172,9 @@ public class SpriteManager : MonoBehaviour {
                 break;
             case PersonName.francisco:
                 personString = "francisco";
+                break;
+            case PersonName.pilar:
+                personString = "pilar";
                 break;
             case PersonName.maria:
                 personString = "maria";

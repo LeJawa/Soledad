@@ -180,7 +180,7 @@ public class Grandfather : RelationshipClass {
 public class Grandchild : RelationshipClass {
 
     public Grandchild() {
-        relationship = Relationship.Grandchild_m;
+        relationship = Relationship.Grandchild;
     }
 
     public override RelationshipClass ReciprocateToMe(Person me) {
@@ -271,7 +271,7 @@ public class Niece : RelationshipClass {
 public class Cousin : RelationshipClass {
 
     public Cousin() {
-        relationship = Relationship.Cousin_m;
+        relationship = Relationship.Cousin;
     }
 
     public override RelationshipClass ReciprocateToMe(Person me) {

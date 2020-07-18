@@ -112,14 +112,7 @@ public class CenterPerson : MonoBehaviour {
     }
 
     void SetRelationshipObjectSprite(RelationshipObject relationshipObject) {
-
-        if ( relationshipObject.Person.Name == PersonName.soledad ) {
-            relationshipObject.GetComponent<SpriteRenderer>().sprite = SpriteManager.current.GetSoledadSpriteFromRelationship(relationshipObject.Relationship);
-        }
-        else {
-            relationshipObject.GetComponent<SpriteRenderer>().sprite = SpriteManager.current.GetSpriteFromRelationship(relationshipObject.Relationship);
-        }
-
+        relationshipObject.GetComponent<SpriteRenderer>().sprite = SpriteManager.current.GetSpriteFromRelationship(relationshipObject.Relationship);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

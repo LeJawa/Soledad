@@ -7,11 +7,13 @@ public class BackToMenuButton : MonoBehaviour {
 
     public void HandleBackToMenuButton() {
         GameEvents.current.TriggerResetEverything();
-        GameController.current.LoadMainMenu();
+        SceneManager.LoadScene("MainMenu");
     }
 
 
     public void HandleBackToMenuButtonFromEnd() {
-        GameController.current.LoadDedicatoria();
+        GameEvents.current.TriggerResetEverything();
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Dedicatoria");
     }
 }
