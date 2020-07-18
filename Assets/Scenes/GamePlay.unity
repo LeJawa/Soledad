@@ -133,6 +133,8 @@ GameObject:
   - component: {fileID: 85011833}
   - component: {fileID: 85011834}
   - component: {fileID: 85011832}
+  - component: {fileID: 85011836}
+  - component: {fileID: 85011835}
   m_Layer: 5
   m_Name: Tutorial8
   m_TagString: Untagged
@@ -219,7 +221,40 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Jorge, Javier and Pilar, from Francisco and Mar\xEDa\n"
+  m_Text: 'David, Jaime y Ana, de Jorge y Concha
+
+'
+--- !u!114 &85011835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85011830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &85011836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85011830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &136070089
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +309,125 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &140273998
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638671, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390488738725638675, guid: 879a230547ad66745bd2fec21765e641,
+        type: 3}
+      propertyPath: m_Name
+      value: IOAnimations
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 879a230547ad66745bd2fec21765e641, type: 3}
 --- !u!1 &155055288
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +439,8 @@ GameObject:
   - component: {fileID: 155055289}
   - component: {fileID: 155055291}
   - component: {fileID: 155055290}
+  - component: {fileID: 155055293}
+  - component: {fileID: 155055292}
   m_Layer: 5
   m_Name: Tutorial14
   m_TagString: Untagged
@@ -343,12 +499,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You can try now to navigate through the family relationships.
-
-    When
-    you are ready to remember,
-
-    press Start.'
+  m_Text: "Puedes probar a moverte a trav\xE9s del \xE1rbol familiar.\nCuando est\xE9s
+    lista para recordar,\ndale a Empezar."
 --- !u!222 &155055291
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -357,6 +509,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155055288}
   m_CullTransparentMesh: 0
+--- !u!114 &155055292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155055288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &155055293
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155055288}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &458382955
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +551,8 @@ GameObject:
   - component: {fileID: 458382958}
   - component: {fileID: 458382957}
   - component: {fileID: 458382956}
+  - component: {fileID: 458382960}
+  - component: {fileID: 458382959}
   m_Layer: 5
   m_Name: Tutorial10
   m_TagString: Untagged
@@ -407,8 +592,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The objective is to remember all the members of your family within the
-    time limit.
+  m_Text: El objetivo es recordar a todos los miembros de la familia, en el tiempo
+    asignado.
 --- !u!222 &458382957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -436,6 +621,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -290}
   m_SizeDelta: {x: 663.248, y: 104.78494}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &458382959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458382955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &458382960
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458382955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &497376185
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +664,8 @@ GameObject:
   - component: {fileID: 497376188}
   - component: {fileID: 497376189}
   - component: {fileID: 497376187}
+  - component: {fileID: 497376191}
+  - component: {fileID: 497376190}
   m_Layer: 5
   m_Name: Tutorial5
   m_TagString: Untagged
@@ -534,7 +752,38 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "And the respective three daughters-in-law: Almudena, Mar\xEDa and Ana."
+  m_Text: 'Tienes tres respectivas nueras: Socorro, Concha and Margarita.'
+--- !u!114 &497376190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497376185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &497376191
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497376185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +878,8 @@ GameObject:
   - component: {fileID: 526647706}
   - component: {fileID: 526647708}
   - component: {fileID: 526647707}
+  - component: {fileID: 526647710}
+  - component: {fileID: 526647709}
   m_Layer: 5
   m_Name: Tutorial11
   m_TagString: Untagged
@@ -687,7 +938,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The names to remember will appear at the bottom left of the screen.
+  m_Text: "El siguiente nombre que recordar aparecer\xE1 en la esquina de abajo a
+    la izquierda."
 --- !u!222 &526647708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -696,6 +948,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526647705}
   m_CullTransparentMesh: 0
+--- !u!114 &526647709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526647705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &526647710
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526647705}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &591394296
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +1037,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 76b01c5577d0a0e42809c258e1512f2d, type: 3}
-    m_FontSize: 22
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -765,7 +1048,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pass Name
+  m_Text: Pasar Nombre
 --- !u!222 &591394299
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -786,6 +1069,8 @@ GameObject:
   - component: {fileID: 641450292}
   - component: {fileID: 641450293}
   - component: {fileID: 641450291}
+  - component: {fileID: 641450295}
+  - component: {fileID: 641450294}
   m_Layer: 5
   m_Name: Tutorial4
   m_TagString: Untagged
@@ -872,9 +1157,38 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You have three sons, Alberto, Francisco and David.
-
-'
+  m_Text: "Con qui\xE9n tuviste tres hijos, Luis-Francisco, Jorge and Javier.\n"
+--- !u!114 &641450294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641450289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &641450295
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641450289}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &868438118
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +1270,8 @@ GameObject:
   - component: {fileID: 1043486368}
   - component: {fileID: 1043486366}
   - component: {fileID: 1043486367}
+  - component: {fileID: 1043486371}
+  - component: {fileID: 1043486370}
   m_Layer: 5
   m_Name: Tutorial9
   m_TagString: Untagged
@@ -995,7 +1311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: And, Luis and Javi from David and Ana.
+  m_Text: y Luis y Alberto, de Javier y Margarita.
 --- !u!114 &1043486367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1359,37 @@ RectTransform:
   m_AnchoredPosition: {x: 289.00235, y: -644.7258}
   m_SizeDelta: {x: 578.0047, y: 90.10928}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1043486370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043486365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1043486371
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043486365}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1112971803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1164,8 +1511,8 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_ScreenMatchMode: 2
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1189,7 +1536,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1210128104
 RectTransform:
@@ -1290,6 +1637,8 @@ GameObject:
   - component: {fileID: 1451699263}
   - component: {fileID: 1451699262}
   - component: {fileID: 1451699261}
+  - component: {fileID: 1451699265}
+  - component: {fileID: 1451699264}
   m_Layer: 5
   m_Name: Tutorial13
   m_TagString: Untagged
@@ -1329,7 +1678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: and you remember them by clicking on their name.
+  m_Text: ... y recordarlos al seleccionar su nombre.
 --- !u!222 &1451699262
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1357,6 +1706,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -290}
   m_SizeDelta: {x: 663.248, y: 104.78494}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1451699264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451699260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1451699265
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451699260}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1518460535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,7 +1820,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1505,6 +1885,8 @@ GameObject:
   - component: {fileID: 1536603320}
   - component: {fileID: 1536603319}
   - component: {fileID: 1536603318}
+  - component: {fileID: 1536603321}
+  - component: {fileID: 1536603322}
   m_Layer: 5
   m_Name: Tutorial0
   m_TagString: Untagged
@@ -1544,7 +1926,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You are Soledad
+  m_Text: Eres Soledad
 --- !u!222 &1536603319
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1572,6 +1954,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -78}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1536603321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536603317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1536603322
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536603317}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1618360000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1997,8 @@ GameObject:
   - component: {fileID: 1618360003}
   - component: {fileID: 1618360004}
   - component: {fileID: 1618360002}
+  - component: {fileID: 1618360006}
+  - component: {fileID: 1618360005}
   m_Layer: 5
   m_Name: Tutorial6
   m_TagString: Untagged
@@ -1670,7 +2085,38 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You also have seven grand-children:'
+  m_Text: "Tambi\xE9n tienes siete nietos:"
+--- !u!114 &1618360005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618360000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1618360006
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618360000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1637997702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +2129,8 @@ GameObject:
   - component: {fileID: 1637997704}
   - component: {fileID: 1637997703}
   - component: {fileID: 1637997706}
+  - component: {fileID: 1637997708}
+  - component: {fileID: 1637997707}
   m_Layer: 5
   m_Name: Tutorial3
   m_TagString: Untagged
@@ -1722,7 +2170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You had a sister, Concha, and a husband, Carlos.
+  m_Text: Estuviste casada con Luis.
 --- !u!222 &1637997704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1770,6 +2218,37 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1637997707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637997702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1637997708
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637997702}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1743538179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +2405,8 @@ GameObject:
   - component: {fileID: 1765882340}
   - component: {fileID: 1765882341}
   - component: {fileID: 1765882339}
+  - component: {fileID: 1765882343}
+  - component: {fileID: 1765882342}
   m_Layer: 5
   m_Name: Tutorial7
   m_TagString: Untagged
@@ -2012,7 +2493,38 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Socorro and Luis-Francisco, from Alberto and Almudena
+  m_Text: Almudena y Javi, de Luis-Francisco y Socorro
+--- !u!114 &1765882342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765882337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1765882343
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765882337}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1769899544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,7 +2542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1769899545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2152,6 +2664,8 @@ GameObject:
   - component: {fileID: 1882246765}
   - component: {fileID: 1882246764}
   - component: {fileID: 1882246763}
+  - component: {fileID: 1882246766}
+  - component: {fileID: 1882246767}
   m_Layer: 5
   m_Name: Tutorial1
   m_TagString: Untagged
@@ -2191,7 +2705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: And you have Alzheimer disease.
+  m_Text: Y tienes Alzheimer.
 --- !u!222 &1882246764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2219,6 +2733,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -247}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1882246766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882246762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1882246767
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882246762}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1891906889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,6 +2776,8 @@ GameObject:
   - component: {fileID: 1891906892}
   - component: {fileID: 1891906891}
   - component: {fileID: 1891906893}
+  - component: {fileID: 1891906895}
+  - component: {fileID: 1891906894}
   m_Layer: 5
   m_Name: Tutorial2
   m_TagString: Untagged
@@ -2289,7 +2836,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Right now you remember your mother Margarita and your father Jaime.
+  m_Text: "Ahora mismo, te acuerdas de tu madre, Mar\xEDa, y de tu padre, Francisco."
 --- !u!222 &1891906892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2318,6 +2865,37 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1891906894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891906889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1891906895
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891906889}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1987969334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,7 +3098,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 76b01c5577d0a0e42809c258e1512f2d, type: 3}
-    m_FontSize: 22
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2531,7 +3109,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Empezar
 --- !u!222 &2068863383
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2551,6 +3129,8 @@ GameObject:
   - component: {fileID: 2091099200}
   - component: {fileID: 2091099199}
   - component: {fileID: 2091099198}
+  - component: {fileID: 2091099202}
+  - component: {fileID: 2091099201}
   m_Layer: 5
   m_Name: Tutorial12
   m_TagString: Untagged
@@ -2590,7 +3170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You access each name by clicking on their family relationship...
+  m_Text: "Puedes acceder a cada nombre seleccion\xE1ndo su parentesco..."
 --- !u!222 &2091099199
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2618,3 +3198,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -290}
   m_SizeDelta: {x: 663.248, y: 104.78494}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2091099201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091099197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef88bbf40c655634682c43e6dbc30b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2091099202
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091099197}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c49c0f2f58151ba48aecb281c24c7572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
