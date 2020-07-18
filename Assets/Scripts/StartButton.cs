@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class HUDButtons : MonoBehaviour {
+public class StartButton : MonoBehaviour {
 
-
-    public void HandlePassNameButtonClicked() {
-        RoundController.Instance.HandlePassTokenName();
+    private void Start() {
+        GetComponentInChildren<Text>().text = LanguageManager.GetTextFromKey("start_button");
     }
 
     public void HandleStartButtonClicked() {

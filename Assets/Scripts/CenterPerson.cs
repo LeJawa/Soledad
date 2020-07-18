@@ -123,7 +123,6 @@ public class CenterPerson : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if ( collision.CompareTag("Cursor") ) {
-            print(person.Name);
 
             transform.localScale = highlightScale;
             isHighlighted = true;

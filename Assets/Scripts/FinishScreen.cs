@@ -17,13 +17,17 @@ public class FinishScreen : MonoBehaviour {
     void GenerateEndText() {
         string s = "";
         if ( RoundController.Instance.PersonsLeftToFind == 0 ) {
-            s = "¡Felicidades!\nHas recordado a todo el mundo.";
+            s = LanguageManager.GetTextFromKey("finish_congrats_1");
+            s += '\n' + LanguageManager.GetTextFromKey("finish_congrats_2");
         }
         else {
-            s = "¡Oh oh!\nTu memoria ya no es tan rápida como antaño, esto te va a dejar algunas secuelas...";
-            s += "\n\nHas olvidado " + RoundController.Instance.LastRoundRelationshipsLost + " parentescos entre los miembros de tu familia.";
+            s = LanguageManager.GetTextFromKey("finish_lost_memories1");
+            s += '\n' + LanguageManager.GetTextFromKey("finish_lost_memories2");
+            s += "\n\n" + LanguageManager.GetTextFromKey("finish_lost_memories3");
+            s += RoundController.Instance.LastRoundRelationshipsLost 
+                + LanguageManager.GetTextFromKey("finish_lost_memories4");
         }
-        s += "\n\nTodavía recuerdas " + RoundController.Instance.CurrentNumberOfRelationships + " parentescos.";
+        s += "\n\n" + LanguageManager.GetTextFromKey("finish_ending1") + RoundController.Instance.CurrentNumberOfRelationships + LanguageManager.GetTextFromKey("finish_ending2");
 
         mainText.text = s;
 

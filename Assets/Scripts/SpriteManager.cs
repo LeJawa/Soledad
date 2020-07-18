@@ -23,8 +23,12 @@ public class SpriteManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-
-        relationshipSprites = (SpriteAtlas) Resources.Load("Relationships");
+        if ( GameController.current.Language == Language.ES ) {
+            relationshipSprites = (SpriteAtlas) Resources.Load("Relationships_es");
+        }
+        else {
+            relationshipSprites = (SpriteAtlas) Resources.Load("Relationships_en");
+        }
         personSprites = (SpriteAtlas) Resources.Load("Persons");
     }
 

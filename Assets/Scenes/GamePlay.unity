@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 289.00235, y: -564.6233}
-  m_SizeDelta: {x: 578.0047, y: 70.09589}
+  m_AnchoredPosition: {x: 289.00235, y: -568.9358}
+  m_SizeDelta: {x: 578.0047, y: 67.22089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &85011832
 MonoBehaviour:
@@ -689,8 +689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 289.00235, y: -311.8356}
-  m_SizeDelta: {x: 578.0047, y: 115.09589}
+  m_AnchoredPosition: {x: 289.00235, y: -324.7731}
+  m_SizeDelta: {x: 578.0047, y: 112.22089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &497376187
 MonoBehaviour:
@@ -1094,8 +1094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 289.00235, y: -208.73972}
-  m_SizeDelta: {x: 578.0047, y: 91.09589}
+  m_AnchoredPosition: {x: 289.00235, y: -224.55222}
+  m_SizeDelta: {x: 578.0047, y: 88.22089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &641450291
 MonoBehaviour:
@@ -1356,8 +1356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 289.00235, y: -644.7258}
-  m_SizeDelta: {x: 578.0047, y: 90.10928}
+  m_AnchoredPosition: {x: 289.00235, y: -646.1633}
+  m_SizeDelta: {x: 578.0047, y: 87.23428}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043486370
 MonoBehaviour:
@@ -1951,8 +1951,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -78}
-  m_SizeDelta: {x: 300, y: 50}
+  m_AnchoredPosition: {x: 0, y: -85}
+  m_SizeDelta: {x: 432.9666, y: 52.89058}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536603321
 MonoBehaviour:
@@ -2022,8 +2022,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 289.00235, y: -404.4315}
-  m_SizeDelta: {x: 578.0047, y: 70.09589}
+  m_AnchoredPosition: {x: 289.00235, y: -414.494}
+  m_SizeDelta: {x: 578.0047, y: 67.22089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618360002
 MonoBehaviour:
@@ -2195,8 +2195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 289.00235, y: -126.64383}
-  m_SizeDelta: {x: 578.0047, y: 73.09589}
+  m_AnchoredPosition: {x: 289.00235, y: -145.33133}
+  m_SizeDelta: {x: 578.0047, y: 70.22089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637997706
 MonoBehaviour:
@@ -2430,8 +2430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 289.00235, y: -484.52737}
-  m_SizeDelta: {x: 578.0047, y: 90.09589}
+  m_AnchoredPosition: {x: 289.00235, y: -491.71487}
+  m_SizeDelta: {x: 578.0047, y: 87.22089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765882339
 MonoBehaviour:
@@ -2801,8 +2801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 289.00235, y: -45.047943}
-  m_SizeDelta: {x: 578.0047, y: 90.09589}
+  m_AnchoredPosition: {x: 289.00235, y: -55.110443}
+  m_SizeDelta: {x: 578.0047, y: 110.22089}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891906891
 MonoBehaviour:
@@ -2836,7 +2836,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ahora mismo, te acuerdas de tu madre, Mar\xEDa, y de tu padre, Francisco."
+  m_Text: "At the moment, you remember your mother, Mar\xEDa and your father Francisco"
 --- !u!222 &1891906892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2859,9 +2859,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: 65
+  m_MinHeight: 81
   m_PreferredWidth: -1
-  m_PreferredHeight: 65
+  m_PreferredHeight: 88
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -2945,7 +2945,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1987969334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44c5fdcf56ea06e43bafed6b26b5f462, type: 3}
+  m_Script: {fileID: 11500000, guid: 886a3218e2ebc2643bf9f422cc9e5790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1987969337

@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Relationships_en
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+    totalSpriteSurfaceArea: 589824
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -6808944997461169043, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 964101391570327039, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -2122532648076712800, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -3692907272157715866, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 7984300747664038248, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -3327494063607142227, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 1749232642978303660, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 3948325394776782158, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 8548368876679611735, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -5259859384522864800, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 133779848695490728, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 3282659602692313147, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -640414713429787518, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -5716696019142165379, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -1941333779640181651, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -8981091976504841276, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 1083027287002472833, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -2485479220881775125, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 4364128301453375804, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -3239835718224018024, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -1835854802404328519, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -8438304691172401204, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -2514260843635017668, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 7053890091427909214, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -5300058741631984589, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -5634666159384861824, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -8965361609864444752, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -4301364295654467023, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -1987554881366964738, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -8336378827583642629, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 7374807509601644126, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -8300974760891014956, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 7892604109275107211, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: -6910755144104846165, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 1681945765133828784, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  - {fileID: 4418474810736560774, guid: bbe3f68a3694b644c8dfea0df91985e5, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - mother_s
+  - daughter_s
+  - aunt
+  - husband
+  - motheril_s
+  - Relationships_32
+  - Relationships_33
+  - grandmother
+  - Relationships_34
+  - Relationships_35
+  - Relationships_23
+  - father
+  - grandmother_s
+  - wife_s
+  - friend
+  - sonil
+  - son
+  - grandchild_m
+  - grandchild_f
+  - sister
+  - wife
+  - daughter
+  - sister_s
+  - niece
+  - sisteril
+  - mother
+  - brother
+  - brotheril
+  - cousin_f
+  - cousin_m
+  - uncle
+  - fatheril
+  - motheril
+  - daughteril
+  - grandfather
+  - nephew
+  m_Tag: Relationships_en
+  m_IsVariant: 0

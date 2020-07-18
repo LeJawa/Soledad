@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
+
+    [SerializeField]
+    private Language language;
+
     public static GameController current;
 
     Person soledad;
@@ -47,6 +51,7 @@ public class GameController : MonoBehaviour {
 
 
     public Person Soledad { get => soledad; }
+    public Language Language { get => language; }
 
     private void Awake() {
 
@@ -57,6 +62,8 @@ public class GameController : MonoBehaviour {
             current = this;
             DontDestroyOnLoad(gameObject);
         }
+
+        LanguageManager.Initialize(Language);
     }
 
     private void Start() {

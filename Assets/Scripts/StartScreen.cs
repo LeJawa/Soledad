@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -100,11 +101,37 @@ public class StartScreen : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
 
+        InitializeText();
+
         if ( skipTutorial ) {
             timeTutorialEnd = 1;
         }
 
         GameEvents.current.onStartButtonClicked += FinishTutorial;
+
+    }
+
+    private void InitializeText() {
+
+        tutorial0.text = LanguageManager.GetTextFromKey("tutorial0");
+        tutorial1.text = LanguageManager.GetTextFromKey("tutorial1");
+        tutorial2.text = LanguageManager.GetTextFromKey("tutorial2");
+        tutorial3.text = LanguageManager.GetTextFromKey("tutorial3");
+        tutorial4.text = LanguageManager.GetTextFromKey("tutorial4");
+        tutorial5.text = LanguageManager.GetTextFromKey("tutorial5");
+        tutorial6.text = LanguageManager.GetTextFromKey("tutorial6");
+        tutorial7.text = LanguageManager.GetTextFromKey("tutorial7");
+        tutorial8.text = LanguageManager.GetTextFromKey("tutorial8");
+        tutorial9.text = LanguageManager.GetTextFromKey("tutorial9");
+        tutorial10.text = LanguageManager.GetTextFromKey("tutorial10");
+        tutorial11.text = LanguageManager.GetTextFromKey("tutorial11");
+        tutorial12.text = LanguageManager.GetTextFromKey("tutorial12");
+        tutorial13.text = LanguageManager.GetTextFromKey("tutorial13");
+
+        string text14 = LanguageManager.GetTextFromKey("tutorial14_1");
+        text14 += '\n' + LanguageManager.GetTextFromKey("tutorial14_2");
+        text14 += '\n' + LanguageManager.GetTextFromKey("tutorial14_3");
+        tutorial14.text = text14;
 
     }
 
