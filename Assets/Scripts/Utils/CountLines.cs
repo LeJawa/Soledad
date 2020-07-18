@@ -2,8 +2,6 @@
 using UnityEditor;
 using System.Collections;
 
-#if UNITY_EDITOR
-
 public class CountLines : EditorWindow {
 	System.Text.StringBuilder strStats;
 	Vector2 scrollPosition = new Vector2(0, 0);
@@ -82,6 +80,3 @@ public class CountLines : EditorWindow {
 		reader.Close();
 	}
 }
-
-
-#endif

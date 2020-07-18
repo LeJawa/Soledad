@@ -53,13 +53,6 @@ public class GameEvents : MonoBehaviour {
     }
     #endregion
 
-    #region onStartButtonClicked
-    public event Action onStartButtonClicked;
-    public void TriggerStartButtonClicked() {
-        onStartButtonClicked?.Invoke();
-    }
-    #endregion
-
 
 
 
