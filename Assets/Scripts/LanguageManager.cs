@@ -89,7 +89,6 @@ public class LanguageManager : MonoBehaviour{
                 Debug.Log($"{req.error}: {req.downloadHandler.text}");
             }
             else {
-                Debug.Log(req.downloadHandler.text);
                 ParseUnityWebRequestText(req.downloadHandler.text);
 
                 _initialized = true;
