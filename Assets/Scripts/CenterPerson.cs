@@ -21,17 +21,17 @@ public class CenterPerson : MonoBehaviour {
     public PersonName Name { get => person.Name; }
 
     private void Start() {
-        GameController.current.SetCenterPersonObject(this);
+        GameController.Instance.SetCenterPersonObject(this);
 
-        person = GameController.current.Soledad;
+        person = GameController.Instance.Soledad;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         relationships = new List<RelationshipObject>();
 
-        GameEvents.current.onMouseClicked += HandleMouseClicked;
-        GameEvents.current.onTutorial1 += ShowRelationships;
-        GameEvents.current.onNameTokenFound += ResetCenterPersonToSoledad;
-        GameEvents.current.onResetEverything += Clear;
+        GameEvents.Instance.onMouseClicked += HandleMouseClicked;
+        GameEvents.Instance.onTutorial1 += ShowRelationships;
+        GameEvents.Instance.onNameTokenFound += ResetCenterPersonToSoledad;
+        GameEvents.Instance.onResetEverything += Clear;
 
         SetCenterSprite();
     }
@@ -53,8 +53,8 @@ public class CenterPerson : MonoBehaviour {
     }
 
     void SetCenterSprite() {
-        spriteRenderer.sprite = SpriteManager.current.GetSpriteFromPerson(person.Name);
-        spriteRenderer.color = SpriteManager.current.GetSpriteColorFromPersonName(person.Name);
+        spriteRenderer.sprite = SpriteManager.Instance.GetSpriteFromPerson(person.Name);
+        spriteRenderer.color = SpriteManager.Instance.GetSpriteColorFromPersonName(person.Name);
     }
 
     public void SetPerson(Person person) {
@@ -113,10 +113,10 @@ public class CenterPerson : MonoBehaviour {
     void SetRelationshipObjectSprite(RelationshipObject relationshipObject) {
 
         if ( relationshipObject.Person.Name == PersonName.soledad ) {
-            relationshipObject.GetComponent<SpriteRenderer>().sprite = SpriteManager.current.GetSoledadSpriteFromRelationship(relationshipObject.Relationship);
+            relationshipObject.GetComponent<SpriteRenderer>().sprite = SpriteManager.Instance.GetSoledadSpriteFromRelationship(relationshipObject.Relationship);
         }
         else {
-            relationshipObject.GetComponent<SpriteRenderer>().sprite = SpriteManager.current.GetSpriteFromRelationship(relationshipObject.Relationship);
+            relationshipObject.GetComponent<SpriteRenderer>().sprite = SpriteManager.Instance.GetSpriteFromRelationship(relationshipObject.Relationship);
         }
 
     }
@@ -137,20 +137,20 @@ public class CenterPerson : MonoBehaviour {
 
     void HandleMouseClicked() {
         if ( isHighlighted ) {
-            GameEvents.current.TriggerCenterPersonClicked(person.Name);
+            GameEvents.Instance.TriggerCenterPersonClicked(person.Name);
         }
 
     }
 
     void ResetCenterPersonToSoledad() {
-        SetPerson(GameController.current.Soledad);
+        SetPerson(GameController.Instance.Soledad);
     }
 
     private void OnDestroy() {
-        GameEvents.current.onMouseClicked -= HandleMouseClicked;
-        GameEvents.current.onTutorial1 -= ShowRelationships;
-        GameEvents.current.onNameTokenFound -= ResetCenterPersonToSoledad;
-        GameEvents.current.onResetEverything -= Clear;
+        GameEvents.Instance.onMouseClicked -= HandleMouseClicked;
+        GameEvents.Instance.onTutorial1 -= ShowRelationships;
+        GameEvents.Instance.onNameTokenFound -= ResetCenterPersonToSoledad;
+        GameEvents.Instance.onResetEverything -= Clear;
     }
 
 }

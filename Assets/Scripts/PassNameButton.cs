@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PassNameButton : MonoBehaviour {
 
     private void Start() {
-        GetComponentInChildren<Text>().text = LanguageManager.GetTextFromKey("pass_name_button");
+        GetComponentInChildren<Text>().text = LanguageManager.Instance.GetTextFromKey("pass_name_button");
     }
 
     public void HandlePassNameButtonClicked() {

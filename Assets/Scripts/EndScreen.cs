@@ -14,12 +14,12 @@ public class EndScreen : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
 
-        endText.text = LanguageManager.GetTextFromKey("end_text");
-        endButtonText.text = LanguageManager.GetTextFromKey("end_button");
+        endText.text = LanguageManager.Instance.GetTextFromKey("end_text");
+        endButtonText.text = LanguageManager.Instance.GetTextFromKey("end_button");
 
     }
 
     public void HandleBackToMenuButtonFromEnd() {
-        GameController.current.LoadDedicatoria();
+        GameController.Instance.LoadDedicatoria();
     }
 }

@@ -95,11 +95,16 @@ public class RoundController : MonoBehaviour {
     public int CurrentNumberOfRelationships { get => currentNumberOfRelationships; }
 
     private void Awake() {
-        GameController.current.InitializeSceneAnimator();
+        GameController.Instance.InitializeSceneAnimator();
     }
 
     // Start is called before the first frame update
     void Start() {
+
+        if (  GameController.Instance.CurrentScene != "GamePlay" ) {
+            return;
+        }
+
         startTimer = gameObject.AddComponent<Timer>();
         startTimer.Duration = secondsBeforeStartOfGame;
         startTimer.onTimerFinished += StartRound;
@@ -108,8 +113,8 @@ public class RoundController : MonoBehaviour {
         roundTimer.Duration = roundDurationTimeInSeconds;
         roundTimer.onTimerFinished += EndRound;
 
-        GameEvents.current.onCenterPersonClicked += HandleCenterPersonClicked;
-        GameEvents.current.onStartButtonClicked += HandleStartButtonClicked;
+        GameEvents.Instance.onCenterPersonClicked += HandleCenterPersonClicked;
+        GameEvents.Instance.onStartButtonClicked += HandleStartButtonClicked;
 
         InitializeArrayOfNameTokens();
         lastTokenPosition = InitialTokenPosition;
@@ -131,7 +136,7 @@ public class RoundController : MonoBehaviour {
         ShuffleArrayOfNameTokens();
         StartStartTimer();
 
-        GameController.current.SetSoledadAsCenterPerson();
+        GameController.Instance.SetSoledadAsCenterPerson();
 
         Time.timeScale = 1;
 
@@ -153,7 +158,7 @@ public class RoundController : MonoBehaviour {
         }
         listOfPersonTokens.Remove(PersonName.soledad);
 
-        if ( GameController.current.Language == Language.ES ) {
+        if ( GameController.Instance.Language == Language.ES ) {
             listOfPersonTokens.Remove(PersonName.carlos);
             listOfPersonTokens.Remove(PersonName.pilar);
         }
@@ -183,7 +188,7 @@ public class RoundController : MonoBehaviour {
 
     void StartRound() {
         totalNumberOfRounds++;
-        GameController.current.SetSoledadAsCenterPerson();
+        GameController.Instance.SetSoledadAsCenterPerson();
 
         playing = true;
         roundTimer.Run();
@@ -214,7 +219,7 @@ public class RoundController : MonoBehaviour {
         if ( !gameEnded ) {
             Instantiate(prefabFinishScreen);
 
-            GameController.current.SetMusicVolume(currentNumberOfRelationships / 1000f);
+            GameController.Instance.SetMusicVolume(currentNumberOfRelationships / 1000f);
         }
     }
 
@@ -249,13 +254,13 @@ public class RoundController : MonoBehaviour {
 
         for ( int i = 0; i < relationshipsLostThisRound; i++ ) {
 
-            currentPerson = GameController.current.Soledad;
+            currentPerson = GameController.Instance.Soledad;
 
             if ( currentNumberOfRelationships > 100 || rng.NextDouble() > chanceThatSoledadForgetsDirectRelationship ) {
                 int tries = 0;
                 do {
                     index = rng.Next(arrayOfNameTokens.Length);
-                    currentPerson = GameController.current.GetPersonFromName(arrayOfNameTokens[index]);
+                    currentPerson = GameController.Instance.GetPersonFromName(arrayOfNameTokens[index]);
                     tries++;
                 }
                 while ( currentPerson.Relationships.Count == 0 && tries < 20 );
@@ -275,7 +280,7 @@ public class RoundController : MonoBehaviour {
             currentNumberOfRelationships--;
         }
 
-        if ( GameController.current.Soledad.Relationships.Count == 0 ) {
+        if ( GameController.Instance.Soledad.Relationships.Count == 0 ) {
             EndGame();
         }
 
@@ -284,7 +289,7 @@ public class RoundController : MonoBehaviour {
 
     void HandleCenterPersonClicked(PersonName name) {
         if ( playing && personToFind == name) {
-            GameEvents.current.TriggerNameTokenFound();
+            GameEvents.Instance.TriggerNameTokenFound();
             SpawnNewName();
         }
 
@@ -295,7 +300,7 @@ public class RoundController : MonoBehaviour {
         Time.timeScale = 1;
         Instantiate(prefabEndScreen);
 
-        GameController.current.FadeOutMusic();
+        GameController.Instance.FadeOutMusic();
     }
 
     void SpawnNewName() {
@@ -309,8 +314,8 @@ public class RoundController : MonoBehaviour {
 
         GameObject nameToken = Instantiate(prefabNameToken);
         SpriteRenderer spriteRenderer = nameToken.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = SpriteManager.current.GetSpriteFromPerson(personToFind);
-        spriteRenderer.color = SpriteManager.current.GetSpriteColorFromPersonName(personToFind);
+        spriteRenderer.sprite = SpriteManager.Instance.GetSpriteFromPerson(personToFind);
+        spriteRenderer.color = SpriteManager.Instance.GetSpriteColorFromPersonName(personToFind);
         spriteRenderer.sortingOrder = sortingOrderOfTokens++;
 
         nameToken.transform.position = lastTokenPosition + tokenOffset;
@@ -340,7 +345,7 @@ public class RoundController : MonoBehaviour {
     }
 
     public void HandlePassTokenName() {
-        GameController.current.SetSoledadAsCenterPerson();
+        GameController.Instance.SetSoledadAsCenterPerson();
         numberOfNamesPassed++;
         SpawnNewName();
     }
@@ -363,13 +368,16 @@ public class RoundController : MonoBehaviour {
 
 
     private void OnDestroy() {
+        if ( GameController.Instance.CurrentScene == "GamePlay" ) {
+            return;
+        }
 
         startTimer.onTimerFinished -= StartRound;
         roundTimer.onTimerFinished -= EndRound;
 
 
-        GameEvents.current.onCenterPersonClicked -= HandleCenterPersonClicked;
-        GameEvents.current.onStartButtonClicked -= HandleStartButtonClicked;
+        GameEvents.Instance.onCenterPersonClicked -= HandleCenterPersonClicked;
+        GameEvents.Instance.onStartButtonClicked -= HandleStartButtonClicked;
     }
 
     

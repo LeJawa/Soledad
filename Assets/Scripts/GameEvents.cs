@@ -6,7 +6,24 @@ using UnityEngine.Events;
 
 public class GameEvents : MonoBehaviour {
 
-	public static GameEvents current;
+    #region SINGLETON PATTERN
+    static GameEvents current;
+    public static GameEvents Instance {
+        get {
+            if ( current == null ) {
+                current = GameObject.FindObjectOfType<GameEvents>();
+
+                if ( current == null ) {
+                    GameObject container = new GameObject("GameEvents");
+                    current = container.AddComponent<GameEvents>();
+                    DontDestroyOnLoad(current.gameObject);
+                }
+            }
+
+            return current;
+        }
+    }
+    #endregion
 
     #region onMouseClicked
     public event Action onMouseClicked;
@@ -60,18 +77,13 @@ public class GameEvents : MonoBehaviour {
     }
     #endregion
 
-
-
-
-    private void Awake() {
-        if ( current != null ) {
-            Destroy(gameObject);
-        }
-        else {
-            current = this;
-            DontDestroyOnLoad(gameObject);
-        }
+    #region onFinishedLoadingLanguageManager
+    public event Action onFinishedLoadingLanguageManager;
+    public void TriggerFinishedLoadingLanguageManager() {
+        onFinishedLoadingLanguageManager?.Invoke();
     }
+    #endregion
+
 
 
 }

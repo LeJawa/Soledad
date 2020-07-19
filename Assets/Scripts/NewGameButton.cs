@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class NewGameButton : MonoBehaviour
 {
     private void Start() {
-        GetComponentInChildren<Text>().text = LanguageManager.GetTextFromKey("new_game_button");
+        GetComponentInChildren<Text>().text = LanguageManager.Instance.GetTextFromKey("new_game_button");
     }
 
     public void HandleNewGameButtonClicked() {
-        GameController.current.StartNewGame();
+        GameController.Instance.StartNewGame();
     }
 }

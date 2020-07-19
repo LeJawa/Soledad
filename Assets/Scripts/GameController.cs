@@ -8,7 +8,24 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     private Language language;
 
-    public static GameController current;
+    #region SINGLETON PATTERN
+    static GameController current;
+    public static GameController Instance {
+        get {
+            if ( current == null ) {
+                current = GameObject.FindObjectOfType<GameController>();
+
+                if ( current == null ) {
+                    GameObject container = new GameObject("GameController");
+                    current = container.AddComponent<GameController>();
+                    DontDestroyOnLoad(current.gameObject);
+                }
+            }
+
+            return current;
+        }
+    }
+    #endregion
 
     Person soledad;
 
@@ -52,25 +69,17 @@ public class GameController : MonoBehaviour {
 
     public Person Soledad { get => soledad; }
     public Language Language { get => language; }
+    public string CurrentScene { get => currentScene; }
 
-    private void Awake() {
-
-        if ( current != null ) {
-            Destroy(gameObject);
-        }
-        else {
-            current = this;
-            DontDestroyOnLoad(gameObject);
-        }
-
-        LanguageManager.Initialize(Language);
-    }
 
     private void Start() {
+
+        LanguageManager.Instance.Initialize(Language);
 
 #if UNITY_EDITOR || UNITY_WEBGL || UNITY_STANDALONE
         DontDestroyOnLoad(Instantiate(prefabCursor));
 #endif
+        DontDestroyOnLoad(gameObject);
 
     }
 
@@ -293,7 +302,7 @@ public class GameController : MonoBehaviour {
 
 #if UNITY_EDITOR || UNITY_WEBGL || UNITY_STANDALONE
         if ( Input.GetMouseButtonDown(0) ) {
-            GameEvents.current.TriggerMouseClicked();
+            GameEvents.Instance.TriggerMouseClicked();
         }
 #endif
 

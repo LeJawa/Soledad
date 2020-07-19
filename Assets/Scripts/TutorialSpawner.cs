@@ -10,7 +10,7 @@ public class TutorialSpawner : MonoBehaviour {
     int spawnTurn = 0;
 
     public void SpawnNextBatchOfNames() {
-        if ( GameController.current.Language == Language.ES ) {
+        if ( GameController.Instance.Language == Language.ES ) {
             SpawnNextBatchOfNamesES();
         }
         else {
@@ -101,8 +101,8 @@ public class TutorialSpawner : MonoBehaviour {
     void InstantiateNameTokenAtPosition(PersonName name, Vector3 position) {
         GameObject nameToken = Instantiate(prefabNameToken);
         SpriteRenderer spriteRenderer = nameToken.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = SpriteManager.current.GetSpriteFromPerson(name);
-        spriteRenderer.color = SpriteManager.current.GetSpriteColorFromPersonName(name);
+        spriteRenderer.sprite = SpriteManager.Instance.GetSpriteFromPerson(name);
+        spriteRenderer.color = SpriteManager.Instance.GetSpriteColorFromPersonName(name);
 
         nameToken.transform.position = position;
     }

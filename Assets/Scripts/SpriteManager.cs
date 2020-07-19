@@ -5,25 +5,31 @@ using UnityEngine.U2D;
 
 public class SpriteManager : MonoBehaviour {
 
-    public static SpriteManager current;
+    #region SINGLETON PATTERN
+    static SpriteManager current;
+    public static SpriteManager Instance {
+        get {
+            if ( current == null ) {
+                current = GameObject.FindObjectOfType<SpriteManager>();
+
+                if ( current == null ) {
+                    GameObject container = new GameObject("GameEvents");
+                    current = container.AddComponent<SpriteManager>();
+                    DontDestroyOnLoad(current.gameObject);
+                }
+            }
+
+            return current;
+        }
+    }
+    #endregion
 
     SpriteAtlas relationshipSprites;
     SpriteAtlas personSprites;
 
-    private void Awake() {
-
-        if ( current != null ) {
-            Destroy(gameObject);
-        }
-        else {
-            current = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-
     // Start is called before the first frame update
     void Start() {
-        if ( GameController.current.Language == Language.ES ) {
+        if ( GameController.Instance.Language == Language.ES ) {
             relationshipSprites = (SpriteAtlas) Resources.Load("Relationships_es");
         }
         else {

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TryAgainButton : MonoBehaviour {
 
     private void Start() {
-        GetComponentInChildren<Text>().text = LanguageManager.GetTextFromKey("try_again_button");
+        GetComponentInChildren<Text>().text = LanguageManager.Instance.GetTextFromKey("try_again_button");
     }
 
 

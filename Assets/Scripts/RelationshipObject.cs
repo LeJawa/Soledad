@@ -17,9 +17,9 @@ public class RelationshipObject : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
 
-        GetComponent<SpriteRenderer>().color = SpriteManager.current.GetSpriteColorFromPersonName(person.Name);
+        GetComponent<SpriteRenderer>().color = SpriteManager.Instance.GetSpriteColorFromPersonName(person.Name);
 
-        GameEvents.current.onMouseClicked += HandleMouseClicked;
+        GameEvents.Instance.onMouseClicked += HandleMouseClicked;
     }
 
     public void SetPersonAndRelationship(Person person, Relationship relationship) {
@@ -51,7 +51,7 @@ public class RelationshipObject : MonoBehaviour {
 
     void HandleMouseClicked() {
         if ( isHighlighted ) {
-            GameController.current.SetCenterPerson(person);
+            GameController.Instance.SetCenterPerson(person);
         }
 
     }

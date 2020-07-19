@@ -10,8 +10,8 @@ public class Dedicatoria : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
 
-        string text = LanguageManager.GetTextFromKey("dedicatoria_1");
-        text += "\n\n\n\n" + LanguageManager.GetTextFromKey("dedicatoria_2");
+        string text = LanguageManager.Instance.GetTextFromKey("dedicatoria_1");
+        text += "\n\n\n\n" + LanguageManager.Instance.GetTextFromKey("dedicatoria_2");
 
         FindObjectOfType<Text>().text = text;
 
@@ -24,7 +24,7 @@ public class Dedicatoria : MonoBehaviour {
     }
 
     void HandleTimerEnd() {
-        GameController.current.LoadMainMenu();
+        GameController.Instance.LoadMainMenu();
     }
 
     private void OnDestroy() {

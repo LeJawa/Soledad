@@ -107,30 +107,30 @@ public class StartScreen : MonoBehaviour {
             timeTutorialEnd = 1;
         }
 
-        GameEvents.current.onStartButtonClicked += FinishTutorial;
+        GameEvents.Instance.onStartButtonClicked += FinishTutorial;
 
     }
 
     private void InitializeText() {
 
-        tutorial0.text = LanguageManager.GetTextFromKey("tutorial0");
-        tutorial1.text = LanguageManager.GetTextFromKey("tutorial1");
-        tutorial2.text = LanguageManager.GetTextFromKey("tutorial2");
-        tutorial3.text = LanguageManager.GetTextFromKey("tutorial3");
-        tutorial4.text = LanguageManager.GetTextFromKey("tutorial4");
-        tutorial5.text = LanguageManager.GetTextFromKey("tutorial5");
-        tutorial6.text = LanguageManager.GetTextFromKey("tutorial6");
-        tutorial7.text = LanguageManager.GetTextFromKey("tutorial7");
-        tutorial8.text = LanguageManager.GetTextFromKey("tutorial8");
-        tutorial9.text = LanguageManager.GetTextFromKey("tutorial9");
-        tutorial10.text = LanguageManager.GetTextFromKey("tutorial10");
-        tutorial11.text = LanguageManager.GetTextFromKey("tutorial11");
-        tutorial12.text = LanguageManager.GetTextFromKey("tutorial12");
-        tutorial13.text = LanguageManager.GetTextFromKey("tutorial13");
+        tutorial0.text = LanguageManager.Instance.GetTextFromKey("tutorial0");
+        tutorial1.text = LanguageManager.Instance.GetTextFromKey("tutorial1");
+        tutorial2.text = LanguageManager.Instance.GetTextFromKey("tutorial2");
+        tutorial3.text = LanguageManager.Instance.GetTextFromKey("tutorial3");
+        tutorial4.text = LanguageManager.Instance.GetTextFromKey("tutorial4");
+        tutorial5.text = LanguageManager.Instance.GetTextFromKey("tutorial5");
+        tutorial6.text = LanguageManager.Instance.GetTextFromKey("tutorial6");
+        tutorial7.text = LanguageManager.Instance.GetTextFromKey("tutorial7");
+        tutorial8.text = LanguageManager.Instance.GetTextFromKey("tutorial8");
+        tutorial9.text = LanguageManager.Instance.GetTextFromKey("tutorial9");
+        tutorial10.text = LanguageManager.Instance.GetTextFromKey("tutorial10");
+        tutorial11.text = LanguageManager.Instance.GetTextFromKey("tutorial11");
+        tutorial12.text = LanguageManager.Instance.GetTextFromKey("tutorial12");
+        tutorial13.text = LanguageManager.Instance.GetTextFromKey("tutorial13");
 
-        string text14 = LanguageManager.GetTextFromKey("tutorial14_1");
-        text14 += '\n' + LanguageManager.GetTextFromKey("tutorial14_2");
-        text14 += '\n' + LanguageManager.GetTextFromKey("tutorial14_3");
+        string text14 = LanguageManager.Instance.GetTextFromKey("tutorial14_1");
+        text14 += '\n' + LanguageManager.Instance.GetTextFromKey("tutorial14_2");
+        text14 += '\n' + LanguageManager.Instance.GetTextFromKey("tutorial14_3");
         tutorial14.text = text14;
 
     }
@@ -211,7 +211,7 @@ public class StartScreen : MonoBehaviour {
         }
         else if ( !tutorial12Triggered && timePassed > timeTutorial12 ) {
             // Trigger show relationships
-            GameEvents.current.TriggerTutorial1();
+            GameEvents.Instance.TriggerTutorial1();
             tutorial11.gameObject.BroadcastMessage("FadeOut");
             tutorial12.gameObject.SetActive(true);
             tutorial12Triggered = true;
@@ -234,7 +234,7 @@ public class StartScreen : MonoBehaviour {
             // Trigger show relationships
             if ( skipTutorial ) {
                 Time.timeScale = 1;
-                GameEvents.current.TriggerTutorial1();
+                GameEvents.Instance.TriggerTutorial1();
                 RoundController.Instance.ActivateStartButton();
                 RoundController.Instance.ActivateGameTimerText();
             }
@@ -249,7 +249,7 @@ public class StartScreen : MonoBehaviour {
     }
 
     IEnumerator FinishTutorialCoroutine() {
-        GameEvents.current.TriggerTutorialEnd();
+        GameEvents.Instance.TriggerTutorialEnd();
 
         tutorial14.gameObject.BroadcastMessage("FadeOut");
 
@@ -261,6 +261,6 @@ public class StartScreen : MonoBehaviour {
 
     private void OnDestroy() {
 
-        GameEvents.current.onStartButtonClicked -= FinishTutorial;
+        GameEvents.Instance.onStartButtonClicked -= FinishTutorial;
     }
 }

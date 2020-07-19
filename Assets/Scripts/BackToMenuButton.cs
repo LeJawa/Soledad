@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class BackToMenuButton : MonoBehaviour {
 
     private void Start() {
-        GetComponentInChildren<Text>().text = LanguageManager.GetTextFromKey("back_to_menu_button");
+        GetComponentInChildren<Text>().text = LanguageManager.Instance.GetTextFromKey("back_to_menu_button");
     }
 
     public void HandleBackToMenuButton() {
-        GameEvents.current.TriggerResetEverything();
-        GameController.current.LoadMainMenu();
+        GameEvents.Instance.TriggerResetEverything();
+        GameController.Instance.LoadMainMenu();
     }
 }
