@@ -75,31 +75,69 @@ public class GameController : MonoBehaviour {
     }
 
     private void InitializePersons() {
-        soledad = new Person(PersonName.soledad, Sex.Female);
+        if ( language == Language.ES ) {
+            soledad = new Person(PersonName.soledad, Sex.Female);
+            maria = new Person(PersonName.maria, Sex.Female);
+            francisco = new Person(PersonName.francisco, Sex.Male);
+            luisAbuelo = new Person(PersonName.luis, Sex.Male);
+            luisfrancisco = new Person(PersonName.luisfrancisco, Sex.Male);
+            jorge = new Person(PersonName.jorge, Sex.Male);
+            javier = new Person(PersonName.javier, Sex.Male);
+            socorro = new Person(PersonName.socorro, Sex.Female);
+            concha = new Person(PersonName.concha, Sex.Female);
+            margarita = new Person(PersonName.margarita, Sex.Female);
+            almudena = new Person(PersonName.almudena, Sex.Female);
+            javi = new Person(PersonName.javi, Sex.Male);
+            david = new Person(PersonName.david, Sex.Male);
+            jaime = new Person(PersonName.jaime, Sex.Male);
+            ana = new Person(PersonName.ana, Sex.Female);
+            luisNieto = new Person(PersonName.luisNieto, Sex.Male);
+            alberto = new Person(PersonName.alberto, Sex.Male);
+        }
+        else {
+            soledad = new Person(PersonName.soledad, Sex.Female);
+            maria = new Person(PersonName.margarita, Sex.Female);
+            francisco = new Person(PersonName.jaime, Sex.Male);
+            luisAbuelo = new Person(PersonName.carlos, Sex.Male);
+            luisfrancisco = new Person(PersonName.alberto, Sex.Male);
+            jorge = new Person(PersonName.francisco, Sex.Male);
+            javier = new Person(PersonName.david, Sex.Male);
+            socorro = new Person(PersonName.almudena, Sex.Female);
+            concha = new Person(PersonName.maria, Sex.Female);
+            margarita = new Person(PersonName.ana, Sex.Female);
+            almudena = new Person(PersonName.socorro, Sex.Female);
+            javi = new Person(PersonName.luisfrancisco, Sex.Male);
+            david = new Person(PersonName.jorge, Sex.Male);
+            jaime = new Person(PersonName.javier, Sex.Male);
+            ana = new Person(PersonName.pilar, Sex.Female);
+            luisNieto = new Person(PersonName.luis, Sex.Male);
+            alberto = new Person(PersonName.javi, Sex.Male);
+        }
+        
 
-        maria = new Person(PersonName.maria, Sex.Female);
+
+        InitializeRelationships();
+    }
+
+    private void InitializeRelationships() {
+
         soledad.AddRelationship(Relationship.Mother, maria);
-        francisco = new Person(PersonName.francisco, Sex.Male);
         soledad.AddRelationship(Relationship.Father, francisco);
         maria.AddRelationship(Relationship.Husband, francisco);
 
-        luisAbuelo = new Person(PersonName.luis, Sex.Male);
         soledad.AddRelationship(Relationship.Husband, luisAbuelo);
         luisAbuelo.AddRelationship(Relationship.MotherInLaw, maria);
         luisAbuelo.AddRelationship(Relationship.FatherInLaw, francisco);
 
-        luisfrancisco = new Person(PersonName.luisfrancisco, Sex.Male);
         soledad.AddRelationship(Relationship.Son, luisfrancisco);
         luisfrancisco.AddRelationship(Relationship.Father, luisAbuelo);
         luisfrancisco.AddRelationship(Relationship.Grandmother, maria);
         luisfrancisco.AddRelationship(Relationship.Grandfather, francisco);
-        jorge = new Person(PersonName.jorge, Sex.Male);
         soledad.AddRelationship(Relationship.Son, jorge);
         jorge.AddRelationship(Relationship.Father, luisAbuelo);
         jorge.AddRelationship(Relationship.Grandmother, maria);
         jorge.AddRelationship(Relationship.Grandfather, francisco);
         jorge.AddRelationship(Relationship.Brother, luisfrancisco);
-        javier = new Person(PersonName.javier, Sex.Male);
         soledad.AddRelationship(Relationship.Son, javier);
         javier.AddRelationship(Relationship.Father, luisAbuelo);
         javier.AddRelationship(Relationship.Grandmother, maria);
@@ -108,26 +146,22 @@ public class GameController : MonoBehaviour {
         javier.AddRelationship(Relationship.Brother, jorge);
 
 
-        socorro = new Person(PersonName.socorro, Sex.Female);
         soledad.AddRelationship(Relationship.DaughterInLaw, socorro);
         socorro.AddRelationship(Relationship.Husband, luisfrancisco);
         socorro.AddRelationship(Relationship.BrotherInLaw, jorge);
         socorro.AddRelationship(Relationship.BrotherInLaw, javier);
         socorro.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
-        concha = new Person(PersonName.concha, Sex.Female);
         soledad.AddRelationship(Relationship.DaughterInLaw, concha);
         concha.AddRelationship(Relationship.Husband, jorge);
         concha.AddRelationship(Relationship.BrotherInLaw, luisfrancisco);
         concha.AddRelationship(Relationship.BrotherInLaw, javier);
         concha.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
-        margarita = new Person(PersonName.margarita, Sex.Female);
         soledad.AddRelationship(Relationship.DaughterInLaw, margarita);
         margarita.AddRelationship(Relationship.Husband, javier);
         margarita.AddRelationship(Relationship.BrotherInLaw, jorge);
         margarita.AddRelationship(Relationship.BrotherInLaw, luisfrancisco);
         margarita.AddRelationship(Relationship.FatherInLaw, luisAbuelo);
 
-        almudena = new Person(PersonName.almudena, Sex.Female);
         soledad.AddRelationship(Relationship.Grandchild_f, almudena);
         almudena.AddRelationship(Relationship.Father, luisfrancisco);
         almudena.AddRelationship(Relationship.Mother, socorro);
@@ -136,7 +170,6 @@ public class GameController : MonoBehaviour {
         almudena.AddRelationship(Relationship.Uncle, javier);
         almudena.AddRelationship(Relationship.Aunt, margarita);
         almudena.AddRelationship(Relationship.Grandfather, luisAbuelo);
-        javi = new Person(PersonName.javi, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild_m, javi);
         javi.AddRelationship(Relationship.Father, luisfrancisco);
         javi.AddRelationship(Relationship.Mother, socorro);
@@ -146,7 +179,6 @@ public class GameController : MonoBehaviour {
         javi.AddRelationship(Relationship.Aunt, margarita);
         javi.AddRelationship(Relationship.Grandfather, luisAbuelo);
         javi.AddRelationship(Relationship.Sister, almudena);
-        david = new Person(PersonName.david, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild_m, david);
         david.AddRelationship(Relationship.Father, jorge);
         david.AddRelationship(Relationship.Mother, concha);
@@ -157,7 +189,6 @@ public class GameController : MonoBehaviour {
         david.AddRelationship(Relationship.Grandfather, luisAbuelo);
         david.AddRelationship(Relationship.Cousin_f, almudena);
         david.AddRelationship(Relationship.Cousin_m, javi);
-        jaime = new Person(PersonName.jaime, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild_m, jaime);
         jaime.AddRelationship(Relationship.Father, jorge);
         jaime.AddRelationship(Relationship.Mother, concha);
@@ -169,7 +200,6 @@ public class GameController : MonoBehaviour {
         jaime.AddRelationship(Relationship.Cousin_f, almudena);
         jaime.AddRelationship(Relationship.Cousin_m, javi);
         jaime.AddRelationship(Relationship.Brother, david);
-        ana = new Person(PersonName.ana, Sex.Female);
         soledad.AddRelationship(Relationship.Grandchild_f, ana);
         ana.AddRelationship(Relationship.Father, jorge);
         ana.AddRelationship(Relationship.Mother, concha);
@@ -182,7 +212,6 @@ public class GameController : MonoBehaviour {
         ana.AddRelationship(Relationship.Cousin_m, javi);
         ana.AddRelationship(Relationship.Brother, david);
         ana.AddRelationship(Relationship.Brother, jaime);
-        luisNieto = new Person(PersonName.luisNieto, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild_m, luisNieto);
         luisNieto.AddRelationship(Relationship.Father, javier);
         luisNieto.AddRelationship(Relationship.Mother, margarita);
@@ -196,7 +225,6 @@ public class GameController : MonoBehaviour {
         luisNieto.AddRelationship(Relationship.Cousin_m, david);
         luisNieto.AddRelationship(Relationship.Cousin_m, jaime);
         luisNieto.AddRelationship(Relationship.Cousin_f, ana);
-        alberto = new Person(PersonName.alberto, Sex.Male);
         soledad.AddRelationship(Relationship.Grandchild_m, alberto);
         alberto.AddRelationship(Relationship.Father, javier);
         alberto.AddRelationship(Relationship.Mother, margarita);
@@ -304,43 +332,85 @@ public class GameController : MonoBehaviour {
     }
 
     public Person GetPersonFromName(PersonName name) {
-        switch ( name ) {
-            case PersonName.soledad:
-                return soledad;
-            case PersonName.javier:
-                return javier;
-            case PersonName.jorge:
-                return jorge;
-            case PersonName.luisfrancisco:
-                return luisfrancisco;
-            case PersonName.socorro:
-                return socorro;
-            case PersonName.margarita:
-                return margarita;
-            case PersonName.concha:
-                return concha;
-            case PersonName.almudena:
-                return almudena;
-            case PersonName.javi:
-                return javi;
-            case PersonName.david:
-                return david;
-            case PersonName.jaime:
-                return jaime;
-            case PersonName.ana:
-                return ana;
-            case PersonName.luisNieto:
-                return luisNieto;
-            case PersonName.alberto:
-                return alberto;
-            case PersonName.luis:
-                return luisAbuelo;
-            case PersonName.francisco:
-                return francisco;
-            case PersonName.maria:
-                return maria;
-            default:
-                return null;
+        if ( language == Language.ES ) {
+            switch ( name ) {
+                case PersonName.soledad:
+                    return soledad;
+                case PersonName.javier:
+                    return javier;
+                case PersonName.jorge:
+                    return jorge;
+                case PersonName.luisfrancisco:
+                    return luisfrancisco;
+                case PersonName.socorro:
+                    return socorro;
+                case PersonName.margarita:
+                    return margarita;
+                case PersonName.concha:
+                    return concha;
+                case PersonName.almudena:
+                    return almudena;
+                case PersonName.javi:
+                    return javi;
+                case PersonName.david:
+                    return david;
+                case PersonName.jaime:
+                    return jaime;
+                case PersonName.ana:
+                    return ana;
+                case PersonName.luisNieto:
+                    return luisNieto;
+                case PersonName.alberto:
+                    return alberto;
+                case PersonName.luis:
+                    return luisAbuelo;
+                case PersonName.francisco:
+                    return francisco;
+                case PersonName.maria:
+                    return maria;
+                default:
+                    return null;
+            }
+        }
+        else {
+            switch ( name ) {
+                case PersonName.soledad:
+                    return soledad;
+                case PersonName.david:
+                    return javier;
+                case PersonName.francisco:
+                    return jorge;
+                case PersonName.alberto:
+                    return luisfrancisco;
+                case PersonName.almudena:
+                    return socorro;
+                case PersonName.ana:
+                    return margarita;
+                case PersonName.maria:
+                    return concha;
+                case PersonName.socorro:
+                    return almudena;
+                case PersonName.luisfrancisco:
+                    return javi;
+                case PersonName.jorge:
+                    return david;
+                case PersonName.javier:
+                    return jaime;
+                case PersonName.pilar:
+                    return ana;
+                case PersonName.luis:
+                    return luisNieto;
+                case PersonName.javi:
+                    return alberto;
+                case PersonName.carlos:
+                    return luisAbuelo;
+                case PersonName.jaime:
+                    return francisco;
+                case PersonName.margarita:
+                    return maria;
+                default:
+                    return null;
+            }
         }
 
 

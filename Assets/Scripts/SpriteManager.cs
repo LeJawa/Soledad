@@ -216,6 +216,12 @@ public class SpriteManager : MonoBehaviour {
             case PersonName.maria:
                 personString = "maria";
                 break;
+            case PersonName.carlos:
+                personString = "carlos";
+                break;
+            case PersonName.pilar:
+                personString = "pilar";
+                break;
             default:
                 personString = "";
                 break;

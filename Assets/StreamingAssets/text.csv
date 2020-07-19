@@ -4,14 +4,14 @@ start_button;Start;Empezar
 pass_name_button;Pass Name;Pasar Nombre
 tutorial0;You are Soledad;Eres Soledad
 tutorial1;And you have Alzheimer.;Y tienes Alzheimer.
-tutorial2;At the moment, you remember your mother, María and your father Francisco;Ahora mismo, te acuerdas de tu madre, María, y de tu padre, Francisco.
-tutorial3;You were married to Luis.;Estuviste casada con Luis.
-tutorial4;With whom you had three children, Luis-Francisco, Jorge and Javier.;Con quién tuviste tres hijos, Luis-Francisco, Jorge and Javier.
-tutorial5;You have the respective three daughters-in-law, Socorro, Concha and Margarita.;Tienes tres respectivas nueras: Socorro, Concha and Margarita.
+tutorial2;At the moment, you remember your mother, Margarita and your father Jaime;Ahora mismo, te acuerdas de tu madre, María, y de tu padre, Francisco.
+tutorial3;You were married to Carlos.;Estuviste casada con Luis.
+tutorial4;With whom you had three children,Alberto, Francisco and David.;Con quién tuviste tres hijos, Luis-Francisco, Jorge y Javier.
+tutorial5;You have the respective three daughters-in-law, Almudena, María and Ana.;Tienes tres respectivas nueras: Socorro, Concha and Margarita.
 tutorial6;You also have seven grandchildren:;También tienes siete nietos:
-tutorial7;Almudena and Javi, from Luis-Francisco and Socorro;Almudena y Javi, de Luis-Francisco y Socorro
-tutorial8;David, Jaime and Ana, from Jorge and Concha;David, Jaime y Ana, de Jorge y Concha
-tutorial9;and, Luis and Alberto, from Javier and Margarita.;y Luis y Alberto, de Javier y Margarita.
+tutorial7;Socorro and Luis-Francisco, from Alberto and Almudena;Almudena y Javi, de Luis-Francisco y Socorro
+tutorial8;Jorge, Javier and Pilar, from Francisco and María;David, Jaime y Ana, de Jorge y Concha
+tutorial9;and, Luis and Javi, from David and Ana.;y Luis y Alberto, de Javier y Margarita.
 tutorial10;The objective is to remember all the members of your family, within the allocated time.;El objetivo es recordar a todos los miembros de la familia, en el tiempo asignado.
 tutorial11;The next name to remember will appear in the bottom left corner.;El siguiente nombre que recordar aparecerá en la esquina de abajo a la izquierda.
 tutorial12;You can access each name by selecting its family relationship…;Puedes acceder a cada nombre seleccionándo su parentesco...

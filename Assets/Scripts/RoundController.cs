@@ -153,6 +153,16 @@ public class RoundController : MonoBehaviour {
         }
         listOfPersonTokens.Remove(PersonName.soledad);
 
+        if ( GameController.current.Language == Language.ES ) {
+            listOfPersonTokens.Remove(PersonName.carlos);
+            listOfPersonTokens.Remove(PersonName.pilar);
+        }
+        else {
+            listOfPersonTokens.Remove(PersonName.luisNieto);
+            listOfPersonTokens.Remove(PersonName.concha);
+        }
+
+
         arrayOfNameTokens = new PersonName[listOfPersonTokens.Count];
         for ( int i = 0; i < listOfPersonTokens.Count; i++ ) {
             arrayOfNameTokens[i] = listOfPersonTokens[i];

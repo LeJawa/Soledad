@@ -15,7 +15,9 @@
     alberto,
     luis,
     francisco,
-    maria
+    maria,
+    carlos,
+    pilar
 
 
 

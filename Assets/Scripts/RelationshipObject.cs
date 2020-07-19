@@ -51,7 +51,6 @@ public class RelationshipObject : MonoBehaviour {
 
     void HandleMouseClicked() {
         if ( isHighlighted ) {
-            print(person.Name);
             GameController.current.SetCenterPerson(person);
         }
 

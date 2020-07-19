@@ -242,9 +242,6 @@ public class StartScreen : MonoBehaviour {
             FinishTutorial();
 
         }
-
-
-
     }
 
     void FinishTutorial() {
