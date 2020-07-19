@@ -314,7 +314,7 @@ public class GameController : MonoBehaviour {
                 currentCursor = Instantiate(prefabCursor, Camera.main.ScreenToWorldPoint(touch.position), Quaternion.identity);
             }
             if ( !touchAlreadyRegistered && touch.phase == TouchPhase.Stationary ) {
-                GameEvents.current.TriggerMouseClicked();
+                GameEvents.Instance.TriggerMouseClicked();
                 touchAlreadyRegistered = true;
             }
             if ( touch.phase == TouchPhase.Ended ) {
