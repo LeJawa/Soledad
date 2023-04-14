@@ -1,6 +1,8 @@
 # Soledad
 This is my first game and my submision for the GMTK Jam 2020.
 
+![Soledad main menu](soledad-screenshot.PNG)
+
 You can play it [here](https://luisescobar.itch.io/soledad).
 
 This is a personal take on Alzheimer disease. Soledad is a grand-mother with Alzheimer. I imagine her family members talking to her about someone and her trying to remember who they are.
